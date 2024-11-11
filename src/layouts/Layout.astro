@@ -1,6 +1,8 @@
 ---
 import '@fontsource-variable/league-spartan';
 
+import Header from "../components/header/index.astro"
+
 interface Props {
 	title: string;
   description: string;
@@ -22,6 +24,7 @@ const { title, description } = Astro.props;
 	<body>
     <div class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(1,150,190,.6),rgba(1,255,255,0))]" />
 		<slot />
+    <Header />
 	</body>
 </html>
 <style is:global>
@@ -30,7 +33,7 @@ const { title, description } = Astro.props;
 	}
 	html {
 		font-family: 'League Spartan Variable', system-ui, sans-serif;
-		background: #13151a;
+		background: #0A0A0A;
 		scroll-behavior: smooth;
 	}
 	code {
