@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Hero from '../components/main/Hero.astro'
+import SectionContainer from '../components/common/SectionContainer.astro'
 ---
 
 <Layout
@@ -7,6 +9,8 @@ import Layout from '../layouts/Layout.astro';
 	description="David Balvio, expert technology solutions in Cloud, AI, and software engineering. Over 15 years of experience in delivering scalable, innovative digital solutions. Based in Andorra, serving global clients with proven expertise."
 >
 	<main>
-	  </slot>
+    <SectionContainer class="p-24">
+      <Hero />
+    </SectionContainer>
 	</main>
 </Layout>

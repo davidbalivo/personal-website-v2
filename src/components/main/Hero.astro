@@ -1,0 +1,43 @@
+---
+import SocialIconLink from '../common/SocialIconLink.astro'
+import GithubIcon from '../icons/Github.astro'
+import LinkedinIcon from '../icons/Linkedin.astro'
+import EmailIcon from '../icons/Email.astro'
+
+const data = {
+  name: 'David Balivo',
+  title: 'Software Engineer',
+  bio: '15+ years as a Technology Expert based in Andorra, with a proven track record in diverse roles, including CTO, specializing in Team Leadership, Cloud & AI solutions.',
+  linkedin: 'https://www.linkedin.com/in/davidbalivo/',
+  mail: 'mailto:miduga@gmail.com',
+  github: 'https://github.com/davidbq'
+}
+---
+
+<div class="w-full flex flex-row">
+  <div class="flex flex-col w-1/2 justify-center space-y-5">
+    <h1 class="text-4xl text-accent">{data.name}</h1>
+    <h2 class="text-4xl">{data.title}</h2>
+    <p class="text-xl">15+ years as a <span class="text-secondary">Technology Expert</span> based in Andorra, with a proven track record in diverse roles, including <span class="text-secondary">CTO</span>, specializing in Team <span class="text-secondary">Management</span>, <span class="text-secondary">Cloud</span> & <span class="text-secondary">AI</span> solutions.</p>
+    <div class="flex flex-row space-x-10">
+      <SocialIconLink href={data.linkedin}><LinkedinIcon class="size-8" /></SocialIconLink>
+      <SocialIconLink href={data.github}><GithubIcon class="size-8" /></SocialIconLink>
+      <SocialIconLink href={data.mail}><EmailIcon class="size-8" /></SocialIconLink>
+    </div>
+  </div>
+  <div class="w-1/2">
+    <div class="overflow-hidden size-64 rounded-full bg-white/10 border border-accent/10 ml-auto">
+      <img
+        class="image-shadow h-full w-full"
+        src="/images/hero.webp"
+        alt={data.name}
+      />
+    </div>
+  </div>
+</div>
+
+<style>
+  .image-shadow {
+    filter: drop-shadow(-10px -2px 5px #000) contrast(110%);
+  }
+</style>
