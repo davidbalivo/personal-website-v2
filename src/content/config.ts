@@ -11,18 +11,25 @@ const navigation = defineCollection({
 });
 
 const hero = defineCollection({
-  type: 'data',
+  type: 'content',
   schema: z.object({
     name: z.string(),
     title: z.string(),
+    image: z.string(),
+  })
+})
+
+const socialLinks = defineCollection({
+  type: 'data',
+  schema: z.object({
     linkedin: z.string().url(),
     github: z.string().url(),
     email: z.string().url(),
-    image: z.string(),
   })
 })
 
 export const collections = {
   navigation,
   hero,
+  'social-links': socialLinks
 };

@@ -1,0 +1,18 @@
+---
+import SocialIconLink from '../common/SocialIconLink.astro'
+import GithubIcon from '../icons/solid/Github.astro'
+import LinkedinIcon from '../icons/solid/Linkedin.astro'
+import EmailIcon from '../icons/solid/Email.astro'
+import { getCollection} from 'astro:content';
+import type { SocialLink } from '../../types';
+
+const socialLinks: SocialLink = (await getCollection('social-links'))[0].data;
+
+const socialIconLinkClass = "text-4xl hover:text-accent cursor-pointer duration-500 hover:scale-110";
+---
+
+<div class="flex flex-row justify-between">
+  <SocialIconLink href={socialLinks.github} class={socialIconLinkClass}><GithubIcon  class="size-10" /></SocialIconLink>
+  <SocialIconLink href={socialLinks.linkedin} class={socialIconLinkClass}><LinkedinIcon class="size-10" /></SocialIconLink>
+  <SocialIconLink href={socialLinks.email} class={socialIconLinkClass}><EmailIcon class="size-10" /></SocialIconLink>
+</div>

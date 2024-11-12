@@ -1,22 +1,23 @@
 ---
 import SocialIconLink from '../common/SocialIconLink.astro'
-import GithubIcon from '../icons/Github.astro'
-import LinkedinIcon from '../icons/Linkedin.astro'
-import EmailIcon from '../icons/Email.astro'
+import GithubIcon from '../icons/regular/Github.astro'
+import LinkedinIcon from '../icons/regular/Linkedin.astro'
+import EmailIcon from '../icons/regular/Email.astro'
 import { getCollection, render } from 'astro:content';
+import type { SocialLink } from '../../types';
 
 interface HeroContent {
   name: string;
   title: string;
-  linkedin: string;
-  github: string;
-  email: string;
   image: string;
 }
 
 const rawCollection = await getCollection('hero');
 const content: HeroContent = rawCollection[0].data;
 const { Content: Bio } = await render(rawCollection[0]);
+const socialLinks: SocialLink = (await getCollection('social-links'))[0].data;
+
+const socialIconLinkClass = "size-8 text-accent hover:trasnform transform transition-transform duration-500 hover:scale-110 hover:text-accent-light cursor-pointer";
 ---
 
 <div class="w-full flex flex-row">
@@ -25,9 +26,9 @@ const { Content: Bio } = await render(rawCollection[0]);
     <h2 class="text-4xl">{content.title}</h2>
      <div class="text-lg text-secondary"><Bio /></div>
     <div class="flex flex-row space-x-10">
-      <SocialIconLink href={content.linkedin}><LinkedinIcon class="size-8" /></SocialIconLink>
-      <SocialIconLink href={content.github}><GithubIcon class="size-8" /></SocialIconLink>
-      <SocialIconLink href={content.email}><EmailIcon class="size-8" /></SocialIconLink>
+      <SocialIconLink href={socialLinks.linkedin} class={socialIconLinkClass}><LinkedinIcon class="size-8" /></SocialIconLink>
+      <SocialIconLink href={socialLinks.github} class={socialIconLinkClass}><GithubIcon class="size-8" /></SocialIconLink>
+      <SocialIconLink href={socialLinks.email} class={socialIconLinkClass}><EmailIcon class="size-8" /></SocialIconLink>
     </div>
   </div>
   <div class="w-1/2">
