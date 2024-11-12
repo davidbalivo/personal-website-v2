@@ -2,9 +2,10 @@
 interface Props {
   id?: string;
   class?: string;
+  title?: string;
 }
 
-const { class: className, id } = Astro.props
+const { class: className, id, title } = Astro.props
 ---
 
 <section
@@ -12,5 +13,8 @@ const { class: className, id } = Astro.props
   data-section={id}
   class={`section ${className} scroll-m-20 w-full mx-auto container max-w-7xl`}
 >
+  {title &&
+    <h1 class="text-xl font-semibold mb-10">{title}</h1>
+  }
   <slot />
 </section>
