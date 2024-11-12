@@ -1,43 +1,27 @@
 ---
-const navItems = [
-  {
-    title: "Home",
-    label: "home",
-    url: "/#home",
-  },
-  {
-    title: "Experience",
-    label: "experience",
-    url: "/#experience",
-  },
-  {
-    title: "Expertise",
-    label: "expertise",
-    url: "/#expertise",
-  },
-  {
-    title: "About",
-    label: "about",
-    url: "#/about",
-  },
-  {
-    title: "Contact",
-    label: "contact",
-    url: "#/contact",
-  },
-]
+import { getCollection } from 'astro:content';
+
+interface NavItem {
+  title: string;
+  label: string;
+  url: string;
+  order: number;
+}
+
+const rawNavItems = await getCollection('navigation');
+const navItems: NavItem[] = rawNavItems.map((item) => item.data).sort((a, b) => a.order - b.order);
 ---
 
 <header class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2">
   <nav class="flex px-3 text-sm rounded-full text-primary">
     {
-      navItems.map(({ title, label, url }) => (
+      navItems.map((item) => (
         <a
           class="nav-link"
-          aria-label={label}
-          href={url}
+          aria-label={item.label}
+          href={item.url}
         >
-          {title}
+          {item.title}
         </a>
       ))
     }
