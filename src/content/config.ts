@@ -1,6 +1,6 @@
 import { z, defineCollection } from 'astro:content';
 
-const navigationCollection = defineCollection({
+const navigation = defineCollection({
   type: 'data',
   schema: z.object({
     title: z.string(),
@@ -10,6 +10,19 @@ const navigationCollection = defineCollection({
   })
 });
 
+const hero = defineCollection({
+  type: 'data',
+  schema: z.object({
+    name: z.string(),
+    title: z.string(),
+    linkedin: z.string().url(),
+    github: z.string().url(),
+    email: z.string().url(),
+    image: z.string(),
+  })
+})
+
 export const collections = {
-  navigation: navigationCollection,
+  navigation,
+  hero,
 };
