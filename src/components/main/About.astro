@@ -1,0 +1,50 @@
+---
+import { getCollection, render } from 'astro:content';
+
+export interface AboutContent {
+  image: string;
+  skills: string[];
+  hobbies: {
+    img: string;
+    alt: string;
+  }[];
+}
+
+const rawCollection = await getCollection('about');
+const content: AboutContent = rawCollection[0].data;
+const { Content: Bio } = await render(rawCollection[0]);
+---
+
+<div class="w-full flex flex-row">
+  <div class="flex flex-col w-1/2 justify-center space-y-12">
+    <div class="grid grid-cols-1 gap-2 lg:grid-cols-4 sm:grid-cols-2 items-center">
+      { content.skills.map((skill) => (
+        <div class="font-semibold py-1 text-center text-accent border border-white/10 rounded-full text-sm">{skill}</div>
+      ))}
+    </div>
+    <div class="grid grid-cols-2 gap-2 lg:grid-cols-6 sm:grid-cols-3">
+      { content.hobbies.map((hobby) => (
+        <div class="flex justify-center"><img src={hobby.img} alt={hobby.alt} class="size-10 items-center justify-center"/></div>
+      ))
+
+      }
+    </div>
+    <div class="text-lg text-secondary"><Bio /></div>
+  </div>
+  <div class="ml-auto">
+      <div class="overflow-hidden rounded-b-full flex h-full items-center">
+        <img
+          class="image-shadow w-[206px] h-[300px]"
+          src={content.image}
+          alt="about"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .image-shadow {
+    filter: drop-shadow(-5px 2px 1px #0296BE30) contrast(110%);
+  }
+</style>

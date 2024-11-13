@@ -28,8 +28,23 @@ const socialLinks = defineCollection({
   })
 })
 
+const about = defineCollection({
+  type: 'content',
+  schema: z.object({
+    image: z.string(),
+    skills: z.array(z.string()),
+    hobbies: z.array(
+      z.object({
+        img: z.string(),
+        alt: z.string(),
+      })
+    ),
+  })
+})
+
 export const collections = {
   navigation,
   hero,
-  'social-links': socialLinks
+  'social-links': socialLinks,
+  about
 };
