@@ -2,13 +2,14 @@ import { z, defineCollection } from 'astro:content';
 
 const navigation = defineCollection({
   type: 'data',
-  schema: z.object({
-    title: z.string(),
-    label: z.string(),
-    url: z.string(),
-    order: z.number(),
-  })
-});
+  schema: z.array(
+    z.object({
+      title: z.string(),
+      label: z.string(),
+      url: z.string(),
+    })
+  )
+})
 
 const hero = defineCollection({
   type: 'content',
@@ -47,4 +48,4 @@ export const collections = {
   hero,
   'social-links': socialLinks,
   about
-};
+}

@@ -5,11 +5,9 @@ interface NavItem {
   title: string;
   label: string;
   url: string;
-  order: number;
 }
 
-const rawNavItems = await getCollection('navigation');
-const navItems: NavItem[] = rawNavItems.map((item) => item.data).sort((a, b) => a.order - b.order);
+const navItems: NavItem[] = (await getCollection('navigation'))[0].data;
 ---
 
 <header class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2">
