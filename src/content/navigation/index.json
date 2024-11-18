@@ -22,11 +22,11 @@
   {
     "title": "About",
     "label": "about",
-    "url": "#/about"
+    "url": "/#about"
   },
   {
     "title": "Contact",
     "label": "contact",
-    "url": "#/contact"
+    "url": "/#contact"
   }
 ]
