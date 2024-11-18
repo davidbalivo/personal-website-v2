@@ -23,6 +23,6 @@ hobbies: [
   I am a results-driven professional with extensive experience in <span class="text-primary">building and leading
   high-performance</span>, cross functional <span class="text-primary">teams</span> that foster
   teamwork, trust, continuous learning, and innovation, with a passion for
-  achieving <span class="text-primary">impactful and scalable</span> solutions powered by <span class="text-primary">Cloud</span> & <span class="text-primary">AI</span>.
+  achieving <span class="text-primary">impactful and scalable</span> solutions powered by <span class="text-primary">Cloud</span> & <span class="text-primary">AI</span>
 </p>
 
