@@ -29,6 +29,20 @@ const socialLinks = defineCollection({
   })
 })
 
+const experience = defineCollection({
+  type: 'content',
+  schema: z.object({
+    date: z.string(),
+    titleLong: z.string(),
+    titleShort: z.string().optional(),
+    company: z.string(),
+    descriptionShort: z.string(),
+    descriptionLong: z.string(),
+    stackShort: z.array(z.string()),
+    stackLong: z.array(z.string()),
+  })
+});
+
 const about = defineCollection({
   type: 'content',
   schema: z.object({
@@ -47,5 +61,6 @@ export const collections = {
   navigation,
   hero,
   'social-links': socialLinks,
+  experience,
   about
 }

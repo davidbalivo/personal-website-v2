@@ -4,8 +4,9 @@ import SectionContainer from '../components/common/SectionContainer.astro'
 import Hero from '../components/main/Hero.astro'
 import About from '../components/main/About.astro'
 import Footer from '../components/footer/index.astro'
+import Experience from '../components/main/Experience.astro';
 ---
-
+<!-- TODO : get layout content from collection -->
 <Layout
 	title="Personal Website David Balivo - Expert Technology Solutions in Cloud, AI, and Software Engineering"
 	description="David Balvio, expert technology solutions in Cloud, AI, and software engineering. Over 15 years of experience in delivering scalable, innovative digital solutions. Based in Andorra, serving global clients with proven expertise."
@@ -14,6 +15,9 @@ import Footer from '../components/footer/index.astro'
     <SectionContainer class="p-24">
       <Hero />
     </SectionContainer>
+		<SectionContainer title='Experience' class="p-24">
+			<Experience />
+		</SectionContainer>
 		<SectionContainer title='About' class="p-24">
 			<About />
 		</SectionContainer>
