@@ -5,6 +5,7 @@ import Hero from '../components/main/Hero.astro'
 import About from '../components/main/About.astro'
 import Footer from '../components/footer/index.astro'
 import Experience from '../components/main/Experience.astro';
+import Education from '../components/main/Education.astro';
 ---
 <!-- TODO : get layout content from collection -->
 <Layout
@@ -15,13 +16,16 @@ import Experience from '../components/main/Experience.astro';
     <SectionContainer class="p-24" id="home">
       <Hero />
     </SectionContainer>
-		<SectionContainer title='Experience' class="p-24" id="experience">
+		<SectionContainer title='Experience' class="px-24 py-12" id="experience">
 			<Experience />
 		</SectionContainer>
-		<SectionContainer title='About' class="p-24" id="about">
+		<SectionContainer title='Education' class="p-24 py-12" id="education">
+			<Education />
+		</SectionContainer>
+		<SectionContainer title='About' class="p-24 py-12" id="about">
 			<About />
 		</SectionContainer>
-		<SectionContainer title='Contact' class="p-24" id="contact">
+		<SectionContainer title='Contact' class="p-24 py-12" id="contact">
 			<Footer />
     </SectionContainer>
 	</main>

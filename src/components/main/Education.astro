@@ -1,0 +1,29 @@
+---
+import { getCollection } from 'astro:content';
+
+
+interface EducationContent {
+  date: string;
+  title: string;
+  institution: string;
+}
+
+
+const content: EducationContent[] = (await getCollection('education'))[0].data;
+---
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+  { content.map((education: EducationContent) => (
+    <div class="p-5">
+      <div class="flex flex-row items-center mb-2">
+        <img src="/icons/certification.svg" class="size-4" alt="diploma">
+        <p class="text-secondary text-sm pl-2 pt-1">{education.date}</p>
+      </div>
+      <div>
+        <h2 class="text-lg">{education.title}</h2>
+      </div>
+      <div>
+        <p class="text-secondary">{education.institution}</p>
+      </div>
+    </div>
+  ))}
+</div>
