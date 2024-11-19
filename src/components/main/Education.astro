@@ -17,10 +17,10 @@ const content: EducationContent[] = (await getCollection('education'))[0].data;
         <p class="text-secondary text-sm pl-2 pt-1">{education.date}</p>
       </div>
       <div>
-        <h2 class="text-lg">{education.title}</h2>
+        <span class="text-lg font-semibold">{education.title}</span>
       </div>
       <div>
-        <p class="text-secondary">{education.institution}</p>
+        <span class="text-secondary">{education.institution}</span>
       </div>
     </div>
   ))}

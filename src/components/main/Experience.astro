@@ -20,16 +20,16 @@ const content = await getCollection('experience');
       <div class="h-[1px] bg-accent transform-gpu origin-center transition-transform duration-500 scale-x-0 group-hover/card:scale-x-100"/>
       <div class="p-5">
         <div class="mb-2">
-          <p class="text-secondary pt-1 text-sm pl-1">{experience.data.date}</p>
+          <span class="text-secondary pt-1 text-sm pl-1">{experience.data.date}</span>
         </div>
         <div class="flex flex-row mb-5">
           <div class="hidden lg:block flex items-center p-4 bg-white/5 rounded-xl">
             <img src="/icons/company.svg" class="size-6" alt="company">
           </div>
           <div class="w-full lg:pl-5">
-            <h3 class="text-lg font-semibold pt-1">{experience.data.titleShort || experience.data.titleLong}</h3>
+            <span class="text-lg font-semibold pt-1">{experience.data.titleShort || experience.data.titleLong}</span>
             <div class="flex flex-row">
-              <p class="text-accent pt-1">{experience.data.company}</p>
+              <span class="text-accent pt-1">{experience.data.company}</span>
             </div>
           </div>
         </div>
