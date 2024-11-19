@@ -15,37 +15,35 @@ interface ExperienceData {
 const content = await getCollection('experience');
 ---
 <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-  {
-    content.map((experience: ExperienceData) => (
-      <div class="group/card rounded-2xl overflow-hidden bg-accent/5 border border-accent/25 hover:cursor-pointer hover:scale-105 duration-500 hover:bg-accent/10">
-        <div class="h-[1px] bg-accent transform-gpu origin-center transition-transform duration-500 scale-x-0 group-hover/card:scale-x-100"/>
-        <div class="p-5">
-          <div class="mb-2">
-            <p class="text-secondary pt-1 text-sm pl-1">{experience.data.date}</p>
+  { content.map((experience: ExperienceData) => (
+    <div class="group/card rounded-2xl overflow-hidden hover:cursor-pointer hover:scale-105 duration-500 hover:bg-accent/5">
+      <div class="h-[1px] bg-accent transform-gpu origin-center transition-transform duration-500 scale-x-0 group-hover/card:scale-x-100"/>
+      <div class="p-5">
+        <div class="mb-2">
+          <p class="text-secondary pt-1 text-sm pl-1">{experience.data.date}</p>
+        </div>
+        <div class="flex flex-row mb-5">
+          <div class="hidden lg:block flex items-center p-4 bg-white/5 rounded-xl">
+            <img src="/icons/company.svg" class="size-6" alt="company">
           </div>
-          <div class="flex flex-row mb-5">
-            <div class="hidden lg:block flex items-center p-4 bg-white/5 rounded-xl">
-              <img src="/icons/company.svg" class="size-6" alt="company">
+          <div class="w-full lg:pl-5">
+            <h3 class="text-lg font-semibold pt-1">{experience.data.titleShort || experience.data.titleLong}</h3>
+            <div class="flex flex-row">
+              <p class="text-accent pt-1">{experience.data.company}</p>
             </div>
-            <div class="w-full lg:pl-5">
-              <h3 class="text-lg font-semibold pt-1">{experience.data.titleShort || experience.data.titleLong}</h3>
-              <div class="flex flex-row">
-                <p class="text-accent pt-1">{experience.data.company}</p>
-              </div>
-            </div>
-          </div>
-          <div class="mb-5">
-            <p class="text-secondary">{experience.data.descriptionShort}</p>
-          </div>
-          <div class="flex flex-wrap gap-2">
-            {
-              experience.data.stackShort.map((item) => (
-                <span class="px-4 py-1.5 rounded-full text-accent text-sm bg-white/5">{item}</span>
-              ))
-            }
           </div>
         </div>
+        <div class="mb-5">
+          <p class="text-secondary">{experience.data.descriptionShort}</p>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          {
+            experience.data.stackShort.map((item) => (
+              <span class="px-4 py-1.5 rounded-full text-secondary text-sm bg-white/5">{item}</span>
+            ))
+          }
+        </div>
       </div>
-    ))
-  }
+    </div>
+  ))}
 </div>
