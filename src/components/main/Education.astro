@@ -1,13 +1,11 @@
 ---
 import { getCollection } from 'astro:content';
 
-
 interface EducationContent {
   date: string;
   title: string;
   institution: string;
 }
-
 
 const content: EducationContent[] = (await getCollection('education'))[0].data;
 ---
