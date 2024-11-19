@@ -1,0 +1,52 @@
+[
+  {
+    "src": "/icons/cloud.svg",
+    "alt": "cloud",
+    "text": "Cloud"
+  },
+  {
+    "src": "/icons/ai-ml.svg",
+    "alt": "ai-ml",
+    "text": "AI/ML"
+  },
+  {
+    "src": "/icons/serverless.svg",
+    "alt": "serverless",
+    "text": "Serverless"
+  },
+  {
+    "src": "/icons/containerization.svg",
+    "alt": "containerization",
+    "text": "Containerization"
+  },
+  {
+    "src": "/icons/micro-services.svg",
+    "alt": "micro-services",
+    "text": "Micro-services"
+  },
+  {
+    "src": "/icons/devops.svg",
+    "alt": "devops",
+    "text": "DevOps"
+  },
+  {
+    "src": "/icons/databases.svg",
+    "alt": "databases",
+    "text": "Databases"
+  },
+  {
+    "src": "/icons/python.svg",
+    "alt": "python",
+    "text": "Python"
+  },
+  {
+    "src": "/icons/typescript.svg",
+    "alt": "typescript",
+    "text": "Typescript"
+  },
+  {
+    "src": "/icons/javascript.svg",
+    "alt": "javascript",
+    "text": "Javascript"
+  }
+]
