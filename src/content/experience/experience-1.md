@@ -1,4 +1,5 @@
 ---
+order: 1
 date: '2021 - Present'
 titleShort: 'Lead Architect for Cloud & AI'
 titleLong: 'Lead Enterprise Architect for Cloud & AI Solutions'

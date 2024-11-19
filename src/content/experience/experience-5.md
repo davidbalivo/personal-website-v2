@@ -1,4 +1,5 @@
 ---
+order: 5
 date: '2014 - 2015'
 titleLong: 'Lead Android Developer'
 company: 'eLaboro'

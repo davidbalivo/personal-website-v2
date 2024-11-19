@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 
 interface ExperienceData {
   data: {
+    order: number;
     date: string;
     titleShort?: string;
     titleLong: string;
@@ -12,7 +13,8 @@ interface ExperienceData {
   };
 }
 
-const content = await getCollection('experience');
+const rawContent = await getCollection('experience');
+const content = rawContent.sort((a, b) => a.data.order - b.data.order);
 ---
 <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
   { content.map((experience: ExperienceData) => (

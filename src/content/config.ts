@@ -32,6 +32,7 @@ const socialLinks = defineCollection({
 const experience = defineCollection({
   type: 'content',
   schema: z.object({
+    order: z.number(),
     date: z.string(),
     titleLong: z.string(),
     titleShort: z.string().optional(),

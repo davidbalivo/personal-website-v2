@@ -1,4 +1,5 @@
 ---
+order: 2
 date: '2018 - 2021'
 titleLong: 'Chief Technology Officer'
 company: 'ForFans Media'

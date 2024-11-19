@@ -1,4 +1,5 @@
 ---
+order: 3
 date: '2016 - 2018'
 titleLong: 'Technical Lead'
 company: 'Freekik'

@@ -1,4 +1,5 @@
 ---
+order: 4
 date: '2015 - 2016'
 titleLong: 'Lead Mobile Developer'
 company: 'Twibex35'
