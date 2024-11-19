@@ -15,7 +15,7 @@ hobbies: [
   { img: '/icons/reading.svg', alt: 'Reading' },
   { img: '/icons/boxing.svg', alt: 'Boxing' },
   { img: '/icons/riding.svg', alt: 'Riding' },
-  { img: '/icons/music.svg', alt: 'Music' },
+  { img: '/icons/skiing.svg', alt: 'Skiing' },
   { img: '/icons/traveling.svg', alt: 'Traveling' }
 ]
 ---
