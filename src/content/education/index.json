@@ -1,21 +1,25 @@
 [
   {
     "date": "2022",
+    "type": "certification",
     "title": "Certified Machine Learning",
     "institution": "Amazon Web Service"
   },
   {
     "date": "2020",
+    "type": "certification",
     "title": "Certified Solutions Architect",
     "institution": "Amazon Web Service"
   },
   {
     "date": "2012",
+    "type": "diploma",
     "title": "BE in Computer Science",
     "institution": "Universidad de Vigo"
   },
   {
     "date": "2004",
+    "type": "certification",
     "title": "IELTS",
     "institution": "I. House Dublin"
   }
