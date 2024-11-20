@@ -1,0 +1,44 @@
+[
+  {
+    "id": "home",
+    "title": "Home",
+    "component": "Hero",
+    "order": 1,
+    "class": "p-24"
+  },
+  {
+    "id": "experience",
+    "title": "Experience",
+    "component": "Experience",
+    "order": 2,
+    "class": "p-24"
+  },
+  {
+    "id": "expertise",
+    "title": "Expertise",
+    "component": "Expertise",
+    "order": 3,
+    "class": "p-24"
+  },
+  {
+    "id": "education",
+    "title": "Education",
+    "component": "Education",
+    "order": 4,
+    "class": "p-24"
+  },
+  {
+    "id": "about",
+    "title": "About",
+    "component": "About",
+    "order": 5,
+    "class": "p-24"
+  },
+  {
+    "id": "contact",
+    "title": "Contact",
+    "component": "Footer",
+    "order": 6,
+    "class": "px-24 pt-24 pb-12"
+  }
+]

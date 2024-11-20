@@ -1,19 +1,19 @@
 ---
-import { getCollection } from 'astro:content';
+import { getNavigation } from "../../utils/content-loader";
 
-interface NavItem {
+interface NavContent {
   title: string;
   label: string;
   url: string;
 }
 
-const navItems: NavItem[] = (await getCollection('navigation'))[0].data;
+const navigation: NavContent[] = await getNavigation();
 ---
 
 <header class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2">
   <nav class="flex px-3 text-sm rounded-full text-primary">
     {
-      navItems.map((item) => (
+      navigation.map((item) => (
         <a
           class="nav-link"
           aria-label={item.label}
