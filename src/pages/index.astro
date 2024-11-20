@@ -1,12 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import SectionContainer from '../components/common/SectionContainer.astro'
-import Hero from '../components/main/Hero.astro'
-import About from '../components/main/About.astro'
-import Footer from '../components/footer/index.astro'
-import Experience from '../components/main/Experience.astro';
-import Education from '../components/main/Education.astro';
-import Expertise from '../components/main/Expertise.astro';
+import { getPageMainSections } from '../utils/page-main';
+
+const sections = await getPageMainSections();
 ---
 <!-- TODO : get layout content from collection -->
 <Layout
@@ -14,23 +11,13 @@ import Expertise from '../components/main/Expertise.astro';
 	description="David Balvio, expert technology solutions in Cloud, AI, and software engineering. Over 15 years of experience in delivering scalable, innovative digital solutions. Based in Andorra, serving global clients with proven expertise."
 >
 	<main>
-    <SectionContainer class="p-24" id="home">
-      <Hero />
-    </SectionContainer>
-		<SectionContainer title='Experience' class="p-24" id="experience">
-			<Experience />
-		</SectionContainer>
-		<SectionContainer title='Expertise' class="p-24" id="expertise">
-			<Expertise />
-		</SectionContainer>
-		<SectionContainer title='Education' class="p-24" id="education">
-			<Education />
-		</SectionContainer>
-		<SectionContainer title='About' class="p-24" id="about">
-			<About />
-		</SectionContainer>
-		<SectionContainer title='Contact' class="px-24 pt-24 pb-12" id="contact">
-			<Footer />
-    </SectionContainer>
+		{
+			sections.map(({section, Component}) => (
+				Component && (
+					<SectionContainer id={section.id} title={section.title} class={section.class}>
+						<Component />
+					</SectionContainer>
+				)
+		))}
 	</main>
 </Layout>

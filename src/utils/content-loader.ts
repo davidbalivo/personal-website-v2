@@ -2,7 +2,7 @@ import { getCollection, type ContentEntryMap, type DataEntryMap } from "astro:co
 import { generateNavigation } from "./navigation";
 import type { Section } from "../types";
 
-export const getSingleEntryCollection = async (collection: keyof ContentEntryMap | keyof DataEntryMap) => {
+const getSingleEntryCollection = async (collection: keyof ContentEntryMap | keyof DataEntryMap) => {
   const rawCollection: Array<any> = await getCollection(collection);
   return sortCollectionByOrder(rawCollection[0].data);
 }
@@ -21,7 +21,11 @@ const sortCollectionByOrder = (collection: Array<any>) =>{
   }
 }
 
+export const getSections = async (): Promise<Section[]> => (
+ await getSingleEntryCollection('section')
+)
+
 export const getNavigation = async () => {
-  const sections: Section[] = (await getSingleEntryCollection('section'));
+  const sections: Section[] = await getSections();
   return generateNavigation(sections);
 }

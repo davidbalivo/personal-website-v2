@@ -1,9 +1,9 @@
 export interface Section {
   id: string;
-  title: string;
+  title?: string;
   component: string;
   order: number;
-  class: string;
+  class?: string;
 }
 
 export interface SocialLink {

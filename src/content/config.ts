@@ -5,7 +5,7 @@ const section = defineCollection({
   schema: z.array(
     z.object({
       id: z.string(),
-      title: z.string(),
+      title: z.string().optional(),
       component: z.string(),
       order: z.number(),
       class: z.string().optional(),

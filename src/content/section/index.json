@@ -1,38 +1,32 @@
 [
   {
     "id": "home",
-    "title": "Home",
     "component": "Hero",
-    "order": 1,
-    "class": "p-24"
+    "order": 1
   },
   {
     "id": "experience",
     "title": "Experience",
     "component": "Experience",
-    "order": 2,
-    "class": "p-24"
+    "order": 2
   },
   {
     "id": "expertise",
     "title": "Expertise",
     "component": "Expertise",
-    "order": 3,
-    "class": "p-24"
+    "order": 3
   },
   {
     "id": "education",
     "title": "Education",
     "component": "Education",
-    "order": 4,
-    "class": "p-24"
+    "order": 4
   },
   {
     "id": "about",
     "title": "About",
     "component": "About",
-    "order": 5,
-    "class": "p-24"
+    "order": 5
   },
   {
     "id": "contact",
