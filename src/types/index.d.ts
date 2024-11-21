@@ -1,6 +1,10 @@
 export interface Section {
   id: string;
-  title?: string;
+  title: string;
+  display: {
+    showTitle: boolean;
+    showInNav: boolean;
+  },
   component: string;
   order: number;
   class?: string;

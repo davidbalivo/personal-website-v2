@@ -1,30 +1,51 @@
 [
   {
     "id": "home",
+    "title": "Home",
+    "display": {
+      "showTitle": false,
+      "showInNav": true
+    },
     "component": "Hero",
     "order": 1
   },
   {
     "id": "experience",
     "title": "Experience",
+    "display": {
+      "showTitle": true,
+      "showInNav": true
+    },
     "component": "Experience",
     "order": 2
   },
   {
     "id": "expertise",
     "title": "Expertise",
+    "display": {
+      "showTitle": true,
+      "showInNav": true
+    },
     "component": "Expertise",
     "order": 3
   },
   {
     "id": "education",
     "title": "Education",
+    "display": {
+      "showTitle": true,
+      "showInNav": true
+    },
     "component": "Education",
     "order": 4
   },
   {
     "id": "about",
     "title": "About",
+    "display": {
+      "showTitle": true,
+      "showInNav": true
+    },
     "component": "About",
     "order": 5
   },
@@ -32,6 +53,10 @@
     "id": "contact",
     "title": "Contact",
     "component": "Footer",
+    "display": {
+      "showTitle": true,
+      "showInNav": true
+    },
     "order": 6,
     "class": "px-24 pt-24 pb-12"
   }

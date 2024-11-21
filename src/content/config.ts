@@ -5,7 +5,11 @@ const section = defineCollection({
   schema: z.array(
     z.object({
       id: z.string(),
-      title: z.string().optional(),
+      title: z.string(),
+      display: z.object({
+        showTitle: z.boolean(),
+        showInNav: z.boolean(),
+      }),
       component: z.string(),
       order: z.number(),
       class: z.string().optional(),

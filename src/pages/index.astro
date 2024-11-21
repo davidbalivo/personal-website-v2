@@ -14,7 +14,11 @@ const sections = await getPageMainSections();
 		{
 			sections.map(({section, Component}) => (
 				Component && (
-					<SectionContainer id={section.id} title={section.title} class={section.class}>
+					<SectionContainer
+						id={section.id}
+						title={section.display.showTitle ? section.title : undefined}
+						class={section.class}
+					>
 						<Component />
 					</SectionContainer>
 				)
