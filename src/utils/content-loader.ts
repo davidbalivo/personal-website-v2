@@ -1,6 +1,6 @@
-import { getCollection, type ContentEntryMap, type DataEntryMap } from "astro:content";
+import { getCollection, getEntry, type ContentEntryMap, type DataEntryMap } from "astro:content";
 import { generateNavigation } from "./navigation";
-import type { Section } from "../types";
+import type { SiteMetadata, PagesMetadata, Section, Navigation } from "../types";
 
 const getSingleEntryCollection = async (collection: keyof ContentEntryMap | keyof DataEntryMap) => {
   const rawCollection: Array<any> = await getCollection(collection);
@@ -21,11 +21,18 @@ const sortCollectionByOrder = (collection: Array<any>) =>{
   }
 }
 
+export const getSiteMetaData = async (): Promise<SiteMetadata> => {
+  return (await getEntry('site-metadata', 'index')).data.site;
+}
+
+export const getPagesMetaData = async (): Promise<PagesMetadata> => {
+  return (await getEntry('site-metadata', 'index')).data.pages;
+}
+
 export const getSections = async (): Promise<Section[]> => (
  await getSingleEntryCollection('section')
 )
 
-export const getNavigation = async () => {
-  const sections: Section[] = await getSections();
-  return generateNavigation(sections);
+export const getNavigation = async (): Promise<Navigation[]> => {
+  return generateNavigation(await getSections());
 }

@@ -1,0 +1,13 @@
+{
+  "site": {
+    "defaultLanguage": "en",
+    "author": "David Balivo",
+    "domain": "https://davidbalivo.com"
+  },
+  "pages": {
+    "main": {
+      "title": "Personal Website David Balivo - Expert Technology Solutions in Cloud, AI, and Software Engineering",
+      "description": "David Balvio, expert technology solutions in Cloud, AI, and software engineering. Over 15 years of experience in delivering scalable, innovative digital solutions. Based in Andorra, serving global clients with proven expertise."
+    }
+  }
+}

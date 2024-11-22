@@ -2,13 +2,14 @@
 import Layout from '../layouts/Layout.astro';
 import SectionContainer from '../components/common/SectionContainer.astro'
 import { getPageMainSections } from '../utils/page-main';
+import { getPagesMetaData } from '../utils/content-loader';
 
+const pagesMetaData = await getPagesMetaData();
 const sections = await getPageMainSections();
 ---
-<!-- TODO : get layout content from collection -->
 <Layout
-	title="Personal Website David Balivo - Expert Technology Solutions in Cloud, AI, and Software Engineering"
-	description="David Balvio, expert technology solutions in Cloud, AI, and software engineering. Over 15 years of experience in delivering scalable, innovative digital solutions. Based in Andorra, serving global clients with proven expertise."
+	title={pagesMetaData.main.title}
+	description={pagesMetaData.main.description}
 >
 	<main>
 		{

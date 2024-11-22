@@ -1,24 +1,23 @@
 ---
 import '@fontsource-variable/league-spartan';
-
-import Header from "../components/header/index.astro"
-
-interface Props {
-	title: string;
-  description: string;
-}
+import { getSiteMetaData } from '../utils/content-loader';
+import Header from "../components/header/index.astro";
 
 const { title, description } = Astro.props;
+
+const siteMetaData = await getSiteMetaData();
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={siteMetaData.defaultLanguage}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content={description}>
 		<meta name="viewport" content="width=device-width" />
+		<meta name="author" content={siteMetaData.author} />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		<link rel="canonical" href={siteMetaData.domain} />
 		<title>{title}</title>
 	</head>
 	<body>

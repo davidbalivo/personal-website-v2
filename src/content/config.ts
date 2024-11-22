@@ -1,5 +1,20 @@
 import { z, defineCollection } from 'astro:content';
 
+const siteMetadata = defineCollection({
+  type: 'data',
+  schema: z.object({
+    site: z.object({
+      defaultLanguage: z.string().default('en'),
+      author: z.string(),
+      domain: z.string(),
+    }),
+    pages: z.record(z.string(), z.object({
+      title: z.string(),
+      description: z.string(),
+    })),
+  }),
+})
+
 const section = defineCollection({
   type: 'data',
   schema: z.array(
@@ -86,6 +101,7 @@ const about = defineCollection({
 })
 
 export const collections = {
+  'site-metadata': siteMetadata,
   section,
   hero,
   'social-links': socialLinks,
