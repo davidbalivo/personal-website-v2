@@ -19,7 +19,7 @@ export interface SectionContent {
   display: {
     showTitle: boolean;
     showInNav: boolean;
-  },
+  };
   component: string;
   order: number;
   class?: string;
