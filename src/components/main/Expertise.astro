@@ -1,13 +1,8 @@
 ---
-import { getCollection } from 'astro:content';
+import { getExpertise } from "../../utils/content-loader";
+import type { ExpertiseContent } from "../../types";
 
-interface ExpertiseContent {
-  src: string;
-  alt: string;
-  text: string;
-}
-
-const content: ExpertiseContent[] = (await getCollection('expertise'))[0].data;
+const content: ExpertiseContent[] = await getExpertise();
 ---
 <div class="grid grid-cols-2 md:grid-cols-5 gap-10">
   { content.map((expertise: ExpertiseContent) => (

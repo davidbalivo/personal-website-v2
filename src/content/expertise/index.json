@@ -2,51 +2,61 @@
   {
     "src": "/icons/cloud.svg",
     "alt": "cloud",
-    "text": "Cloud"
+    "text": "Cloud",
+    "order": 1
   },
   {
     "src": "/icons/ai-ml.svg",
     "alt": "ai-ml",
-    "text": "AI/ML"
+    "text": "AI/ML",
+    "order": 2
   },
   {
     "src": "/icons/serverless.svg",
     "alt": "serverless",
-    "text": "Serverless"
+    "text": "Serverless",
+    "order": 3
   },
   {
     "src": "/icons/containerization.svg",
     "alt": "containerization",
-    "text": "Containerization"
+    "text": "Containerization",
+    "order": 4
   },
   {
     "src": "/icons/micro-services.svg",
     "alt": "micro-services",
-    "text": "Micro-services"
+    "text": "Micro-services",
+    "order": 5
   },
   {
     "src": "/icons/devops.svg",
     "alt": "devops",
-    "text": "DevOps"
+    "text": "DevOps",
+    "order": 6
   },
   {
     "src": "/icons/databases.svg",
     "alt": "databases",
-    "text": "Databases"
+    "text": "Databases",
+    "order": 7
   },
   {
     "src": "/icons/python.svg",
     "alt": "python",
-    "text": "Python"
+    "text": "Python",
+    "order": 8
   },
   {
     "src": "/icons/typescript.svg",
     "alt": "typescript",
-    "text": "Typescript"
+    "text": "Typescript",
+    "order": 9
   },
   {
     "src": "/icons/javascript.svg",
     "alt": "javascript",
-    "text": "Javascript"
+    "text": "Javascript",
+    "order": 10
   }
 ]

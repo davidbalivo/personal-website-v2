@@ -53,10 +53,17 @@ export interface ExperienceContent {
   order: number;
   date: string;
   titleLong: string;
-  titleShort: string;
+  titleShort?: string;
   company: string;
   descriptionShort: string;
   descriptionLong: string;
   stackShort: string[];
   stackLong: string[];
+}
+
+export interface ExpertiseContent {
+  src: string;
+  alt: string;
+  text: string;
+  oreder: number;
 }
