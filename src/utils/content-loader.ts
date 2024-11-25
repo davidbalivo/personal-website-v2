@@ -1,4 +1,4 @@
-import { getEntry, getCollection, render } from "astro:content";
+import { getEntry, getCollection, render, type ContentEntryMap } from "astro:content";
 import { generateNavigation } from "./navigation";
 import type {
   SiteMetadataContent,
@@ -35,6 +35,14 @@ const sortCollectionByOrder = (collection: Array<any>) =>{
   }
 }
 
+type RenderableContentTypes = HeroContent | AboutContent;
+
+const getEntryAndRenderContent = async <T extends RenderableContentTypes>(type: keyof ContentEntryMap): Promise<T> => {
+  const entry = await getEntry(type, 'index');
+  const { Content: Bio } = await render(entry);
+  return { ...entry.data, Bio } as T;
+}
+
 export const getSections = async (): Promise<SectionContent[]> => (
   sortCollectionByOrder((await getEntry('section', 'index')).data)
 )
@@ -43,11 +51,9 @@ export const getNavigation = async (): Promise<NavigationContent[]> => (
   (generateNavigation(await getSections()))
 )
 
-export const getHeroContent = async(): Promise<HeroContent> => {
-  const heroEntry = await getEntry('hero', 'index')
-  const { Content: Bio } = await render(heroEntry)
-  return { ...heroEntry.data, Bio }
-}
+export const getHeroContent = async(): Promise<HeroContent> => (
+  getEntryAndRenderContent('hero')
+)
 
 export const getSocialLinks = async (): Promise<SocialLinksContent> => (
   (await getEntry('social-links', 'index')).data
@@ -64,9 +70,6 @@ export const getExpertise = async (): Promise<ExpertiseContent[]> => (
 export const getEducation = async (): Promise<EducationContent[]> => (
   sortCollectionByOrder((await getEntry('education', 'index')).data)
 )
-
-export const getAbout = async (): Promise<AboutContent> => {
- const aboutEntry = await getEntry('about', 'index')
- const { Content: Bio } = await render(aboutEntry)
- return { ...aboutEntry.data, Bio }
-}
+export const getAbout = async (): Promise<AboutContent> => (
+  getEntryAndRenderContent('about')
+)
