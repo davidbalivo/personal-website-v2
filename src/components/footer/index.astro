@@ -3,8 +3,8 @@ import SocialIconLink from '../common/SocialIconLink.astro';
 import GithubIcon from '../icons/solid/Github.astro';
 import LinkedinIcon from '../icons/solid/Linkedin.astro';
 import EmailIcon from '../icons/solid/Email.astro';
-import { getSocialLinks } from '../../utils/content-loader';
-import type { SocialLinksContent } from '../../types';
+import { getSocialLinks } from '@/utils/content-loader';
+import type { SocialLinksContent } from '@/types';
 
 const content: SocialLinksContent = await getSocialLinks();
 

@@ -1,10 +1,10 @@
 import { getSections } from './content-loader';
-import Hero from '../components/main/Hero.astro';
-import About from '../components/main/About.astro';
-import Footer from '../components/footer/index.astro';
-import Experience from '../components/main/Experience.astro';
-import Education from '../components/main/Education.astro';
-import Expertise from '../components/main/Expertise.astro';
+import Hero from '@/components/main/Hero.astro';
+import About from '@/components/main/About.astro';
+import Footer from '@/components/footer/index.astro';
+import Experience from '@/components/main/Experience.astro';
+import Education from '@/components/main/Education.astro';
+import Expertise from '@/components/main/Expertise.astro';
 import type { SectionContent, PageSectionContent } from '../types';
 
 const COMPONENT_MAP = {

@@ -11,7 +11,7 @@ import type {
   ExpertiseContent,
   EducationContent,
   AboutContent,
-} from '../types';
+} from '@/types';
 
 export const getSiteMetaData = async (): Promise<SiteMetadataContent> => {
   return (await getEntry('site-metadata', 'index')).data.site;

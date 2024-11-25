@@ -1,6 +1,6 @@
 ---
-import { getAbout } from '../../utils/content-loader';
-import type { AboutContent } from '../../types';
+import { getAbout } from '@/utils/content-loader';
+import type { AboutContent } from '@/types';
 
 const { Bio, ...content }: AboutContent = await getAbout();
 ---
