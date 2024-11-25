@@ -3,6 +3,11 @@ import '@fontsource-variable/league-spartan';
 import { getSiteMetaData } from '../utils/content-loader';
 import Header from "../components/header/index.astro";
 
+interface Props {
+	title: string;
+	description: string;
+}
+
 const { title, description } = Astro.props;
 
 const siteMetaData = await getSiteMetaData();
@@ -21,7 +26,7 @@ const siteMetaData = await getSiteMetaData();
 		<title>{title}</title>
 	</head>
 	<body>
-		<!-- TODO : make the gradient ocupy the whole screen -->
+		<!-- TODO : make the gradient occupy the whole screen -->
     <div class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_70%_at_50%_-20%,rgba(1,150,190,.6),rgba(1,255,255,0))]" />
 		<slot />
     <Header />
