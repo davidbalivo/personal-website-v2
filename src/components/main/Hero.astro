@@ -1,10 +1,10 @@
 ---
-import SocialIconLink from '../common/SocialIconLink.astro';
-import GithubIcon from '../icons/regular/Github.astro';
-import LinkedinIcon from '../icons/regular/Linkedin.astro';
-import EmailIcon from '../icons/regular/Email.astro';
 import type { HeroContent, SocialLinksContent } from '@/types';
 import { getHeroContent, getSocialLinks } from '@/utils/content-loader';
+import SocialIconLink from '../common/SocialIconLink.astro';
+import EmailIcon from '../icons/regular/Email.astro';
+import GithubIcon from '../icons/regular/Github.astro';
+import LinkedinIcon from '../icons/regular/Linkedin.astro';
 
 const { Bio, ...content }: HeroContent = await getHeroContent();
 const socialLinks: SocialLinksContent = await getSocialLinks();

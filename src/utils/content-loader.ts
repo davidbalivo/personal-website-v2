@@ -1,17 +1,17 @@
-import { getEntry, getCollection, render, type ContentEntryMap } from 'astro:content';
-import { generateNavigation } from './navigation';
 import type {
-  SiteMetadataContent,
-  PagesMetadataContent,
-  SectionContent,
-  NavigationContent,
-  HeroContent,
-  SocialLinksContent,
+  AboutContent,
+  EducationContent,
   ExperienceContent,
   ExpertiseContent,
-  EducationContent,
-  AboutContent,
+  HeroContent,
+  NavigationContent,
+  PagesMetadataContent,
+  SectionContent,
+  SiteMetadataContent,
+  SocialLinksContent,
 } from '@/types';
+import { getCollection, getEntry, render, type ContentEntryMap } from 'astro:content';
+import { generateNavigation } from './navigation';
 
 export const getSiteMetaData = async (): Promise<SiteMetadataContent> => {
   return (await getEntry('site-metadata', 'index')).data.site;

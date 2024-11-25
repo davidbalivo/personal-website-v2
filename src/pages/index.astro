@@ -1,9 +1,9 @@
 ---
-import Layout from '@/layouts/Layout.astro';
 import SectionContainer from '@/components/common/SectionContainer.astro';
-import { getPageMainSections } from '@/utils/page-main';
+import Layout from '@/layouts/Layout.astro';
+import type { PageSectionContent, PagesMetadataContent } from '@/types';
 import { getPagesMetaData } from '@/utils/content-loader';
-import type { PagesMetadataContent, PageSectionContent } from '@/types';
+import { getPageMainSections } from '@/utils/page-main';
 
 const pagesMetaData: PagesMetadataContent = await getPagesMetaData();
 const sections: PageSectionContent[] = await getPageMainSections();
