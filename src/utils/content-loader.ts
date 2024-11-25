@@ -1,12 +1,12 @@
 import { getEntry, render } from "astro:content";
 import { generateNavigation } from "./navigation";
-import type { SiteMetadata, PagesMetadata, Section, Navigation, HeroContent, SocialLinks } from "../types";
+import type { SiteMetadataContent, PagesMetadataContent, SectionContent, NavigationContent, HeroContent, SocialLinksContent } from "../types";
 
-export const getSiteMetaData = async (): Promise<SiteMetadata> => {
+export const getSiteMetaData = async (): Promise<SiteMetadataContent> => {
   return (await getEntry('site-metadata', 'index')).data.site;
 }
 
-export const getPagesMetaData = async (): Promise<PagesMetadata> => (
+export const getPagesMetaData = async (): Promise<PagesMetadataContent> => (
   (await getEntry('site-metadata', 'index')).data.pages
 )
 
@@ -24,11 +24,11 @@ const sortCollectionByOrder = (collection: Array<any>) =>{
   }
 }
 
-export const getSections = async (): Promise<Section[]> => (
+export const getSections = async (): Promise<SectionContent[]> => (
   sortCollectionByOrder((await getEntry('section', 'index')).data)
 )
 
-export const getNavigation = async (): Promise<Navigation[]> => (
+export const getNavigation = async (): Promise<NavigationContent[]> => (
   (generateNavigation(await getSections()))
 )
 
@@ -38,6 +38,6 @@ export const getHeroContent = async(): Promise<HeroContent> => {
   return { ...heroEntry.data, Bio }
 }
 
-export const getSocialLinks = async (): Promise<SocialLinks> => (
+export const getSocialLinks = async (): Promise<SocialLinksContent> => (
   (await getEntry('social-links', 'index')).data
 )

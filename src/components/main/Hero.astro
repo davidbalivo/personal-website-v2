@@ -3,11 +3,11 @@ import SocialIconLink from '../common/SocialIconLink.astro'
 import GithubIcon from '../icons/regular/Github.astro'
 import LinkedinIcon from '../icons/regular/Linkedin.astro'
 import EmailIcon from '../icons/regular/Email.astro'
-import type { HeroContent, SocialLinks } from '../../types';
+import type { HeroContent, SocialLinksContent } from '../../types';
 import { getHeroContent, getSocialLinks } from '../../utils/content-loader';
 
 const { Bio, ...content }: HeroContent = await getHeroContent();
-const socialLinks: SocialLinks = await getSocialLinks();
+const socialLinks: SocialLinksContent = await getSocialLinks();
 
 const socialIconLinkClass = "size-8 text-accent hover:trasnform transform transition-transform duration-500 hover:scale-110 hover:text-accent-light cursor-pointer";
 ---

@@ -1,19 +1,19 @@
 import type { AstroComponentFactory } from "astro/runtime/server/index.js";
 
-export interface SiteMetadata {
+export interface SiteMetadataContent {
   defaultLanguage: string;
   author: string;
   domain: string;
 }
 
-export interface PagesMetadata {
+export interface PagesMetadataContent {
   [key: string]: {
     title: string;
     description: string;
   };
 }
 
-export interface Section {
+export interface SectionContent {
   id: string;
   title: string;
   display: {
@@ -25,7 +25,12 @@ export interface Section {
   class?: string;
 }
 
-export interface Navigation {
+export interface PageSectionContent {
+  section: Section;
+  Component: AstroComponentFactory | null;
+}
+
+export interface NavigationContent {
   title: string;
   label: string;
   url: string;
@@ -38,7 +43,7 @@ export interface HeroContent {
   Bio: AstroComponentFactory;
 }
 
-export interface SocialLinks {
+export interface SocialLinksContent {
   linkedin: string;
   github: string;
   email: string;

@@ -1,13 +1,8 @@
 ---
 import { getNavigation } from "../../utils/content-loader";
+import type { NavigationContent } from "../../types";
 
-interface NavContent {
-  title: string;
-  label: string;
-  url: string;
-}
-
-const navigation: NavContent[] = await getNavigation();
+const navigation: NavigationContent[] = await getNavigation();
 ---
 
 <header class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2">
