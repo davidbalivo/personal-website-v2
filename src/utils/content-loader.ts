@@ -1,11 +1,14 @@
-import { getCollection, getEntry, type ContentEntryMap, type DataEntryMap } from "astro:content";
+import { getEntry, render } from "astro:content";
 import { generateNavigation } from "./navigation";
-import type { SiteMetadata, PagesMetadata, Section, Navigation } from "../types";
+import type { SiteMetadata, PagesMetadata, Section, Navigation, HeroContent, SocialLinks } from "../types";
 
-const getSingleEntryCollection = async (collection: keyof ContentEntryMap | keyof DataEntryMap) => {
-  const rawCollection: Array<any> = await getCollection(collection);
-  return sortCollectionByOrder(rawCollection[0].data);
+export const getSiteMetaData = async (): Promise<SiteMetadata> => {
+  return (await getEntry('site-metadata', 'index')).data.site;
 }
+
+export const getPagesMetaData = async (): Promise<PagesMetadata> => (
+  (await getEntry('site-metadata', 'index')).data.pages
+)
 
 const sortCollectionByOrder = (collection: Array<any>) =>{
   const fallback = collection;
@@ -21,18 +24,20 @@ const sortCollectionByOrder = (collection: Array<any>) =>{
   }
 }
 
-export const getSiteMetaData = async (): Promise<SiteMetadata> => {
-  return (await getEntry('site-metadata', 'index')).data.site;
-}
-
-export const getPagesMetaData = async (): Promise<PagesMetadata> => {
-  return (await getEntry('site-metadata', 'index')).data.pages;
-}
-
 export const getSections = async (): Promise<Section[]> => (
- await getSingleEntryCollection('section')
+  sortCollectionByOrder((await getEntry('section', 'index')).data)
 )
 
-export const getNavigation = async (): Promise<Navigation[]> => {
-  return generateNavigation(await getSections());
+export const getNavigation = async (): Promise<Navigation[]> => (
+  (generateNavigation(await getSections()))
+)
+
+export const getHeroContent = async(): Promise<HeroContent> => {
+  const heroEntry = await getEntry('hero', 'index')
+  const { Content: Bio } = await render(heroEntry)
+  return { ...heroEntry.data, Bio }
 }
+
+export const getSocialLinks = async (): Promise<SocialLinks> => (
+  (await getEntry('social-links', 'index')).data
+)

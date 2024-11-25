@@ -3,23 +3,14 @@ import SocialIconLink from '../common/SocialIconLink.astro'
 import GithubIcon from '../icons/regular/Github.astro'
 import LinkedinIcon from '../icons/regular/Linkedin.astro'
 import EmailIcon from '../icons/regular/Email.astro'
-import { getCollection, render } from 'astro:content';
-import type { SocialLink } from '../../types';
+import type { HeroContent, SocialLinks } from '../../types';
+import { getHeroContent, getSocialLinks } from '../../utils/content-loader';
 
-interface HeroContent {
-  name: string;
-  title: string;
-  image: string;
-}
-
-const rawCollection = await getCollection('hero');
-const content: HeroContent = rawCollection[0].data;
-const { Content: Bio } = await render(rawCollection[0]);
-const socialLinks: SocialLink = (await getCollection('social-links'))[0].data;
+const { Bio, ...content }: HeroContent = await getHeroContent();
+const socialLinks: SocialLinks = await getSocialLinks();
 
 const socialIconLinkClass = "size-8 text-accent hover:trasnform transform transition-transform duration-500 hover:scale-110 hover:text-accent-light cursor-pointer";
 ---
-
 <div class="w-full flex flex-row">
   <div class="flex flex-col w-1/2 justify-center space-y-5">
     <h1 class="text-4xl text-accent">{content.name}</h1>
