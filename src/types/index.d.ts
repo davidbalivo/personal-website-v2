@@ -67,3 +67,11 @@ export interface ExpertiseContent {
   text: string;
   oreder: number;
 }
+
+export interface EducationContent {
+  date: string;
+  type: string;
+  title: string;
+  institution: string;
+  order: number;
+}

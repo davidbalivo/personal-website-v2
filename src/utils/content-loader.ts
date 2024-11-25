@@ -8,7 +8,8 @@ import type {
   HeroContent,
   SocialLinksContent,
   ExperienceContent,
-  ExpertiseContent
+  ExpertiseContent,
+  EducationContent
 } from "../types";
 
 export const getSiteMetaData = async (): Promise<SiteMetadataContent> => {
@@ -57,4 +58,8 @@ export const getExperience = async (): Promise<ExperienceContent[]> => (
 
 export const getExpertise = async (): Promise<ExpertiseContent[]> => (
   sortCollectionByOrder((await getEntry('expertise', 'index')).data)
+)
+
+export const getEducation = async (): Promise<EducationContent[]> => (
+  sortCollectionByOrder((await getEntry('education', 'index')).data)
 )
