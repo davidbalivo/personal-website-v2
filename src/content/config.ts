@@ -8,12 +8,15 @@ const siteMetadata = defineCollection({
       author: z.string(),
       domain: z.string(),
     }),
-    pages: z.record(z.string(), z.object({
-      title: z.string(),
-      description: z.string(),
-    })),
+    pages: z.record(
+      z.string(),
+      z.object({
+        title: z.string(),
+        description: z.string(),
+      }),
+    ),
   }),
-})
+});
 
 const section = defineCollection({
   type: 'data',
@@ -28,9 +31,9 @@ const section = defineCollection({
       component: z.string(),
       order: z.number(),
       class: z.string().optional(),
-    })
-  )
-})
+    }),
+  ),
+});
 
 const hero = defineCollection({
   type: 'content',
@@ -38,8 +41,8 @@ const hero = defineCollection({
     name: z.string(),
     title: z.string(),
     image: z.string(),
-  })
-})
+  }),
+});
 
 const socialLinks = defineCollection({
   type: 'data',
@@ -47,8 +50,8 @@ const socialLinks = defineCollection({
     linkedin: z.string().url(),
     github: z.string().url(),
     email: z.string().url(),
-  })
-})
+  }),
+});
 
 const experience = defineCollection({
   type: 'content',
@@ -62,7 +65,7 @@ const experience = defineCollection({
     descriptionLong: z.string(),
     stackShort: z.array(z.string()),
     stackLong: z.array(z.string()),
-  })
+  }),
 });
 
 const expertise = defineCollection({
@@ -72,8 +75,9 @@ const expertise = defineCollection({
       src: z.string(),
       alt: z.string(),
       text: z.string(),
-  }))
-})
+    }),
+  ),
+});
 
 const education = defineCollection({
   type: 'data',
@@ -83,8 +87,9 @@ const education = defineCollection({
       type: z.string(),
       title: z.string(),
       institution: z.string(),
-  }))
-})
+    }),
+  ),
+});
 
 const about = defineCollection({
   type: 'content',
@@ -95,10 +100,10 @@ const about = defineCollection({
       z.object({
         img: z.string(),
         alt: z.string(),
-      })
+      }),
     ),
-  })
-})
+  }),
+});
 
 export const collections = {
   'site-metadata': siteMetadata,
@@ -108,5 +113,5 @@ export const collections = {
   experience,
   expertise,
   education,
-  about
-}
+  about,
+};

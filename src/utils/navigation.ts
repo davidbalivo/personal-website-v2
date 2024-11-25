@@ -1,4 +1,4 @@
-import type { SectionContent } from '../types'
+import type { SectionContent } from '../types';
 
 export const generateNavigation = (sections: SectionContent[]) => {
   return sections

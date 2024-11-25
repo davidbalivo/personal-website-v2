@@ -5,38 +5,29 @@ titleLong: 'Lead Mobile Developer'
 company: 'Twibex35'
 descriptionShort: 'Led mobile development of a financial app from scratch to help users save and invest in the stock market. Oversaw the entire development lifecycle, including architecture design, coding, and deployment'
 descriptionLong: '<p><span class="text-primary">Led mobile development</span> of a financial app from scratch to help users save and invest in the stock market. Oversaw the entire <span class="text-primary">development lifecycle</span>, including <span class="text-primary">architecture design</span>, <span class="text-primary">coding</span>, and <span class="text-primary">deployment</span>. <span class="text-primary">Collaborated</span> with <span class="text-primary">stakeholders</span> to define key features and ensure the app met user needs while adhering to industry standards and best practices</p>'
-stackShort: [
-  'Android',
-  'iOS',
-  'Java',
-  'Objective-C',
-  'Kotlin',
-  'Swift',
-  'CI/CD',
-  'Testing',
-  'Github',
-  'Trello'
-]
-stackLong: [
-  'Android',
-  'iOS',
-  'Java',
-  'Objective-C',
-  'Kotlin',
-  'Swift',
-  'Gradle',
-  'CocoaPods',
-  'ProGuard',
-  'SwiftShield',
-  'Jenkins',
-  'JUnit',
-  'Espresso',
-  'XCTest',
-  'SonarQube',
-  'Github',
-  'Trello'
-]
+stackShort: ['Android', 'iOS', 'Java', 'Objective-C', 'Kotlin', 'Swift', 'CI/CD', 'Testing', 'Github', 'Trello']
+stackLong:
+  [
+    'Android',
+    'iOS',
+    'Java',
+    'Objective-C',
+    'Kotlin',
+    'Swift',
+    'Gradle',
+    'CocoaPods',
+    'ProGuard',
+    'SwiftShield',
+    'Jenkins',
+    'JUnit',
+    'Espresso',
+    'XCTest',
+    'SonarQube',
+    'Github',
+    'Trello',
+  ]
 ---
+
 <p>
   <ul>
     <li><span class="text-primary">Led the architecture and design</span> of a financial app from scratch, ensuring scalability, performance, and maintainability</li>

@@ -1,18 +1,18 @@
 ---
-import SocialIconLink from '../common/SocialIconLink.astro'
-import GithubIcon from '../icons/solid/Github.astro'
-import LinkedinIcon from '../icons/solid/Linkedin.astro'
-import EmailIcon from '../icons/solid/Email.astro'
-import { getSocialLinks } from '../../utils/content-loader'
+import SocialIconLink from '../common/SocialIconLink.astro';
+import GithubIcon from '../icons/solid/Github.astro';
+import LinkedinIcon from '../icons/solid/Linkedin.astro';
+import EmailIcon from '../icons/solid/Email.astro';
+import { getSocialLinks } from '../../utils/content-loader';
 import type { SocialLinksContent } from '../../types';
 
 const content: SocialLinksContent = await getSocialLinks();
 
-const socialIconLinkClass = "text-4xl hover:text-accent cursor-pointer duration-500 hover:scale-110";
+const socialIconLinkClass = 'text-4xl hover:text-accent cursor-pointer duration-500 hover:scale-110';
 ---
 
 <div class="flex flex-row justify-between">
-  <SocialIconLink href={content.github} class={socialIconLinkClass}><GithubIcon  class="size-10" /></SocialIconLink>
+  <SocialIconLink href={content.github} class={socialIconLinkClass}><GithubIcon class="size-10" /></SocialIconLink>
   <SocialIconLink href={content.linkedin} class={socialIconLinkClass}><LinkedinIcon class="size-10" /></SocialIconLink>
   <SocialIconLink href={content.email} class={socialIconLinkClass}><EmailIcon class="size-10" /></SocialIconLink>
 </div>

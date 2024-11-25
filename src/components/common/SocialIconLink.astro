@@ -4,14 +4,9 @@ interface Props {
   class?: string;
 }
 
-const { href, class: className } = Astro.props
+const { href, class: className } = Astro.props;
 ---
 
-<a
-  href={href}
-  target="_blank"
-  rel="noopener noreferrer"
-  class={className}
->
+<a href={href} target="_blank" rel="noopener noreferrer" class={className}>
   <slot />
 </a>

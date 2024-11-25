@@ -5,46 +5,38 @@ titleLong: 'Technical Lead'
 company: 'Freekik'
 descriptionShort: 'Played a key role in the full-cycle development of a Football Social Network, supporting the CTO in building the engineering team, defining the technical architecture, and collaborating with stakeholders'
 descriptionLong: '<p><span class="text-primary">Played a key role</span> in the <span class="text-primary">full-cycle development</span> of a Football Social Network mobile app, leveraging cloud technologies to create a <span class="text-primary">scalable</span> and <span class="text-primary">robust platform</span>. <span class="text-primary">Supported</span> the CTO in <span class="text-primary">building the engineering team</span> from the ground up, assisting with <span class="text-primary">technical architecture</span> and enabling the team to deliver a <span class="text-primary">feature-rich experience</span> for football enthusiasts</p>'
-stackShort: [
-  'Cloud',
-  'Micro-services',
-  'Serverless',
-  'React Native',
-  'JavaScript',
-  'Node.js',
-  'Testing',
-  'CI/CD',
-  'Agile'
-]
+stackShort:
+  ['Cloud', 'Micro-services', 'Serverless', 'React Native', 'JavaScript', 'Node.js', 'Testing', 'CI/CD', 'Agile']
 stackLong: [
-  'Micro-services',
-  'Serverless',
-  'React Native',
-  'Android',
-  'iOS',
-  'Redux',
-  'Node.js',
-  'Express',
-  'MongoDB',
-  'Lambda',
-  'Elastic Transcoder',
-  'API Gateway',
-  'S3',
-  'SNS',
-  'CloudFront',
-  'IAM',
-  'CloudWatch',
-  'Jest',
-  'Enzyme',
-  'Mocha',
-  'Chai',
-  'Jenkins',
-  SonarQube'
-  'Bitbucket',
-  'Jira',
-  'Confluence'
-]
+    'Micro-services',
+    'Serverless',
+    'React Native',
+    'Android',
+    'iOS',
+    'Redux',
+    'Node.js',
+    'Express',
+    'MongoDB',
+    'Lambda',
+    'Elastic Transcoder',
+    'API Gateway',
+    'S3',
+    'SNS',
+    'CloudFront',
+    'IAM',
+    'CloudWatch',
+    'Jest',
+    'Enzyme',
+    'Mocha',
+    'Chai',
+    'Jenkins',
+    SonarQube'
+    'Bitbucket',
+    'Jira',
+    'Confluence',
+  ]
 ---
+
 <p>
   <ul>
     <li>Partnered with CTO, Product, and Marketing teams to <span class="text-primary">translate business needs into technical requirements</span></li>

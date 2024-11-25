@@ -1,19 +1,15 @@
 ---
-import { getNavigation } from "../../utils/content-loader";
-import type { NavigationContent } from "../../types";
+import { getNavigation } from '../../utils/content-loader';
+import type { NavigationContent } from '../../types';
 
 const navigation: NavigationContent[] = await getNavigation();
 ---
 
-<header class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2">
-  <nav class="flex px-3 text-sm rounded-full text-primary">
+<header class="fixed top-0 z-10 mx-auto mt-2 flex w-full items-center justify-center">
+  <nav class="flex rounded-full px-3 text-sm text-primary">
     {
       navigation.map((item) => (
-        <a
-          class="nav-link"
-          aria-label={item.label}
-          href={item.url}
-        >
+        <a class="nav-link" aria-label={item.label} href={item.url}>
           {item.title}
         </a>
       ))
@@ -29,7 +25,7 @@ const navigation: NavigationContent[] = await getNavigation();
   }
 
   nav {
-    @apply bg-gray-800/90
+    @apply bg-gray-800/90;
   }
 
   @keyframes nav-shadown {
@@ -37,17 +33,17 @@ const navigation: NavigationContent[] = await getNavigation();
       @apply bg-gray-800/0;
     }
     to {
-      @apply shadow-lg ring-1 backdrop-blur ring-white/10;
+      @apply shadow-lg ring-1 ring-white/10 backdrop-blur;
     }
   }
 
   .nav-link {
-    @apply relative block p-2 transition hover:text-accent
+    @apply relative block p-2 transition hover:text-accent;
   }
 
   .nav-link::after {
     content: '';
-    @apply absolute left-1/2 bottom-2 h-px w-0 bg-accent transition-all duration-500 ease-in-out;
+    @apply absolute bottom-2 left-1/2 h-px w-0 bg-accent transition-all duration-500 ease-in-out;
     transform: translateX(-50%);
   }
 

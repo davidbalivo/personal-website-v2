@@ -1,40 +1,39 @@
 ---
-import { getAbout } from "../../utils/content-loader";
-import type { AboutContent } from "../../types";
+import { getAbout } from '../../utils/content-loader';
+import type { AboutContent } from '../../types';
 
-const { Bio, ...content}: AboutContent = await getAbout();
+const { Bio, ...content }: AboutContent = await getAbout();
 ---
 
-<div class="w-full flex flex-row">
-  <div class="flex flex-col w-1/2 justify-center space-y-12">
-    <div class="grid grid-cols-1 gap-2 lg:grid-cols-4 sm:grid-cols-2 items-center">
-      { content.skills.map((skill) => (
-        <div class="py-1 text-center text-accent border border-white/10 rounded-full text-sm">{skill}</div>
-      ))}
+<div class="flex w-full flex-row">
+  <div class="flex w-1/2 flex-col justify-center space-y-12">
+    <div class="grid grid-cols-1 items-center gap-2 sm:grid-cols-2 lg:grid-cols-4">
+      {
+        content.skills.map((skill) => (
+          <div class="rounded-full border border-white/10 py-1 text-center text-sm text-accent">{skill}</div>
+        ))
+      }
     </div>
-    <div class="grid grid-cols-2 gap-2 lg:grid-cols-6 sm:grid-cols-3">
-      { content.hobbies.map((hobby) => (
-        <div class="flex justify-center"><img src={hobby.img} alt={hobby.alt} class="size-10 items-center justify-center"/></div>
-      ))
-
+    <div class="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-6">
+      {
+        content.hobbies.map((hobby) => (
+          <div class="flex justify-center">
+            <img src={hobby.img} alt={hobby.alt} class="size-10 items-center justify-center" />
+          </div>
+        ))
       }
     </div>
     <div class="text-lg text-secondary"><Bio /></div>
   </div>
   <div class="ml-auto">
-      <div class="overflow-hidden rounded-b-full flex h-full items-center">
-        <img
-          class="image-shadow w-[206px] h-[300px]"
-          src={content.image}
-          alt="about"
-        />
-      </div>
+    <div class="flex h-full items-center overflow-hidden rounded-b-full">
+      <img class="image-shadow h-[300px] w-[206px]" src={content.image} alt="about" />
     </div>
   </div>
 </div>
 
 <style>
   .image-shadow {
-    filter: drop-shadow(-5px 2px 1px #0296BE30) contrast(110%);
+    filter: drop-shadow(-5px 2px 1px #0296be30) contrast(110%);
   }
 </style>

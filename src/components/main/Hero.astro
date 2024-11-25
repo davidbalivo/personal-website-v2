@@ -1,35 +1,37 @@
 ---
-import SocialIconLink from '../common/SocialIconLink.astro'
-import GithubIcon from '../icons/regular/Github.astro'
-import LinkedinIcon from '../icons/regular/Linkedin.astro'
-import EmailIcon from '../icons/regular/Email.astro'
+import SocialIconLink from '../common/SocialIconLink.astro';
+import GithubIcon from '../icons/regular/Github.astro';
+import LinkedinIcon from '../icons/regular/Linkedin.astro';
+import EmailIcon from '../icons/regular/Email.astro';
 import type { HeroContent, SocialLinksContent } from '../../types';
 import { getHeroContent, getSocialLinks } from '../../utils/content-loader';
 
 const { Bio, ...content }: HeroContent = await getHeroContent();
 const socialLinks: SocialLinksContent = await getSocialLinks();
 
-const socialIconLinkClass = "size-8 text-accent hover:trasnform transform transition-transform duration-500 hover:scale-110 hover:text-accent-light cursor-pointer";
+const socialIconLinkClass =
+  'size-8 text-accent hover:trasnform transform transition-transform duration-500 hover:scale-110 hover:text-accent-light cursor-pointer';
 ---
-<div class="w-full flex flex-row">
-  <div class="flex flex-col w-1/2 justify-center space-y-5">
+
+<div class="flex w-full flex-row">
+  <div class="flex w-1/2 flex-col justify-center space-y-5">
     <h1 class="text-4xl text-accent">{content.name}</h1>
     <span class="text-2xl font-semibold">{content.title}</span>
-     <div class="text-lg text-secondary"><Bio /></div>
+    <div class="text-lg text-secondary"><Bio /></div>
     <div class="flex flex-row space-x-10">
-      <SocialIconLink href={socialLinks.linkedin} class={socialIconLinkClass}><LinkedinIcon class="size-8" /></SocialIconLink>
-      <SocialIconLink href={socialLinks.github} class={socialIconLinkClass}><GithubIcon class="size-8" /></SocialIconLink>
+      <SocialIconLink href={socialLinks.linkedin} class={socialIconLinkClass}
+        ><LinkedinIcon class="size-8" /></SocialIconLink
+      >
+      <SocialIconLink href={socialLinks.github} class={socialIconLinkClass}
+        ><GithubIcon class="size-8" /></SocialIconLink
+      >
       <SocialIconLink href={socialLinks.email} class={socialIconLinkClass}><EmailIcon class="size-8" /></SocialIconLink>
     </div>
   </div>
   <div class="w-1/2">
     <div class="flex h-full items-center">
-      <div class="overflow-hidden size-64 rounded-full bg-white/10 border border-accent/10 ml-auto">
-        <img
-          class="image-shadow h-full w-full"
-          src={content.image}
-          alt={content.name}
-        />
+      <div class="ml-auto size-64 overflow-hidden rounded-full border border-accent/10 bg-white/10">
+        <img class="image-shadow h-full w-full" src={content.image} alt={content.name} />
       </div>
     </div>
   </div>

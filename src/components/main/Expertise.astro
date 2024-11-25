@@ -1,14 +1,17 @@
 ---
-import { getExpertise } from "../../utils/content-loader";
-import type { ExpertiseContent } from "../../types";
+import { getExpertise } from '../../utils/content-loader';
+import type { ExpertiseContent } from '../../types';
 
 const content: ExpertiseContent[] = await getExpertise();
 ---
-<div class="grid grid-cols-2 md:grid-cols-5 gap-10">
-  { content.map((expertise: ExpertiseContent) => (
-    <div class="flex flex-col items-center">
-      <img src={expertise.src} class="size-14" alt={expertise.alt} />
-      <span class="text-sm text-secondary py-2">{expertise.text}</span>
-    </div>
-  ))}
+
+<div class="grid grid-cols-2 gap-10 md:grid-cols-5">
+  {
+    content.map((expertise: ExpertiseContent) => (
+      <div class="flex flex-col items-center">
+        <img src={expertise.src} class="size-14" alt={expertise.alt} />
+        <span class="py-2 text-sm text-secondary">{expertise.text}</span>
+      </div>
+    ))
+  }
 </div>

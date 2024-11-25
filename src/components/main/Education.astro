@@ -1,6 +1,6 @@
 ---
-import { getEducation } from "../../utils/content-loader";
-import type { EducationContent } from "../../types";
+import { getEducation } from '../../utils/content-loader';
+import type { EducationContent } from '../../types';
 
 interface EducationType {
   icon: string;
@@ -8,31 +8,34 @@ interface EducationType {
 }
 
 const educationTypeMap: Record<string, EducationType> = {
-  'certification': {
+  certification: {
     icon: '/icons/certification.svg',
-    alt: 'certification'
+    alt: 'certification',
   },
-  'diploma': {
+  diploma: {
     icon: '/icons/diploma.svg',
-    alt: 'diploma'
-  }
-}
+    alt: 'diploma',
+  },
+};
 
 const content: EducationContent[] = await getEducation();
 ---
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-  { content.map((education: EducationContent) => (
-    <div class="p-5">
-      <div class="flex flex-row items-center mb-2">
-        <img src={educationTypeMap[education.type].icon} class="size-4" alt={educationTypeMap[education.type].alt} />
-        <p class="text-secondary text-sm pl-2 pt-1">{education.date}</p>
+
+<div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+  {
+    content.map((education: EducationContent) => (
+      <div class="p-5">
+        <div class="mb-2 flex flex-row items-center">
+          <img src={educationTypeMap[education.type].icon} class="size-4" alt={educationTypeMap[education.type].alt} />
+          <p class="pl-2 pt-1 text-sm text-secondary">{education.date}</p>
+        </div>
+        <div>
+          <span class="text-lg font-semibold">{education.title}</span>
+        </div>
+        <div>
+          <span class="text-secondary">{education.institution}</span>
+        </div>
       </div>
-      <div>
-        <span class="text-lg font-semibold">{education.title}</span>
-      </div>
-      <div>
-        <span class="text-secondary">{education.institution}</span>
-      </div>
-    </div>
-  ))}
+    ))
+  }
 </div>

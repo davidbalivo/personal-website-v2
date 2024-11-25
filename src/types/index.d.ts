@@ -1,4 +1,4 @@
-import type { AstroComponentFactory } from "astro/runtime/server/index.js";
+import type { AstroComponentFactory } from 'astro/runtime/server/index.js';
 
 export interface SiteMetadataContent {
   defaultLanguage: string;

@@ -5,35 +5,26 @@ titleLong: 'Lead Android Developer'
 company: 'eLaboro'
 descriptionShort: 'Built from scratch an application for convenience stores, focusing on delivering a user-friendly and efficient solution tailored to their needs. This was my first experience leading a small team'
 descriptionLong: '<p><span class="text-primary">Built from scratch</span> an application for convenience stores, focusing on delivering a user-friendly and efficient solution tailored to their needs. Took <span class="text-primary">ownership</span> of the entire <span class="text-primary">development lifecycle</span>, from <span class="text-primary">architecture</span> and <span class="text-primary">design</span> to <span class="text-primary">implementation</span> and <span class="text-primary">deployment</span>. This was my <span class="text-primary">first experience leading a small team</span>, where I provided guidance, delegated tasks, and ensured the project’s timely delivery</p>'
-stackShort: [
-  'Mobile',
-  'Android',
-  'Java',
-  'SQLite',
-  'WebSocket',
-  'Gradle',
-  'ProGuard',
-  'Testing',
-  'Github',
-  'Trello'
-]
-stackLong: [
-  'Mobile',
-  'Android',
-  'Java',
-  'SQLite',
-  'Realm',
-  'WebSocket',
-  'RxJava',
-  'Gradle',
-  'Dagger',
-  'Flow',
-  'ProGuard',
-  'Testing',
-  'Github',
-  'Trello'
-]
+stackShort: ['Mobile', 'Android', 'Java', 'SQLite', 'WebSocket', 'Gradle', 'ProGuard', 'Testing', 'Github', 'Trello']
+stackLong:
+  [
+    'Mobile',
+    'Android',
+    'Java',
+    'SQLite',
+    'Realm',
+    'WebSocket',
+    'RxJava',
+    'Gradle',
+    'Dagger',
+    'Flow',
+    'ProGuard',
+    'Testing',
+    'Github',
+    'Trello',
+  ]
 ---
+
 <p>
   <ul>
     <li><span class="text-primary">Designed and developed</span> a mobile application for convenience stores from scratch, focusing on usability and efficiency</li>
