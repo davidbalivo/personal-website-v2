@@ -75,3 +75,13 @@ export interface EducationContent {
   institution: string;
   order: number;
 }
+
+export interface AboutContent {
+  image: string;
+  skills: string[];
+  hobbies: {
+    img: string;
+    alt: string;
+  }[];
+  Bio: AstroComponentFactory;
+}

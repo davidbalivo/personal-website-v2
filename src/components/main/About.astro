@@ -1,18 +1,8 @@
 ---
-import { getCollection, render } from 'astro:content';
+import { getAbout } from "../../utils/content-loader";
+import type { AboutContent } from "../../types";
 
-export interface AboutContent {
-  image: string;
-  skills: string[];
-  hobbies: {
-    img: string;
-    alt: string;
-  }[];
-}
-
-const rawCollection = await getCollection('about');
-const content: AboutContent = rawCollection[0].data;
-const { Content: Bio } = await render(rawCollection[0]);
+const { Bio, ...content}: AboutContent = await getAbout();
 ---
 
 <div class="w-full flex flex-row">
