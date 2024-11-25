@@ -48,3 +48,15 @@ export interface SocialLinksContent {
   github: string;
   email: string;
 }
+
+export interface ExperienceContent {
+  order: number;
+  date: string;
+  titleLong: string;
+  titleShort: string;
+  company: string;
+  descriptionShort: string;
+  descriptionLong: string;
+  stackShort: string[];
+  stackLong: string[];
+}

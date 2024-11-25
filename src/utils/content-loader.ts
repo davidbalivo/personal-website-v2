@@ -1,6 +1,14 @@
-import { getEntry, render } from "astro:content";
+import { getEntry, getCollection, render } from "astro:content";
 import { generateNavigation } from "./navigation";
-import type { SiteMetadataContent, PagesMetadataContent, SectionContent, NavigationContent, HeroContent, SocialLinksContent } from "../types";
+import type {
+  SiteMetadataContent,
+  PagesMetadataContent,
+  SectionContent,
+  NavigationContent,
+  HeroContent,
+  SocialLinksContent,
+  ExperienceContent,
+} from "../types";
 
 export const getSiteMetaData = async (): Promise<SiteMetadataContent> => {
   return (await getEntry('site-metadata', 'index')).data.site;
@@ -40,4 +48,8 @@ export const getHeroContent = async(): Promise<HeroContent> => {
 
 export const getSocialLinks = async (): Promise<SocialLinksContent> => (
   (await getEntry('social-links', 'index')).data
+)
+
+export const getExperience = async (): Promise<ExperienceContent[]> => (
+  sortCollectionByOrder((await getCollection('experience')).map((item) => item.data))
 )
