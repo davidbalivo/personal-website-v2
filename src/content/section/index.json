@@ -7,7 +7,8 @@
       "showInNav": true
     },
     "component": "Hero",
-    "order": 1
+    "order": 1,
+    "class": "pt-24 px-24"
   },
   {
     "id": "experience",
@@ -57,7 +58,6 @@
       "showTitle": true,
       "showInNav": true
     },
-    "order": 6,
-    "class": "px-24 pt-24 pb-12"
+    "order": 6
   }
 ]

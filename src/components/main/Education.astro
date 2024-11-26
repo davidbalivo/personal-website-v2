@@ -1,6 +1,6 @@
 ---
-import { getEducation } from '@/utils/content-loader';
 import type { EducationContent } from '@/types';
+import { getEducation } from '@/utils/content-loader';
 
 interface EducationType {
   icon: string;
@@ -21,7 +21,7 @@ const educationTypeMap: Record<string, EducationType> = {
 const content: EducationContent[] = await getEducation();
 ---
 
-<div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+<div class="grid grid-cols-2 gap-5 lg:grid-cols-4">
   {
     content.map((education: EducationContent) => (
       <div class="p-5">

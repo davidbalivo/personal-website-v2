@@ -8,7 +8,11 @@ interface Props {
 const { class: className = '', id, title } = Astro.props;
 ---
 
-<section id={id} data-section={id} class={`scroll-m-20 w-full mx-auto container max-w-7xl p-24 ${className}`}>
+<section
+  id={id}
+  data-section={id}
+  class={`scroll-m-20 w-full mx-auto container max-w-7xl md:px-24 px-12 py-12 ${className}`}
+>
   {title && <h2 class="mb-10 text-xl font-semibold">{title}</h2>}
   <slot />
 </section>
