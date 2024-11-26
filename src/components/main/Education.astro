@@ -21,21 +21,33 @@ const educationTypeMap: Record<string, EducationType> = {
 const content: EducationContent[] = await getEducation();
 ---
 
-<div class="grid grid-cols-2 gap-5 lg:grid-cols-4">
+<div class="custom:grid-cols-4 grid grid-cols-2 gap-5">
   {
-    content.map((education: EducationContent) => (
-      <div class="p-5">
-        <div class="mb-2 flex flex-row items-center">
-          <img src={educationTypeMap[education.type].icon} class="size-4" alt={educationTypeMap[education.type].alt} />
-          <p class="pl-2 pt-1 text-sm text-secondary">{education.date}</p>
+    content.map((education: EducationContent, index: number) => {
+      const isSecondHalf = index >= Math.ceil(content.length / 2);
+      const justifyClass = isSecondHalf ? 'custom:justify-end' : 'justify-start';
+
+      return (
+        <div class={`p-5 ${justifyClass}`}>
+          <div class={`mb-2 flex flex-row items-center ${justifyClass}`}>
+            <img
+              src={educationTypeMap[education.type].icon}
+              class="size-4"
+              alt={educationTypeMap[education.type].alt}
+            />
+            <p class="pl-2 pt-1 text-sm text-secondary">{education.date}</p>
+          </div>
+          <div class={`flex ${justifyClass}`}>
+            <span class="font-semibold text-secondary">{education.category}</span>
+          </div>
+          <div class={`flex ${justifyClass}`}>
+            <span class="font-semibold">{education.title}</span>
+          </div>
+          <div class={`flex ${justifyClass}`}>
+            <span class="text-secondary">{education.institution}</span>
+          </div>
         </div>
-        <div>
-          <span class="text-lg font-semibold">{education.title}</span>
-        </div>
-        <div>
-          <span class="text-secondary">{education.institution}</span>
-        </div>
-      </div>
-    ))
+      );
+    })
   }
 </div>

@@ -5,7 +5,7 @@ import { getExperience } from '@/utils/content-loader';
 const content: ExperienceContent[] = await getExperience();
 ---
 
-<div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+<div class="custom:grid-cols-2 grid grid-cols-1 gap-5">
   {
     content.map((experience: ExperienceContent) => (
       <div class="group/card overflow-hidden rounded-2xl duration-500 hover:scale-105 hover:cursor-pointer hover:bg-accent/5">
@@ -15,10 +15,10 @@ const content: ExperienceContent[] = await getExperience();
             <span class="pl-1 pt-1 text-sm text-secondary">{experience.date}</span>
           </div>
           <div class="mb-5 flex flex-row">
-            <div class="flex hidden items-center rounded-xl bg-white/5 p-4 lg:block">
+            <div class="custom:block hidden items-center rounded-xl bg-white/5 p-4">
               <img src="/icons/company.svg" class="size-6" alt="company" />
             </div>
-            <div class="w-full lg:pl-5">
+            <div class="custom:pl-5 w-full">
               <span class="pt-1 text-lg font-semibold">{experience.titleShort || experience.titleLong}</span>
               <div class="flex flex-row">
                 <span class="pt-1 text-accent">{experience.company}</span>

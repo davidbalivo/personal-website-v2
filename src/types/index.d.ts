@@ -71,6 +71,7 @@ export interface ExpertiseContent {
 export interface EducationContent {
   date: string;
   type: string;
+  category: string;
   title: string;
   institution: string;
   order: number;

@@ -1,4 +1,4 @@
-import { z, defineCollection } from 'astro:content';
+import { defineCollection, z } from 'astro:content';
 
 const siteMetadata = defineCollection({
   type: 'data',
@@ -85,6 +85,7 @@ const education = defineCollection({
     z.object({
       date: z.string(),
       type: z.string(),
+      category: z.string(),
       title: z.string(),
       institution: z.string(),
     }),
