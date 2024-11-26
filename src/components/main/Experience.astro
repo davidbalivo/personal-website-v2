@@ -5,7 +5,7 @@ import { getExperience } from '@/utils/content-loader';
 const content: ExperienceContent[] = await getExperience();
 ---
 
-<div class="custom:grid-cols-2 grid grid-cols-1 gap-5">
+<div class="ms:grid-cols-2 grid grid-cols-1 gap-5">
   {
     content.map((experience: ExperienceContent) => (
       <div class="group/card overflow-hidden rounded-2xl duration-500 hover:scale-105 hover:cursor-pointer hover:bg-accent/5">

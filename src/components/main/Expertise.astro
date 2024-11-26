@@ -9,8 +9,8 @@ const content: ExpertiseContent[] = await getExpertise();
   {
     content.map((expertise: ExpertiseContent) => (
       <div class="flex flex-col items-center">
-        <img src={expertise.src} class="custom:size-14 size-12" alt={expertise.alt} />
-        <span class="custom:text-sm py-2 text-xs text-secondary">{expertise.text}</span>
+        <img src={expertise.src} class="size-12 sm:size-14" alt={expertise.alt} />
+        <span class="py-2 text-xs text-secondary sm:text-sm">{expertise.text}</span>
       </div>
     ))
   }

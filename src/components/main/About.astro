@@ -7,14 +7,14 @@ const { Bio, ...content }: AboutContent = await getAbout();
 
 <div class="custom:flex-row flex w-full flex-col-reverse items-center">
   <div class="custom:w-2/3 custom:pt-0 flex w-full flex-col justify-center space-y-12 pt-10">
-    <div class="custom:grid-cols-4 grid grid-cols-2 items-center gap-2">
+    <div class="ms:grid-cols-4 grid grid-cols-2 items-center gap-2">
       {
         content.skills.map((skill) => (
           <div class="rounded-full border border-white/10 py-1 text-center text-sm text-accent">{skill}</div>
         ))
       }
     </div>
-    <div class="custom:grid-cols-6 grid grid-cols-3 gap-2">
+    <div class="ms:grid-cols-6 grid grid-cols-3 gap-2">
       {
         content.hobbies.map((hobby) => (
           <div class="flex justify-center">

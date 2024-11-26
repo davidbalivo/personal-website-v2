@@ -13,12 +13,12 @@ const socialIconLinkClass =
   'size-8 text-accent hover:trasnform transform transition-transform duration-500 hover:scale-110 hover:text-accent-light cursor-pointer';
 ---
 
-<div class="custom:flex-row flex w-full flex-col-reverse items-center">
-  <div class="custom:w-1/2 flex w-full flex-col justify-center space-y-5">
-    <h1 class="custom:pt-0 custom:text-left pt-10 text-center text-4xl text-accent">{content.name}</h1>
-    <span class="custom:text-left text-center text-2xl font-semibold">{content.title}</span>
+<div class="ms:flex-row flex w-full flex-col-reverse items-center">
+  <div class="ms:w-1/2 flex w-full flex-col justify-center space-y-5">
+    <h1 class="ms:pt-0 ms:text-left pt-10 text-center text-4xl text-accent">{content.name}</h1>
+    <span class="ms:text-left text-center text-2xl font-semibold">{content.title}</span>
     <div class="text-lg text-secondary"><Bio /></div>
-    <div class="custom:justify-start flex flex-row justify-center space-x-10">
+    <div class="ms:justify-start flex flex-row justify-center space-x-10">
       <SocialIconLink href={socialLinks.linkedin} class={socialIconLinkClass}>
         <LinkedinIcon class="size-8" />
       </SocialIconLink>
@@ -28,9 +28,9 @@ const socialIconLinkClass =
       <SocialIconLink href={socialLinks.email} class={socialIconLinkClass}><EmailIcon class="size-8" /></SocialIconLink>
     </div>
   </div>
-  <div class="custom:w-1/2 w-full">
-    <div class="custom:justify-end flex h-full items-center justify-center">
-      <div class="custom:size-64 size-48 overflow-hidden rounded-full border border-accent/10 bg-white/10">
+  <div class="ms:w-1/2 w-full">
+    <div class="ms:justify-end flex h-full items-center justify-center">
+      <div class="ms:size-64 size-48 overflow-hidden rounded-full border border-accent/10 bg-white/10">
         <img class="image-shadow h-full w-full" src={content.image} alt={content.name} />
       </div>
     </div>
