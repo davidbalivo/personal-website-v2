@@ -12,51 +12,63 @@
     "order": 2
   },
   {
+    "src": "/icons/infrastructure.svg",
+    "alt": "infrastructure",
+    "text": "Infrastructure",
+    "order": 3
+  },
+  {
+    "src": "/icons/security.svg",
+    "alt": "security",
+    "text": "Security",
+    "order": 4
+  },
+  {
     "src": "/icons/serverless.svg",
     "alt": "serverless",
     "text": "Serverless",
-    "order": 3
+    "order": 5
   },
   {
     "src": "/icons/containerization.svg",
     "alt": "containerization",
     "text": "Containerization",
-    "order": 4
+    "order": 6
   },
   {
     "src": "/icons/micro-services.svg",
     "alt": "micro-services",
     "text": "Micro-services",
-    "order": 5
+    "order": 7
   },
   {
     "src": "/icons/devops.svg",
     "alt": "devops",
     "text": "DevOps",
-    "order": 6
+    "order": 8
   },
   {
     "src": "/icons/databases.svg",
     "alt": "databases",
     "text": "Databases",
-    "order": 7
+    "order": 9
   },
   {
     "src": "/icons/python.svg",
     "alt": "python",
     "text": "Python",
-    "order": 8
+    "order": 10
   },
   {
     "src": "/icons/typescript.svg",
     "alt": "typescript",
     "text": "Typescript",
-    "order": 9
+    "order": 11
   },
   {
     "src": "/icons/javascript.svg",
     "alt": "javascript",
     "text": "Javascript",
-    "order": 10
+    "order": 12
   }
 ]
