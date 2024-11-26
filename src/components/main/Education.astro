@@ -21,11 +21,11 @@ const educationTypeMap: Record<string, EducationType> = {
 const content: EducationContent[] = await getEducation();
 ---
 
-<div class="custom:grid-cols-4 grid grid-cols-2 gap-5">
+<div class="lm:grid-cols-4 grid grid-cols-2 gap-5">
   {
     content.map((education: EducationContent, index: number) => {
       const isSecondHalf = index >= Math.ceil(content.length / 2);
-      const justifyClass = isSecondHalf ? 'custom:justify-end' : 'justify-start';
+      const justifyClass = isSecondHalf ? 'lm:justify-end' : 'justify-start';
 
       return (
         <div class={`p-5 ${justifyClass}`}>

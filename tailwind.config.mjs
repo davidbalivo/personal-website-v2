@@ -19,7 +19,7 @@ export default {
       },
       screens: {
         ms: '700px',
-        custom: '995px',
+        lm: '995px',
       },
     },
   },
