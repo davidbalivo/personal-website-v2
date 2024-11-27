@@ -1,6 +1,10 @@
 ---
 import type { ExperienceContent } from '@/types';
 import { getExperience } from '@/utils/content-loader';
+import IconText from '../common/IconText.astro';
+import Calendar from '../icons/regular/Calendar.astro';
+import Company from '../icons/regular/Company.astro';
+import Job from '../icons/regular/Job.astro';
 
 const content: ExperienceContent[] = await getExperience();
 ---
@@ -14,26 +18,39 @@ const content: ExperienceContent[] = await getExperience();
       >
         <div class="h-[1px] origin-center scale-x-0 transform-gpu bg-accent transition-transform duration-500 group-hover/card:scale-x-100" />
         <div class="p-5">
-          <div class="mb-2">
-            <span class="pl-1 pt-1 text-sm text-secondary">{experience.date}</span>
+          <div>
+            <IconText
+              Icon={Calendar}
+              text={experience.date}
+              iconClass="text-secondary"
+              iconSize="4"
+              textClass="text-sm text-secondary"
+            />
           </div>
-          <div class="mb-5 flex flex-row">
-            <div class="hidden items-center rounded-xl bg-white/5 p-4 lm:block">
-              <img src="/icons/company.svg" class="size-6" alt="company" />
-            </div>
-            <div class="w-full lm:pl-5">
-              <span class="pt-1 text-lg font-semibold">{experience.titleShort || experience.titleLong}</span>
-              <div class="flex flex-row">
-                <span class="pt-1 text-secondary">{experience.company}</span>
-              </div>
-            </div>
+          <div>
+            <IconText
+              Icon={Job}
+              text={experience.titleShort || experience.titleLong}
+              iconClass="text-primary"
+              iconSize="4"
+              textClass="text-lg font-semibold"
+            />
+          </div>
+          <div class="mb-5">
+            <IconText
+              Icon={Company}
+              text={experience.company}
+              iconClass="text-accent"
+              iconSize="4"
+              textClass="text-accent"
+            />
           </div>
           <div class="mb-5">
             <p class="text-secondary">{experience.descriptionShort}</p>
           </div>
           <div class="flex flex-wrap gap-2">
             {experience.stackShort.map((item) => (
-              <span class="rounded-full bg-white/5 px-4 py-1.5 text-sm text-accent">{item}</span>
+              <span class="rounded-full bg-accent px-4 py-1.5 text-sm">{item}</span>
             ))}
           </div>
         </div>

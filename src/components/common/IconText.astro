@@ -1,0 +1,21 @@
+---
+import type { AstroComponentFactory } from 'astro/runtime/server/index.js';
+
+export interface IconTextProps {
+  Icon: AstroComponentFactory;
+  text: string;
+  iconClass?: string;
+  iconSize?: string;
+  textClass?: string;
+  spaceX?: string;
+}
+
+const { Icon, text, iconClass = '', iconSize = '', textClass = '', spaceX = '2' } = Astro.props;
+---
+
+<div class={`flex flex-row items-center space-x-${spaceX}`}>
+  <div class={`${iconClass}`}>
+    <Icon class={`size-${iconSize}`} />
+  </div>
+  <span class={`pt-1 ${textClass}`}>{text}</span>
+</div>
