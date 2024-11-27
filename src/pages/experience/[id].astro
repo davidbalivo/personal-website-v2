@@ -31,7 +31,7 @@ const { Content } = await render(experience);
       <section>
         <div class="flex flex-row items-center space-x-2">
           <img src="/icons/calendar.svg" class="size-3" alt="calendar" />
-          <span class="text-gray-350 pt-1 text-sm">{date}</span>
+          <span class="pt-1 text-sm text-secondary">{date}</span>
         </div>
         <div class="flex flex-row items-center space-x-2">
           <img src="/icons/role.svg" class="size-4" alt="role" />
@@ -44,7 +44,7 @@ const { Content } = await render(experience);
       </section>
 
       <section>
-        <div class="text-lg text-gray-300"><p>{descriptionLong}</p></div>
+        <div class="text-lg text-secondary"><p>{descriptionLong}</p></div>
       </section>
 
       <section>
@@ -62,7 +62,7 @@ const { Content } = await render(experience);
           <img src="/icons/responsibilities.svg" class="size-5" alt="responsibilities" />
           <h2 class="pt-1 text-xl font-semibold">Responsibilities</h2>
         </div>
-        <div class="text-gray-350 text-lg">
+        <div class="text-lg text-secondary">
           <Content />
         </div>
       </section>

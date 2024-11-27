@@ -30,12 +30,12 @@ stackLong:
 
 <p>
   <ul>
-    <li><span class="text-gray-50">Led the architecture and design</span> of a financial app from scratch, ensuring scalability, performance, and maintainability</li>
-    <li><span class="text-gray-50">Oversaw the development lifecycle</span>, including coding, testing, debugging, and deployment to production</li>
-    <li><span class="text-gray-50">Collaborated with stakeholders</span> to gather requirements, define features, and ensure alignment with business objectives</li>
-    <li><span class="text-gray-50">Mentored and guided a small team</span> of developers, providing technical direction and support throughout the project</li>
-    <li><span class="text-gray-50">Implemented robust testing strategies</span>, including unit, integration, and end-to-end testing, to ensure app reliability</li>
-    <li><span class="text-gray-50">Optimized application performance</span> through profiling, refactoring, and efficient resource management</li>
-    <li><span class="text-gray-50">Maintained detailed documentation</span> of the development process, architectural decisions, and technical specifications for future reference</li>
+    <li><span class="text-primary">Led the architecture and design</span> of a financial app from scratch, ensuring scalability, performance, and maintainability</li>
+    <li><span class="text-primary">Oversaw the development lifecycle</span>, including coding, testing, debugging, and deployment to production</li>
+    <li><span class="text-primary">Collaborated with stakeholders</span> to gather requirements, define features, and ensure alignment with business objectives</li>
+    <li><span class="text-primary">Mentored and guided a small team</span> of developers, providing technical direction and support throughout the project</li>
+    <li><span class="text-primary">Implemented robust testing strategies</span>, including unit, integration, and end-to-end testing, to ensure app reliability</li>
+    <li><span class="text-primary">Optimized application performance</span> through profiling, refactoring, and efficient resource management</li>
+    <li><span class="text-primary">Maintained detailed documentation</span> of the development process, architectural decisions, and technical specifications for future reference</li>
   </ul>
 </p>

@@ -39,16 +39,16 @@ stackLong: [
 
 <p>
   <ul>
-    <li>Partnered with CTO, Product, and Marketing teams to <span class="text-gray-50">translate business needs into technical requirements</span></li>
-    <li>Collaborated with the CTO to define <span class="text-gray-50">architectural design</span> and <span class="text-gray-50">data modeling</span> for scalable solutions</li>
-    <li>Aligned <span class="text-gray-50">system architecture</span> with business goals</li>
-    <li><span class="text-gray-50">Oversaw agile software development</span> lifecycle using Scrum methodology</li>
-    <li><span class="text-gray-50">Developed</span> a React Native app and Node.js backend</li>
-    <li>Ensured <span class="text-gray-50">seamless integration</span> between frontend and backend systems</li>
-    <li><span class="text-gray-50">Facilitated development agile practices</span> such as daily stand-ups, sprint planning, and retrospectives for continuous improvement</li>
-    <li><span class="text-gray-50">Ensured timely delivery</span> of features aligned with business objectives</li>
-    <li><span class="text-gray-50">Supervised a team of 7 engineers</span>, managing scheduling, requirements, design, implementation, and testing</li>
-    <li>Participated in <span class="text-gray-50">recruitment processes</span>, including interviewing and evaluating candidates</li>
-    <li>Conducted <span class="text-gray-50">code reviews</span>, provided <span class="text-gray-50">mentorship</span>, and facilitated training for team members</li>
+    <li>Partnered with CTO, Product, and Marketing teams to <span class="text-primary">translate business needs into technical requirements</span></li>
+    <li>Collaborated with the CTO to define <span class="text-primary">architectural design</span> and <span class="text-primary">data modeling</span> for scalable solutions</li>
+    <li>Aligned <span class="text-primary">system architecture</span> with business goals</li>
+    <li><span class="text-primary">Oversaw agile software development</span> lifecycle using Scrum methodology</li>
+    <li><span class="text-primary">Developed</span> a React Native app and Node.js backend</li>
+    <li>Ensured <span class="text-primary">seamless integration</span> between frontend and backend systems</li>
+    <li><span class="text-primary">Facilitated development agile practices</span> such as daily stand-ups, sprint planning, and retrospectives for continuous improvement</li>
+    <li><span class="text-primary">Ensured timely delivery</span> of features aligned with business objectives</li>
+    <li><span class="text-primary">Supervised a team of 7 engineers</span>, managing scheduling, requirements, design, implementation, and testing</li>
+    <li>Participated in <span class="text-primary">recruitment processes</span>, including interviewing and evaluating candidates</li>
+    <li>Conducted <span class="text-primary">code reviews</span>, provided <span class="text-primary">mentorship</span>, and facilitated training for team members</li>
   </ul>
 </p>
