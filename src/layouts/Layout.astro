@@ -1,5 +1,4 @@
 ---
-import Header from '@/components/header/index.astro';
 import { getSiteMetaData } from '@/utils/content-loader';
 import '@fontsource-variable/league-spartan';
 
@@ -32,7 +31,6 @@ const siteMetaData = await getSiteMetaData();
     >
     </div>
     <slot />
-    <Header />
   </body>
 </html>
 <!-- TODO : add light mode -->
