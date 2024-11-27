@@ -16,6 +16,7 @@ export default {
           light: '#66C5E3',
         },
         background: '#0A0A0A',
+        'gray-350': '#B0B6C3',
       },
       screens: {
         ms: '700px',

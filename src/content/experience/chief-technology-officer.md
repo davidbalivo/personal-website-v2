@@ -4,7 +4,7 @@ date: '2018 - 2021'
 titleLong: 'Chief Technology Officer'
 company: 'ForFans Media'
 descriptionShort: 'Led the technology strategy and development of a data-driven platform and built a high-performing team to deliver a scalable solution for content analysis and personalized strategies'
-descriptionLong: '<p><span class="text-primary">Led the technology strategy</span> and <span class="text-primary">end-to-end development</span> of a <span class="text-primary">data-driven platform</span> from the ground up, designed to categorize and analyze content creators through <span class="text-primary">advanced analytics</span>. <span class="text-primary">Architected the design</span> and successfully <span class="text-primary">built</span> a high-performing <span class="text-primary">team</span>, delivering a <span class="text-primary">scalable solution</span> that enhanced decision-making and personalized content strategies</p>'
+descriptionLong: 'Led the technology strategy and end-to-end development of a data-driven platform from the ground up, designed to categorize and analyze content creators through advanced analytics. Architected the design and successfully built a high-performing team, delivering a scalable solution that enhanced decision-making and personalized content strategies'
 stackShort:
   ['Cloud', 'Big Data', 'Containerization', 'Serverless', 'Micro-services', 'IaC', 'Python', 'Typescript', 'CI/CD']
 stackLong:
@@ -55,15 +55,15 @@ stackLong:
 
 <p>
   <ul>
-    <li><span class="text-primary">Defined and implemented the technology strategy</span> to align with business goals, driving innovation and maintaining a competitive edge</li>
-    <li><span class="text-primary">Oversaw system architecture</span> and <span class="text-primary">data modeling</span> for <span class="text-primary">scalable</span>, <span class="text-primary">secure</span> solutions; made critical design and technology choices</li>
-    <li><span class="text-primary">Built and led engineering teams</span>, including recruiting, training, and fostering a culture of continuous improvement and innovation</li>
-    <li>Worked with product, marketing, and business teams to <span class="text-primary">turn business needs into technical requirements</span>, aligning the tech roadmap with company objectives</li>
-    <li><span class="text-primary">Managed development</span> using agile methodologies (Scrum), optimizing processes for efficiency and timely delivery</li>
-    <li><span class="text-primary">Maintained high coding standards</span> through code reviews and mentorship, fostering continuous learning and development</li>
-    <li>Set technical standards and managed risks, ensuring <span class="text-primary">compliance</span> and <span class="text-primary">security</span> across all technology practices</li>
-    <li>Oversaw technology <span class="text-primary">budgets</span> and <span class="text-primary">resource allocation</span>, maximizing ROI on tech investments</li>
-    <li>Built <span class="text-primary">relationships</span> with <span class="text-primary">vendors</span> and <span class="text-primary">stakeholders</span> to optimize resources and integrate third-party solutions</li>
-    <li>Adapted the <span class="text-primary">roadmap</span> to <span class="text-primary">evolving business priorities</span>, ensuring alignment with changing organizational goals</li>
+    <li><span class="text-gray-50">Defined and implemented the technology strategy</span> to align with business goals, driving innovation and maintaining a competitive edge</li>
+    <li><span class="text-gray-50">Oversaw system architecture</span> and <span class="text-gray-50">data modeling</span> for <span class="text-gray-50">scalable</span>, <span class="text-gray-50">secure</span> solutions; made critical design and technology choices</li>
+    <li><span class="text-gray-50">Built and led engineering teams</span>, including recruiting, training, and fostering a culture of continuous improvement and innovation</li>
+    <li>Worked with product, marketing, and business teams to <span class="text-gray-50">turn business needs into technical requirements</span>, aligning the tech roadmap with company objectives</li>
+    <li><span class="text-gray-50">Managed development</span> using agile methodologies (Scrum), optimizing processes for efficiency and timely delivery</li>
+    <li><span class="text-gray-50">Maintained high coding standards</span> through code reviews and mentorship, fostering continuous learning and development</li>
+    <li>Set technical standards and managed risks, ensuring <span class="text-gray-50">compliance</span> and <span class="text-gray-50">security</span> across all technology practices</li>
+    <li>Oversaw technology <span class="text-gray-50">budgets</span> and <span class="text-gray-50">resource allocation</span>, maximizing ROI on tech investments</li>
+    <li>Built <span class="text-gray-50">relationships</span> with <span class="text-gray-50">vendors</span> and <span class="text-gray-50">stakeholders</span> to optimize resources and integrate third-party solutions</li>
+    <li>Adapted the <span class="text-gray-50">roadmap</span> to <span class="text-gray-50">evolving business priorities</span>, ensuring alignment with changing organizational goals</li>
   </ul>
 </p>

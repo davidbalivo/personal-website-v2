@@ -43,15 +43,17 @@ const siteMetaData = await getSiteMetaData();
     background: #0a0a0a;
     scroll-behavior: smooth;
   }
-  code {
-    font-family:
-      Menlo,
-      Monaco,
-      Lucida Console,
-      Liberation Mono,
-      DejaVu Sans Mono,
-      Bitstream Vera Sans Mono,
-      Courier New,
-      monospace;
+  ul {
+    list-style-type: disc;
+    margin-left: 0.6rem;
+  }
+  li {
+    margin-bottom: 2rem;
+    padding-left: 0.35rem;
+  }
+  li::marker {
+    content: '✔︎';
+    color: #0296be;
+    font-size: 0.6rem;
   }
 </style>

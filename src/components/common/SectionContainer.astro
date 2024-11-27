@@ -1,11 +1,11 @@
 ---
 interface Props {
-  id: string;
+  id?: string;
   class?: string;
   title?: string;
 }
 
-const { class: className = '', id, title } = Astro.props;
+const { class: className = '', id = null, title } = Astro.props;
 ---
 
 <section

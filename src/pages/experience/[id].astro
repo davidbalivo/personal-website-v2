@@ -1,0 +1,77 @@
+---
+import SectionContainer from '@/components/common/SectionContainer.astro';
+import Layout from '@/layouts/Layout.astro';
+import { getCollection, render } from 'astro:content';
+
+export const getStaticPaths = async () => {
+  const collection = await getCollection('experience');
+  return collection.map((experience) => ({
+    params: { id: experience.slug },
+    props: { experience },
+  }));
+};
+
+const { experience } = Astro.props;
+const { data } = experience;
+const { date, titleLong, company, descriptionLong, stackLong } = data;
+const { Content } = await render(experience);
+---
+
+<Layout title="Hello" description="Descfipt">
+  <SectionContainer>
+    <div class="space-y-16 rounded-2xl bg-white/5 p-10">
+      <div>
+        <button
+          onclick="window.history.back()"
+          class="text-3xl text-accent duration-500 hover:scale-110 hover:text-accent-light"
+        >
+          ←
+        </button>
+      </div>
+      <section>
+        <div class="flex flex-row items-center space-x-2">
+          <img src="/icons/calendar.svg" class="size-3" alt="calendar" />
+          <span class="text-gray-350 pt-1 text-sm">{date}</span>
+        </div>
+        <div class="flex flex-row items-center space-x-2">
+          <img src="/icons/role.svg" class="size-4" alt="role" />
+          <span class="pt-1 text-2xl font-semibold text-accent">{titleLong}</span>
+        </div>
+        <div class="flex flex-row items-center space-x-2">
+          <img src="/icons/building.svg" class="size-4" alt="company" />
+          <span class="pt-1 text-xl font-semibold">{company}</span>
+        </div>
+      </section>
+
+      <section>
+        <div class="text-lg text-gray-300"><p>{descriptionLong}</p></div>
+      </section>
+
+      <section>
+        <div class="flex flex-row items-center space-x-2 pb-10">
+          <img src="/icons/stack.svg" class="size-5" alt="stack" />
+          <h2 class="pt-1 text-xl font-semibold">Stack</h2>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          {stackLong.map((item) => <span class="rounded-full bg-accent px-4 py-1.5 text-sm">{item}</span>)}
+        </div>
+      </section>
+
+      <section>
+        <div class="flex flex-row items-center space-x-2 pb-10">
+          <img src="/icons/responsibilities.svg" class="size-5" alt="responsibilities" />
+          <h2 class="pt-1 text-xl font-semibold">Responsibilities</h2>
+        </div>
+        <div class="text-gray-350 text-lg">
+          <Content />
+        </div>
+      </section>
+      <div class="flex justify-center">
+        <button
+          onclick="window.history.back()"
+          class="text-4xl text-accent duration-500 hover:scale-110 hover:text-accent-light">☑︎</button
+        >
+      </div>
+    </div>
+  </SectionContainer>
+</Layout>

@@ -14,7 +14,7 @@ export interface PagesMetadataContent {
 }
 
 export interface SectionContent {
-  id: string;
+  id?: string;
   title: string;
   display: {
     showTitle: boolean;

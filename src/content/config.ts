@@ -22,7 +22,7 @@ const section = defineCollection({
   type: 'data',
   schema: z.array(
     z.object({
-      id: z.string(),
+      id: z.string().optional(),
       title: z.string(),
       display: z.object({
         showTitle: z.boolean(),

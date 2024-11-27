@@ -4,7 +4,7 @@ date: '2015 - 2016'
 titleLong: 'Lead Mobile Developer'
 company: 'Twibex35'
 descriptionShort: 'Led mobile development of a financial app from scratch to help users save and invest in the stock market. Oversaw the entire development lifecycle, including architecture design, coding, and deployment'
-descriptionLong: '<p><span class="text-primary">Led mobile development</span> of a financial app from scratch to help users save and invest in the stock market. Oversaw the entire <span class="text-primary">development lifecycle</span>, including <span class="text-primary">architecture design</span>, <span class="text-primary">coding</span>, and <span class="text-primary">deployment</span>. <span class="text-primary">Collaborated</span> with <span class="text-primary">stakeholders</span> to define key features and ensure the app met user needs while adhering to industry standards and best practices</p>'
+descriptionLong: 'Led mobile development of a financial app from scratch to help users save and invest in the stock market. Oversaw the entire development lifecycle, including architecture design, coding, and deployment. Collaborated with stakeholders to define key features and ensure the app met user needs while adhering to industry standards and best practices'
 stackShort: ['Android', 'iOS', 'Java', 'Objective-C', 'Kotlin', 'Swift', 'CI/CD', 'Testing', 'Github', 'Trello']
 stackLong:
   [
@@ -30,12 +30,12 @@ stackLong:
 
 <p>
   <ul>
-    <li><span class="text-primary">Led the architecture and design</span> of a financial app from scratch, ensuring scalability, performance, and maintainability</li>
-    <li><span class="text-primary">Oversaw the development lifecycle</span>, including coding, testing, debugging, and deployment to production</li>
-    <li><span class="text-primary">Collaborated with stakeholders</span> to gather requirements, define features, and ensure alignment with business objectives</li>
-    <li><span class="text-primary">Mentored and guided a small team</span> of developers, providing technical direction and support throughout the project</li>
-    <li><span class="text-primary">Implemented robust testing strategies</span>, including unit, integration, and end-to-end testing, to ensure app reliability</li>
-    <li><span class="text-primary">Optimized application performance</span> through profiling, refactoring, and efficient resource management</li>
-    <li><span class="text-primary">Maintained detailed documentation</span> of the development process, architectural decisions, and technical specifications for future reference</li>
+    <li><span class="text-gray-50">Led the architecture and design</span> of a financial app from scratch, ensuring scalability, performance, and maintainability</li>
+    <li><span class="text-gray-50">Oversaw the development lifecycle</span>, including coding, testing, debugging, and deployment to production</li>
+    <li><span class="text-gray-50">Collaborated with stakeholders</span> to gather requirements, define features, and ensure alignment with business objectives</li>
+    <li><span class="text-gray-50">Mentored and guided a small team</span> of developers, providing technical direction and support throughout the project</li>
+    <li><span class="text-gray-50">Implemented robust testing strategies</span>, including unit, integration, and end-to-end testing, to ensure app reliability</li>
+    <li><span class="text-gray-50">Optimized application performance</span> through profiling, refactoring, and efficient resource management</li>
+    <li><span class="text-gray-50">Maintained detailed documentation</span> of the development process, architectural decisions, and technical specifications for future reference</li>
   </ul>
 </p>
