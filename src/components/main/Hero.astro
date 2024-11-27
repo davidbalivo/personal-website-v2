@@ -9,16 +9,15 @@ import LinkedinIcon from '../icons/regular/Linkedin.astro';
 const { Bio, ...content }: HeroContent = await getHeroContent();
 const socialLinks: SocialLinksContent = await getSocialLinks();
 
-const socialIconLinkClass =
-  'size-8 text-accent hover:trasnform transform transition-transform duration-500 hover:scale-110 hover:text-accent-light cursor-pointer';
+const socialIconLinkClass = 'size-8 text-accent duration-500 hover:scale-110 hover:text-accent-light cursor-pointer';
 ---
 
-<div class="ms:flex-row flex w-full flex-col-reverse items-center">
-  <div class="ms:w-1/2 flex w-full flex-col justify-center space-y-5">
-    <h1 class="ms:pt-0 ms:text-left pt-10 text-center text-4xl text-accent">{content.name}</h1>
-    <span class="ms:text-left text-center text-2xl font-semibold">{content.title}</span>
+<div class="flex w-full flex-col-reverse items-center ms:flex-row">
+  <div class="flex w-full flex-col justify-center space-y-5 ms:w-1/2">
+    <h1 class="pt-10 text-center text-4xl text-accent ms:pt-0 ms:text-left">{content.name}</h1>
+    <span class="text-center text-2xl font-semibold ms:text-left">{content.title}</span>
     <div class="text-lg text-secondary"><Bio /></div>
-    <div class="ms:justify-start flex flex-row justify-center space-x-10">
+    <div class="flex flex-row justify-center space-x-10 ms:justify-start">
       <SocialIconLink href={socialLinks.linkedin} class={socialIconLinkClass}>
         <LinkedinIcon class="size-8" />
       </SocialIconLink>
@@ -28,9 +27,9 @@ const socialIconLinkClass =
       <SocialIconLink href={socialLinks.email} class={socialIconLinkClass}><EmailIcon class="size-8" /></SocialIconLink>
     </div>
   </div>
-  <div class="ms:w-1/2 w-full">
-    <div class="ms:justify-end flex h-full items-center justify-center">
-      <div class="ms:size-64 size-48 overflow-hidden rounded-full border border-accent/10 bg-white/10">
+  <div class="w-full ms:w-1/2">
+    <div class="flex h-full items-center justify-center ms:justify-end">
+      <div class="size-48 overflow-hidden rounded-full border border-accent/10 bg-white/10 ms:size-64">
         <img class="image-shadow h-full w-full" src={content.image} alt={content.name} />
       </div>
     </div>
