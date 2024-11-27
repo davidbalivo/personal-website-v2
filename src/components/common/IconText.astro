@@ -8,12 +8,13 @@ export interface IconTextProps {
   iconSize?: string;
   textClass?: string;
   spaceX?: string;
+  class?: string;
 }
 
-const { Icon, text, iconClass = '', iconSize = '', textClass = '', spaceX = '2' } = Astro.props;
+const { Icon, text, iconClass = '', iconSize = '', textClass = '', spaceX = '2', class: className = '' } = Astro.props;
 ---
 
-<div class={`flex flex-row items-center space-x-${spaceX}`}>
+<div class={`flex flex-row items-center space-x-${spaceX} ${className}`}>
   <div class={`${iconClass}`}>
     <Icon class={`size-${iconSize}`} />
   </div>
