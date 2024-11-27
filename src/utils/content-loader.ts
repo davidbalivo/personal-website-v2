@@ -52,7 +52,12 @@ export const getHeroContent = async (): Promise<HeroContent> => getEntryAndRende
 export const getSocialLinks = async (): Promise<SocialLinksContent> => (await getEntry('social-links', 'index')).data;
 
 export const getExperience = async (): Promise<ExperienceContent[]> =>
-  sortCollectionByOrder((await getCollection('experience')).map((item) => item.data));
+  sortCollectionByOrder(
+    (await getCollection('experience')).map((item) => ({
+      ...item.data,
+      slug: item.slug,
+    })),
+  );
 
 export const getExpertise = async (): Promise<ExpertiseContent[]> =>
   sortCollectionByOrder((await getEntry('expertise', 'index')).data);

@@ -8,17 +8,20 @@ const content: ExperienceContent[] = await getExperience();
 <div class="grid grid-cols-1 gap-5 ms:grid-cols-2">
   {
     content.map((experience: ExperienceContent) => (
-      <div class="group/card overflow-hidden rounded-2xl border border-white/5 bg-white/5 duration-500 hover:scale-105 hover:cursor-pointer hover:bg-accent/5">
+      <a
+        href={`/experience/${experience.slug}`}
+        class="group/card overflow-hidden rounded-2xl border border-white/5 bg-white/5 duration-500 hover:scale-105 hover:cursor-pointer hover:bg-accent/5"
+      >
         <div class="h-[1px] origin-center scale-x-0 transform-gpu bg-accent transition-transform duration-500 group-hover/card:scale-x-100" />
         <div class="p-5">
           <div class="mb-2">
             <span class="pl-1 pt-1 text-sm text-secondary">{experience.date}</span>
           </div>
           <div class="mb-5 flex flex-row">
-            <div class="lm:block hidden items-center rounded-xl bg-white/5 p-4">
+            <div class="hidden items-center rounded-xl bg-white/5 p-4 lm:block">
               <img src="/icons/company.svg" class="size-6" alt="company" />
             </div>
-            <div class="lm:pl-5 w-full">
+            <div class="w-full lm:pl-5">
               <span class="pt-1 text-lg font-semibold">{experience.titleShort || experience.titleLong}</span>
               <div class="flex flex-row">
                 <span class="pt-1 text-secondary">{experience.company}</span>
@@ -34,7 +37,7 @@ const content: ExperienceContent[] = await getExperience();
             ))}
           </div>
         </div>
-      </div>
+      </a>
     ))
   }
 </div>

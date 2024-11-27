@@ -50,6 +50,7 @@ export interface SocialLinksContent {
 }
 
 export interface ExperienceContent {
+  slug: string;
   order: number;
   date: string;
   titleLong: string;
