@@ -1,13 +1,19 @@
 ---
+import BackButton from '@/components/common/BackButton.astro';
 import IconText from '@/components/common/IconText.astro';
 import SectionContainer from '@/components/common/SectionContainer.astro';
 import Calendar from '@/components/icons/regular/Calendar.astro';
 import Company from '@/components/icons/regular/Company.astro';
 import Job from '@/components/icons/regular/Job.astro';
 import Responsibilities from '@/components/icons/regular/Responsibilities.astro';
-import Layout from '@/layouts/Layout.astro';
 import Stack from '@/components/icons/regular/Stack.astro';
+import Layout from '@/layouts/Layout.astro';
+import type { ExperienceContent } from '@/types';
 import { getExperiencePaths, parseExperience } from '@/utils/page-experience';
+
+interface Props {
+  experience: ExperienceContent;
+}
 
 export const getStaticPaths = getExperiencePaths;
 const { experience } = Astro.props;
@@ -18,14 +24,9 @@ const { date, title, company, descriptionLong, stackLong, ResponsibilitiesCompon
 <Layout title={title} description={descriptionLong}>
   <SectionContainer>
     <div class="space-y-16 rounded-2xl bg-white/5 p-10">
-      <div>
-        <button
-          onclick="window.history.back()"
-          class="text-3xl text-accent duration-500 hover:scale-110 hover:text-accent-light"
-        >
-          ←
-        </button>
-      </div>
+      <BackButton>
+        <span aria-hidden="true">←</span>
+      </BackButton>
 
       <section>
         <IconText
@@ -84,10 +85,9 @@ const { date, title, company, descriptionLong, stackLong, ResponsibilitiesCompon
       </section>
 
       <div class="flex justify-center">
-        <button
-          onclick="window.history.back()"
-          class="text-4xl text-accent duration-500 hover:scale-110 hover:text-accent-light">☑︎</button
-        >
+        <BackButton class="text-4xl">
+          <span aria-hidden="true">☑︎</span>
+        </BackButton>
       </div>
     </div>
   </SectionContainer>
