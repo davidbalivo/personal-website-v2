@@ -4,7 +4,7 @@ import SectionContainer from '@/components/common/SectionContainer.astro';
 import Calendar from '@/components/icons/regular/Calendar.astro';
 import Company from '@/components/icons/regular/Company.astro';
 import Job from '@/components/icons/regular/Job.astro';
-import Responsibilities from '@/components/icons/regular/responsibilities.astro';
+import Responsibilities from '@/components/icons/regular/Responsibilities.astro';
 import Layout from '@/layouts/Layout.astro';
 import Stack from '@/components/icons/regular/Stack.astro';
 import { getCollection, render } from 'astro:content';
@@ -19,11 +19,11 @@ export const getStaticPaths = async () => {
 
 const { experience } = Astro.props;
 const { data } = experience;
-const { date, titleLong, company, descriptionLong, stackLong } = data;
+const { date, title, company, descriptionLong, stackLong } = data;
 const { Content } = await render(experience);
 ---
 
-<Layout title="Hello" description="Descfipt">
+<Layout title={title} description={descriptionLong}>
   <SectionContainer>
     <div class="space-y-16 rounded-2xl bg-white/5 p-10">
       <div>
@@ -44,12 +44,18 @@ const { Content } = await render(experience);
         />
         <IconText
           Icon={Job}
-          text={titleLong}
+          text={title}
           iconClass="text-primary"
           iconSize="5"
-          textClass="text-2xl font-semibold"
+          textClass="text-lg md:text-2xl font-semibold"
         />
-        <IconText Icon={Company} text={company} iconClass="text-accent" iconSize="5" textClass="text-accent text-xl" />
+        <IconText
+          Icon={Company}
+          text={company}
+          iconClass="text-accent"
+          iconSize="5"
+          textClass="text-accent text-lg md:text-xl"
+        />
       </section>
 
       <section>

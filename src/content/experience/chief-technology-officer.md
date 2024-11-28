@@ -1,7 +1,7 @@
 ---
 order: 2
 date: '2018 - 2021'
-titleLong: 'Chief Technology Officer'
+title: 'Chief Technology Officer'
 company: 'ForFans Media'
 descriptionShort: 'Led the technology strategy and development of a data-driven platform and built a high-performing team to deliver a scalable solution for content analysis and personalized strategies'
 descriptionLong: 'Led the technology strategy and end-to-end development of a data-driven platform from the ground up, designed to categorize and analyze content creators through advanced analytics. Architected the design and successfully built a high-performing team, delivering a scalable solution that enhanced decision-making and personalized content strategies'

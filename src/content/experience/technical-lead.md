@@ -1,7 +1,7 @@
 ---
 order: 3
 date: '2016 - 2018'
-titleLong: 'Technical Lead'
+title: 'Technical Lead'
 company: 'Freekik'
 descriptionShort: 'Played a key role in the full-cycle development of a Football Social Network, supporting the CTO in building the engineering team, defining the technical architecture, and collaborating with stakeholders'
 descriptionLong: 'Played a key role in the full-cycle development of a Football Social Network mobile app, leveraging cloud technologies to create a scalable and robust platform. Supported the CTO in building the engineering team from the ground up, assisting with technical architecture and enabling the team to deliver a feature-rich experience for football enthusiasts'

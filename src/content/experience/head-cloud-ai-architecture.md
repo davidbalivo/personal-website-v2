@@ -1,8 +1,7 @@
 ---
 order: 1
 date: '2021 - Present'
-titleShort: 'Lead Architect for Cloud & AI'
-titleLong: 'Lead Enterprise Architect for Cloud & AI Solutions'
+title: 'Head of Cloud & AI Architecture'
 company: 'Boehringer Ingelheim'
 descriptionShort: 'Orchestrate data-driven transformation, lead cloud migration, and build and manage a team of experts to enhance collaboration, innovation, and technology alignment across the organization'
 descriptionLong: 'Lead the transformation to a data-driven organization, fostering a culture of data-informed decision-making to leverage insights, boost efficiency, and drive innovation. Oversee the migration from on-premise to cloud, ensuring a secure, scalable, and efficient transition that aligns with digital transformation goals. Additionally, build and lead the ELS (Early Life Support) team of technical leads, AWS solution architects, and AI/ML specialists to provide architecture guidance, best practices, and integration support, ensuring seamless collaboration and alignment across technological projects'

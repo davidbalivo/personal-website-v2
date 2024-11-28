@@ -1,7 +1,7 @@
 ---
 order: 6
 date: '2008 - 2014'
-titleLong: 'Software Developer'
+title: 'Software Developer'
 company: 'Various Companies'
 descriptionShort: 'Developed and maintained applications as a web, mobile, backend, and full-stack developer for various companies, delivering scalable and efficient solutions'
 descriptionLong: 'Developed and maintained applications as a web, mobile, backend, and full-stack developer for various companies, delivering scalable and efficient solutions. Worked on diverse projects across industries, utilizing modern technologies to meet business objectives. Collaborated with cross-functional teams to design, implement, and deploy applications, ensuring performance, reliability, and maintainability'

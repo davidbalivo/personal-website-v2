@@ -1,7 +1,7 @@
 ---
 order: 5
 date: '2014 - 2015'
-titleLong: 'Lead Android Developer'
+title: 'Lead Android Developer'
 company: 'eLaboro'
 descriptionShort: 'Built from scratch an application for convenience stores, focusing on delivering a user-friendly and efficient solution tailored to their needs. This was my first experience leading a small team'
 descriptionLong: 'Built from scratch an application for convenience stores, focusing on delivering a user-friendly and efficient solution tailored to their needs. Took ownership of the entire development lifecycle, from architecture and design to implementation and deployment. This was my first experience leading a small team, where I provided guidance, delegated tasks, and ensured the project’s timely delivery'
