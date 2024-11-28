@@ -1,4 +1,4 @@
-import type { ExperienceContent, RenderedExperienceContent } from '@/types';
+import type { ExperienceContent } from '@/types';
 import { getExperience } from './content-loader';
 
 interface ExperiencePath {
@@ -15,9 +15,7 @@ export const getExperiencePaths = async (): Promise<ExperiencePath[]> => {
 };
 
 export const parseExperience = async (experience: ExperienceContent) => {
-  const { date, title, company, descriptionLong, stackLong, render, slug } = experience;
-
-  const { Content }: RenderedExperienceContent = await render();
+  const { date, title, company, descriptionLong, stackLong, ResponsibilitiesComponent, slug } = experience;
 
   return {
     date,
@@ -26,6 +24,6 @@ export const parseExperience = async (experience: ExperienceContent) => {
     descriptionLong,
     stackLong,
     slug,
-    Content,
+    ResponsibilitiesComponent,
   };
 };

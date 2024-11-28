@@ -6,7 +6,7 @@ import EmailIcon from '../icons/regular/Email.astro';
 import GithubIcon from '../icons/regular/Github.astro';
 import LinkedinIcon from '../icons/regular/Linkedin.astro';
 
-const { Bio, ...content }: HeroContent = await getHeroContent();
+const { BioComponent, ...content }: HeroContent = await getHeroContent();
 const socialLinks: SocialLinksContent = await getSocialLinks();
 
 const socialIconLinkClass = 'size-8 text-accent duration-500 hover:scale-110 hover:text-accent-light cursor-pointer';
@@ -16,7 +16,7 @@ const socialIconLinkClass = 'size-8 text-accent duration-500 hover:scale-110 hov
   <div class="flex w-full flex-col justify-center space-y-5 ms:w-1/2">
     <h1 class="pt-10 text-center text-4xl text-accent ms:pt-0 ms:text-left">{content.name}</h1>
     <span class="text-center text-2xl font-semibold ms:text-left">{content.title}</span>
-    <div class="text-lg text-secondary"><Bio /></div>
+    <div class="text-lg text-secondary"><BioComponent /></div>
     <div class="flex flex-row justify-center space-x-10 ms:justify-start">
       <SocialIconLink href={socialLinks.linkedin} class={socialIconLinkClass}>
         <LinkedinIcon class="size-8" />

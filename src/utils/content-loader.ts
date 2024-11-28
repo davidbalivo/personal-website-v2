@@ -10,7 +10,7 @@ import type {
   SiteMetadataContent,
   SocialLinksContent,
 } from '@/types';
-import { getCollection, getEntry, render, type ContentEntryMap } from 'astro:content';
+import { getCollection, getEntry, type ContentEntryMap } from 'astro:content';
 import { generateNavigation } from './navigation';
 
 export const getSiteMetaData = async (): Promise<SiteMetadataContent> => {
@@ -38,8 +38,8 @@ type RenderableContentTypes = HeroContent | AboutContent;
 
 const getEntryAndRenderContent = async <T extends RenderableContentTypes>(type: keyof ContentEntryMap): Promise<T> => {
   const entry = await getEntry(type, 'index');
-  const { Content: Bio } = await render(entry);
-  return { ...entry.data, Bio } as T;
+  const { Content: BioComponent } = await entry.render();
+  return { ...entry.data, BioComponent } as T;
 };
 
 export const getSections = async (): Promise<SectionContent[]> =>
@@ -53,11 +53,16 @@ export const getSocialLinks = async (): Promise<SocialLinksContent> => (await ge
 
 export const getExperience = async (): Promise<ExperienceContent[]> =>
   sortCollectionByOrder(
-    (await getCollection('experience')).map((item) => ({
-      ...item.data,
-      slug: item.slug,
-      render: item.render,
-    })),
+    await Promise.all(
+      (await getCollection('experience')).map(async (item) => {
+        const { Content: ResponsibilitiesComponent } = await item.render();
+        return {
+          ...item.data,
+          slug: item.slug,
+          ResponsibilitiesComponent,
+        };
+      }),
+    ),
   );
 
 export const getExpertise = async (): Promise<ExpertiseContent[]> =>

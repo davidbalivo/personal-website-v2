@@ -11,7 +11,8 @@ import { getExperiencePaths, parseExperience } from '@/utils/page-experience';
 
 export const getStaticPaths = getExperiencePaths;
 const { experience } = Astro.props;
-const { date, title, company, descriptionLong, stackLong, Content } = await parseExperience(experience);
+const { date, title, company, descriptionLong, stackLong, ResponsibilitiesComponent } =
+  await parseExperience(experience);
 ---
 
 <Layout title={title} description={descriptionLong}>
@@ -78,7 +79,7 @@ const { date, title, company, descriptionLong, stackLong, Content } = await pars
           textClass="text-xl font-semibold"
         />
         <div class="text-lg text-secondary">
-          <Content />
+          <ResponsibilitiesComponent />
         </div>
       </section>
 
