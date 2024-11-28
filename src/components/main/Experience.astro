@@ -18,33 +18,28 @@ const content: ExperienceContent[] = await getExperience();
       >
         <div class="h-[1px] origin-center scale-x-0 transform-gpu bg-accent transition-transform duration-500 group-hover/card:scale-x-100" />
         <div class="p-5">
-          <div>
-            <IconText
-              Icon={Calendar}
-              text={experience.date}
-              iconClass="text-secondary"
-              iconSize="4"
-              textClass="text-sm text-secondary"
-            />
-          </div>
-          <div>
-            <IconText
-              Icon={Job}
-              text={experience.title}
-              iconClass="text-primary"
-              iconSize="4"
-              textClass="text-lg font-semibold"
-            />
-          </div>
-          <div class="mb-5">
-            <IconText
-              Icon={Company}
-              text={experience.company}
-              iconClass="text-accent"
-              iconSize="4"
-              textClass="text-accent"
-            />
-          </div>
+          <IconText
+            Icon={Calendar}
+            text={experience.date}
+            iconClass="text-secondary"
+            iconSize="4"
+            textClass="text-sm text-secondary"
+          />
+          <IconText
+            Icon={Job}
+            text={experience.title}
+            iconClass="text-primary"
+            iconSize="4"
+            textClass="text-lg font-semibold"
+          />
+          <IconText
+            Icon={Company}
+            text={experience.company}
+            iconClass="text-accent"
+            iconSize="4"
+            textClass="text-accent"
+            class="mb-5"
+          />
           <div class="mb-5">
             <p class="text-secondary">{experience.descriptionShort}</p>
           </div>
