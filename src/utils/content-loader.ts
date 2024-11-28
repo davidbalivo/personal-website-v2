@@ -56,6 +56,7 @@ export const getExperience = async (): Promise<ExperienceContent[]> =>
     (await getCollection('experience')).map((item) => ({
       ...item.data,
       slug: item.slug,
+      render: item.render,
     })),
   );
 

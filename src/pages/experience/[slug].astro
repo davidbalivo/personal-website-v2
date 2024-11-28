@@ -7,20 +7,11 @@ import Job from '@/components/icons/regular/Job.astro';
 import Responsibilities from '@/components/icons/regular/Responsibilities.astro';
 import Layout from '@/layouts/Layout.astro';
 import Stack from '@/components/icons/regular/Stack.astro';
-import { getCollection, render } from 'astro:content';
+import { getExperiencePaths, parseExperience } from '@/utils/page-experience';
 
-export const getStaticPaths = async () => {
-  const collection = await getCollection('experience');
-  return collection.map((experience) => ({
-    params: { id: experience.slug },
-    props: { experience },
-  }));
-};
-
+export const getStaticPaths = getExperiencePaths;
 const { experience } = Astro.props;
-const { data } = experience;
-const { date, title, company, descriptionLong, stackLong } = data;
-const { Content } = await render(experience);
+const { date, title, company, descriptionLong, stackLong, Content } = await parseExperience(experience);
 ---
 
 <Layout title={title} description={descriptionLong}>
@@ -34,26 +25,27 @@ const { Content } = await render(experience);
           ←
         </button>
       </div>
+
       <section>
         <IconText
           Icon={Calendar}
           text={date}
           iconClass="text-secondary"
-          iconSize="5"
+          iconSize="4"
           textClass="text-secondary text-sm"
         />
         <IconText
           Icon={Job}
           text={title}
           iconClass="text-primary"
-          iconSize="5"
+          iconSize="4"
           textClass="text-lg md:text-2xl font-semibold"
         />
         <IconText
           Icon={Company}
           text={company}
           iconClass="text-accent"
-          iconSize="5"
+          iconSize="4"
           textClass="text-accent text-lg md:text-xl"
         />
       </section>
@@ -89,6 +81,7 @@ const { Content } = await render(experience);
           <Content />
         </div>
       </section>
+
       <div class="flex justify-center">
         <button
           onclick="window.history.back()"

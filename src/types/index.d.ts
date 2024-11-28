@@ -1,4 +1,5 @@
 import type { AstroComponentFactory } from 'astro/runtime/server/index.js';
+import type { CollectionEntry } from 'astro:content';
 
 export interface SiteMetadataContent {
   defaultLanguage: string;
@@ -49,6 +50,9 @@ export interface SocialLinksContent {
   email: string;
 }
 
+export type ExperienceCollectionEntry = CollectionEntry<'experience'>;
+export type RenderedExperienceContent = Awaited<ReturnType<ExperienceCollectionEntry['render']>>;
+
 export interface ExperienceContent {
   slug: string;
   order: number;
@@ -59,6 +63,7 @@ export interface ExperienceContent {
   descriptionLong: string;
   stackShort: string[];
   stackLong: string[];
+  render: () => RenderedExperienceContent;
 }
 
 export interface ExpertiseContent {
