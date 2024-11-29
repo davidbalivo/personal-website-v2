@@ -5,11 +5,12 @@ import SectionContainer from '@/components/common/SectionContainer.astro';
 import Calendar from '@/components/icons/regular/Calendar.astro';
 import Company from '@/components/icons/regular/Company.astro';
 import Job from '@/components/icons/regular/Job.astro';
+import Location from '@/components/icons/regular/Location.astro';
 import Responsibilities from '@/components/icons/regular/Responsibilities.astro';
 import Stack from '@/components/icons/regular/Stack.astro';
 import Layout from '@/layouts/Layout.astro';
 import type { ExperienceContent } from '@/types';
-import { getExperiencePaths, parseExperience } from '@/utils/page-experience';
+import { getExperiencePaths } from '@/utils/page-experience';
 
 interface Props {
   experience: ExperienceContent;
@@ -17,8 +18,7 @@ interface Props {
 
 export const getStaticPaths = getExperiencePaths;
 const { experience } = Astro.props;
-const { date, title, company, descriptionLong, stackLong, ResponsibilitiesComponent } =
-  await parseExperience(experience);
+const { date, location, title, company, descriptionLong, stackLong, ResponsibilitiesComponent } = experience;
 ---
 
 <Layout title={title} description={descriptionLong}>
@@ -32,6 +32,13 @@ const { date, title, company, descriptionLong, stackLong, ResponsibilitiesCompon
         <IconText
           Icon={Calendar}
           text={date}
+          iconClass="text-secondary"
+          iconSize="4"
+          textClass="text-secondary text-sm"
+        />
+        <IconText
+          Icon={Location}
+          text={location}
           iconClass="text-secondary"
           iconSize="4"
           textClass="text-secondary text-sm"

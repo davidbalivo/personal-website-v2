@@ -53,6 +53,7 @@ export interface ExperienceContent {
   slug: string;
   order: number;
   date: string;
+  location: string;
   title: string;
   company: string;
   descriptionShort: string;

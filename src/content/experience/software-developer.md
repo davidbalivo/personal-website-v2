@@ -1,6 +1,7 @@
 ---
 order: 6
 date: '2008 - 2014'
+location: 'Various Locations, Spain'
 title: 'Software Developer'
 company: 'Various Companies'
 descriptionShort: 'Developed and maintained applications as a web, mobile, backend, and full-stack developer for various companies, delivering scalable and efficient solutions'

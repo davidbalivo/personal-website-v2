@@ -1,6 +1,7 @@
 ---
 order: 4
 date: '2015 - 2016'
+location: 'Pontevedra, Spain'
 title: 'Lead Mobile Developer'
 company: 'Twibex35'
 descriptionShort: 'Led mobile development of a financial app from scratch to help users save and invest in the stock market. Oversaw the entire development lifecycle, including architecture design, coding, and deployment'

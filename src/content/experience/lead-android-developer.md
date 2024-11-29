@@ -1,6 +1,7 @@
 ---
 order: 5
 date: '2014 - 2015'
+location: 'Santiago de Compostela, Spain'
 title: 'Lead Android Developer'
 company: 'eLaboro'
 descriptionShort: 'Built from scratch an application for convenience stores, focusing on delivering a user-friendly and efficient solution tailored to their needs. This was my first experience leading a small team'

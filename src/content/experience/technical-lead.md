@@ -1,6 +1,7 @@
 ---
 order: 3
 date: '2016 - 2018'
+location: 'Barcelona, Spain'
 title: 'Technical Lead'
 company: 'Freekik'
 descriptionShort: 'Played a key role in the full-cycle development of a Football Social Network, supporting the CTO in building the engineering team, defining the technical architecture, and collaborating with stakeholders'

@@ -13,17 +13,3 @@ export const getExperiencePaths = async (): Promise<ExperiencePath[]> => {
     props: { experience },
   }));
 };
-
-export const parseExperience = async (experience: ExperienceContent) => {
-  const { date, title, company, descriptionLong, stackLong, ResponsibilitiesComponent, slug } = experience;
-
-  return {
-    date,
-    title,
-    company,
-    descriptionLong,
-    stackLong,
-    slug,
-    ResponsibilitiesComponent,
-  };
-};

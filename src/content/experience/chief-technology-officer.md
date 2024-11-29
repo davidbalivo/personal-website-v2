@@ -1,6 +1,7 @@
 ---
 order: 2
 date: '2018 - 2021'
+location: 'Barcelona, Spain'
 title: 'Chief Technology Officer'
 company: 'ForFans Media'
 descriptionShort: 'Led the technology strategy and development of a data-driven platform and built a high-performing team to deliver a scalable solution for content analysis and personalized strategies'

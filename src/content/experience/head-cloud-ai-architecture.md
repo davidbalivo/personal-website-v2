@@ -1,6 +1,7 @@
 ---
 order: 1
 date: '2021 - Present'
+location: 'Andorra La Vella, Andorra'
 title: 'Head of Cloud & AI Architecture'
 company: 'Boehringer Ingelheim'
 descriptionShort: 'Orchestrate data-driven transformation, lead cloud migration, and build and manage a team of experts to enhance collaboration, innovation, and technology alignment across the organization'
