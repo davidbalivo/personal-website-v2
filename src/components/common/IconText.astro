@@ -10,7 +10,7 @@ export interface IconTextProps {
   class?: string;
 }
 
-const { Icon, text, iconClass = '', iconSize = '', textClass = '', class: className = '' } = Astro.props;
+const { Icon, text, iconClass = '', iconSize = 4, textClass = '', class: className = '' } = Astro.props;
 ---
 
 <div class={`flex flex-row items-center space-x-2 ${className}`}>

@@ -2,23 +2,23 @@
   {
     "date": "2022",
     "type": "certification",
-    "category": "Certified",
-    "title": "Machine Learning",
-    "institution": "Amazon Web Service",
+    "category": "AWS Certified",
+    "title": "Machine Learning - Specialty",
+    "institution": "Amazon Web Services",
     "order": 1
   },
   {
     "date": "2020",
     "type": "certification",
-    "category": "Certified",
-    "title": "Solutions Architect",
-    "institution": "Amazon Web Service",
+    "category": "AWS Certified",
+    "title": "Solutions Architect - Professional",
+    "institution": "Amazon Web Services",
     "order": 2
   },
   {
     "date": "2012",
     "type": "diploma",
-    "category": "Bachelor Engineering",
+    "category": "Bachelor of Engineering",
     "title": "Computer Science",
     "institution": "Universidad de Vigo",
     "order": 3
@@ -26,9 +26,9 @@
   {
     "date": "2004",
     "type": "certification",
-    "category": "Certified",
+    "category": "Certification",
     "title": "IELTS",
-    "institution": "I. House Dublin",
+    "institution": "International House Dublin",
     "order": 4
   }
 ]

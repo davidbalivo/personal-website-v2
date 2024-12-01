@@ -4,6 +4,7 @@ export default {
   safelist: [
     {
       pattern: /^(p|px|py|pt|pb|pl|pr)-\d+$/,
+      pattern: /^size-.+$/,
     },
   ],
   theme: {
@@ -18,7 +19,7 @@ export default {
         background: '#0A0A0A',
       },
       screens: {
-        ms: '700px',
+        ms: '750px',
         lm: '995px',
       },
     },
