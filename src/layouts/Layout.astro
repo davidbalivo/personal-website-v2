@@ -25,22 +25,23 @@ const siteMetaData = await getSiteMetaData();
     <title>{title}</title>
   </head>
   <body>
-    <!-- TODO : make the gradient occupy the whole screen -->
     <div
-      class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_70%_at_50%_-20%,rgba(1,150,190,.6),rgba(1,255,255,0))]"
+      class="bg-neutral-00 absolute top-0 z-[-2] h-screen w-screen bg-[radial-gradient(ellipse_80%_70%_at_50%_-20%,rgba(1,150,190,.6),rgba(1,255,255,0))]"
+    >
+    </div>
+    <div
+      class="fixed top-0 z-[-3] h-screen w-screen bg-[#0a0a0a] bg-[radial-gradient(#ffffff15_1px,#0a0a0a_1px)] bg-[size:40px_40px]"
     >
     </div>
     <slot />
   </body>
 </html>
-<!-- TODO : add light mode -->
 <style is:global>
   :root {
     color-scheme: dark;
   }
   html {
     font-family: 'League Spartan Variable', system-ui, sans-serif;
-    background: #0a0a0a;
     scroll-behavior: smooth;
   }
   ul {
