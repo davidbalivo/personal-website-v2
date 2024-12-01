@@ -8,7 +8,7 @@
     },
     "component": "Hero",
     "order": 1,
-    "class": "pt-24 px-24"
+    "class": "pt-24"
   },
   {
     "id": "experience",
