@@ -4,6 +4,8 @@ export default {
   safelist: [
     {
       pattern: /^(p|px|py|pt|pb|pl|pr)-\d+$/,
+    },
+    {
       pattern: /^size-.+$/,
     },
   ],
