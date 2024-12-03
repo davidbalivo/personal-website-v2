@@ -1,0 +1,19 @@
+---
+import type { AboutContent } from '@/types';
+import { getAbout } from '@/utils/content-loader';
+import Layout from './Layout.astro';
+
+const { BioComponent, ...content }: AboutContent = await getAbout();
+---
+
+<div>
+  <div class="hidden lm:block">
+    <Layout content={content} BioComponent={BioComponent} layout="full" />
+  </div>
+  <div class="hidden ms:block lm:hidden">
+    <Layout content={content} BioComponent={BioComponent} layout="intermediate" />
+  </div>
+  <div class="block ms:hidden">
+    <Layout content={content} BioComponent={BioComponent} layout="compact" />
+  </div>
+</div>

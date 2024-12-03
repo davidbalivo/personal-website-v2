@@ -1,0 +1,14 @@
+---
+import type { AboutContent } from '@/types';
+
+interface Props {
+  skills: AboutContent['skills'];
+  class?: string;
+}
+
+const { skills, class: className = '' } = Astro.props;
+---
+
+<div class={`grid gap-2 ${className}`}>
+  {skills.map((skill) => <div class="rounded-full bg-accent py-1.5 text-center text-sm">{skill}</div>)}
+</div>

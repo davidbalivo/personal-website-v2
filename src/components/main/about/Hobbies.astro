@@ -1,0 +1,13 @@
+---
+import type { AboutContent } from '@/types';
+
+interface Props {
+  hobbies: AboutContent['hobbies'];
+}
+
+const { hobbies } = Astro.props;
+---
+
+<div class="flex justify-between">
+  {hobbies.map((hobby) => <img src={hobby.img} alt={hobby.alt} class="size-10 items-center justify-center" />)}
+</div>

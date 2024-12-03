@@ -1,0 +1,28 @@
+---
+import type { AboutContent } from '@/types';
+
+interface Props {
+  image: AboutContent['image'];
+  class?: string;
+  size?: 'full' | 'compact';
+}
+
+const { image, class: className = '', size = 'full' } = Astro.props;
+---
+
+<div class={`flex justify-end ${className}`}>
+  <div class="flex h-full items-center overflow-hidden rounded-b-full">
+    <img
+      class={`image-shadow ${size === 'compact' ? 'h-[200px] w-[150px]' : 'h-[300px] w-[218px]'}`}
+      src={image}
+      alt="about"
+      loading="lazy"
+    />
+  </div>
+</div>
+
+<style>
+  .image-shadow {
+    filter: drop-shadow(-5px 2px 1px #0296be30) contrast(110%);
+  }
+</style>

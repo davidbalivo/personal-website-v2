@@ -1,0 +1,11 @@
+---
+import type { AboutContent } from '@/types';
+
+interface Props {
+  BioComponent: AboutContent['BioComponent'];
+}
+
+const { BioComponent } = Astro.props;
+---
+
+<div class="text-pretty text-lg text-secondary"><BioComponent /></div>

@@ -1,5 +1,5 @@
 import Footer from '@/components/footer/index.astro';
-import About from '@/components/main/About.astro';
+import About from '@/components/main/about/index.astro';
 import Education from '@/components/main/Education.astro';
 import Experience from '@/components/main/Experience.astro';
 import Expertise from '@/components/main/Expertise.astro';
