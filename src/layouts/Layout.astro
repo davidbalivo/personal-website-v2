@@ -1,6 +1,7 @@
 ---
 import { getSiteMetaData } from '@/utils/content-loader';
 import '@fontsource-variable/league-spartan';
+import { ClientRouter } from 'astro:transitions';
 
 interface Props {
   title: string;
@@ -23,6 +24,7 @@ const siteMetaData = await getSiteMetaData();
     <meta name="generator" content={Astro.generator} />
     <link rel="canonical" href={siteMetaData.domain} />
     <title>{title}</title>
+    <ClientRouter />
   </head>
   <body>
     <div
