@@ -30,7 +30,7 @@ const content: ExperienceContent[] = await getExperience();
             text={experience.title}
             iconClass="text-primary"
             iconSize="4"
-            textClass="text-lg font-semibold"
+            textClass="text-lg font-semibold lm:text-xl"
             textTransitionName={`${experience.slug}-${experience.title}-${experience.date}`}
           />
           <IconText
@@ -38,7 +38,7 @@ const content: ExperienceContent[] = await getExperience();
             text={experience.company}
             iconClass="text-accent"
             iconSize="4"
-            textClass="text-accent"
+            textClass="text-accent lm:text-lg"
             class="mb-5"
           />
           <div class="mb-5">
@@ -46,7 +46,9 @@ const content: ExperienceContent[] = await getExperience();
           </div>
           <div class="flex flex-wrap gap-2">
             {experience.stackShort.map((item) => (
-              <span class="rounded-full bg-accent px-4 py-1.5 text-sm">{item}</span>
+              <span class="rounded-full bg-white/10 px-4 py-1.5 text-sm duration-500 group-hover/card:bg-accent">
+                {item}
+              </span>
             ))}
           </div>
         </div>
