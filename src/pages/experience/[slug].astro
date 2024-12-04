@@ -18,7 +18,7 @@ interface Props {
 
 export const getStaticPaths = getExperiencePaths;
 const { experience } = Astro.props;
-const { date, location, title, company, descriptionLong, stackLong, ResponsibilitiesComponent } = experience;
+const { date, location, title, company, descriptionLong, stackLong, ResponsibilitiesComponent, slug } = experience;
 ---
 
 <Layout title={title} description={descriptionLong}>
@@ -49,6 +49,7 @@ const { date, location, title, company, descriptionLong, stackLong, Responsibili
           iconClass="text-primary"
           iconSize="4"
           textClass="text-lg sm:text-2xl font-semibold"
+          textTransitionName={`${slug}-${title}-${date}`}
         />
         <IconText
           Icon={Company}

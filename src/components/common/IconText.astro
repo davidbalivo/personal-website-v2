@@ -8,14 +8,31 @@ export interface IconTextProps {
   iconSize?: string;
   textClass?: string;
   class?: string;
+  textTransitionName?: string;
 }
 
-const { Icon, text, iconClass = '', iconSize = 4, textClass = '', class: className = '' } = Astro.props;
+const {
+  Icon,
+  text,
+  iconClass = '',
+  iconSize = 4,
+  textClass = '',
+  class: className = '',
+  textTransitionName = undefined,
+} = Astro.props;
 ---
 
 <div class={`flex flex-row items-center space-x-2 ${className}`}>
   <div class={`${iconClass}`}>
     <Icon class={`size-${iconSize}`} />
   </div>
-  <span class={`pt-1 ${textClass}`}>{text}</span>
+  {
+    textTransitionName ? (
+      <span class={`pt-1 ${textClass}`} transition:name={textTransitionName}>
+        {text}
+      </span>
+    ) : (
+      <span class={`pt-1 ${textClass}`}>{text}</span>
+    )
+  }
 </div>
