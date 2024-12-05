@@ -50,9 +50,11 @@ const content: ExperienceContent[] = await getExperience();
               </span>
             ))}
           </div>
-          <div class="flex justify-end space-x-2 text-sm text-secondary">
-            <span class="duration-300 group-hover/card:scale-105">Learn more</span>
-            <span class="pt-0.5 group-hover/card:scale-105">→</span>
+          <div class="flex justify-end">
+            <div class="flex space-x-2 text-sm text-secondary hover:text-accent">
+              <span class="duration-300 hover:text-accent group-hover/card:scale-105">Learn more</span>
+              <span class="pt-0.5 hover:text-accent group-hover/card:scale-105">→</span>
+            </div>
           </div>
         </div>
       </a>
