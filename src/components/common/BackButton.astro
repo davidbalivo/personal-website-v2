@@ -6,9 +6,6 @@ interface Props {
 const { class: className = '' } = Astro.props;
 ---
 
-<button
-  onclick="window.history.back()"
-  class={`text-3xl text-accent duration-500 hover:scale-110 hover:text-accent-light ${className}`}
->
+<button onclick="window.history.back()" class={`text-3xl text-accent duration-500 hover:scale-125 ${className}`}>
   <slot />
 </button>
