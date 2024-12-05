@@ -6,8 +6,16 @@ import EmailIcon from '../icons/regular/Email.astro';
 import GithubIcon from '../icons/regular/Github.astro';
 import LinkedinIcon from '../icons/regular/Linkedin.astro';
 
-const { BioComponent, ...content }: HeroContent = await getHeroContent();
-const socialLinks: SocialLinksContent = await getSocialLinks();
+const [{ BioComponent, ...content }, socialLinks]: [HeroContent, SocialLinksContent] = await Promise.all([
+  getHeroContent(),
+  getSocialLinks(),
+]);
+
+const socialIcons = [
+  { href: socialLinks.linkedin, Icon: LinkedinIcon },
+  { href: socialLinks.github, Icon: GithubIcon },
+  { href: socialLinks.email, Icon: EmailIcon },
+];
 
 const socialIconLinkClass = 'size-8 text-accent duration-500 hover:scale-125 cursor-pointer';
 ---
@@ -18,19 +26,25 @@ const socialIconLinkClass = 'size-8 text-accent duration-500 hover:scale-125 cur
     <span class="text-center text-2xl font-semibold ms:text-left lm:text-3xl">{content.title}</span>
     <div class="text-pretty text-lg text-secondary"><BioComponent /></div>
     <div class="flex flex-row justify-center space-x-10 ms:justify-start">
-      <SocialIconLink href={socialLinks.linkedin} class={socialIconLinkClass}>
-        <LinkedinIcon class="size-8" />
-      </SocialIconLink>
-      <SocialIconLink href={socialLinks.github} class={socialIconLinkClass}>
-        <GithubIcon class="size-8" />
-      </SocialIconLink>
-      <SocialIconLink href={socialLinks.email} class={socialIconLinkClass}><EmailIcon class="size-8" /></SocialIconLink>
+      {
+        socialIcons.map(({ href, Icon }) => (
+          <SocialIconLink {href} class={socialIconLinkClass}>
+            <Icon class="size-8" />
+          </SocialIconLink>
+        ))
+      }
     </div>
   </div>
   <div class="w-full ms:w-1/2">
     <div class="flex h-full items-center justify-center ms:justify-end">
       <div class="size-48 overflow-hidden rounded-full border border-accent/10 bg-white/10 ms:size-64">
-        <img class="image-shadow h-full w-full" src={content.image} alt={content.name} />
+        <img
+          class="image-shadow h-full w-full"
+          src={content.image}
+          alt={content.name}
+          loading="lazy"
+          decoding="async"
+        />
       </div>
     </div>
   </div>
