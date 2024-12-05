@@ -14,7 +14,7 @@ const content: ExperienceContent[] = await getExperience();
     content.map((experience) => (
       <a
         href={`/experience/${experience.slug}`}
-        class="group/card rounded-2xl border border-white/5 bg-white/5 duration-500 hover:scale-105 hover:cursor-pointer hover:bg-accent/5"
+        class="group/card overflow-hidden rounded-2xl border border-white/5 bg-white/5 duration-500 hover:scale-105 hover:cursor-pointer hover:bg-accent/5"
       >
         <div class="h-[1px] origin-center scale-x-0 transform-gpu bg-accent duration-500 group-hover/card:scale-x-100" />
         <div class="space-y-5 p-5">
@@ -49,6 +49,10 @@ const content: ExperienceContent[] = await getExperience();
                 {item}
               </span>
             ))}
+          </div>
+          <div class="flex justify-end space-x-2 text-sm text-secondary">
+            <span class="duration-300 group-hover/card:scale-105">Learn more</span>
+            <span class="pt-0.5 group-hover/card:scale-105">→</span>
           </div>
         </div>
       </a>
