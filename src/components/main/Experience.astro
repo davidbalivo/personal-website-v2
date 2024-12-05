@@ -11,39 +11,38 @@ const content: ExperienceContent[] = await getExperience();
 
 <div class="grid grid-cols-1 gap-5 ms:grid-cols-2">
   {
-    content.map((experience: ExperienceContent) => (
+    content.map((experience) => (
       <a
         href={`/experience/${experience.slug}`}
-        class="group/card overflow-hidden rounded-2xl border border-white/5 bg-white/5 duration-500 hover:scale-105 hover:cursor-pointer hover:bg-accent/5"
+        class="group/card rounded-2xl border border-white/5 bg-white/5 duration-500 hover:scale-105 hover:cursor-pointer hover:bg-accent/5"
       >
-        <div class="h-[1px] origin-center scale-x-0 transform-gpu bg-accent transition-transform duration-500 group-hover/card:scale-x-100" />
-        <div class="p-5">
-          <IconText
-            Icon={Calendar}
-            text={experience.date}
-            iconClass="text-secondary"
-            iconSize="4"
-            textClass="text-sm text-secondary"
-          />
-          <IconText
-            Icon={Job}
-            text={experience.title}
-            iconClass="text-primary"
-            iconSize="4"
-            textClass="text-lg font-semibold lm:text-xl"
-            textTransitionName={`${experience.slug}-${experience.title}-${experience.date}`}
-          />
-          <IconText
-            Icon={Company}
-            text={experience.company}
-            iconClass="text-accent"
-            iconSize="4"
-            textClass="text-accent lm:text-lg"
-            class="mb-5"
-          />
-          <div class="mb-5">
-            <p class="text-pretty text-secondary">{experience.descriptionShort}</p>
+        <div class="h-[1px] origin-center scale-x-0 transform-gpu bg-accent duration-500 group-hover/card:scale-x-100" />
+        <div class="space-y-5 p-5">
+          <div>
+            <IconText
+              Icon={Calendar}
+              text={experience.date}
+              iconClass="text-secondary"
+              iconSize="4"
+              textClass="text-sm text-secondary"
+            />
+            <IconText
+              Icon={Job}
+              text={experience.title}
+              iconClass="text-primary"
+              iconSize="4"
+              textClass="text-lg font-semibold lm:text-xl"
+              textTransitionName={`${experience.slug}-${experience.title}-${experience.date}`}
+            />
+            <IconText
+              Icon={Company}
+              text={experience.company}
+              iconClass="text-accent"
+              iconSize="4"
+              textClass="text-accent lm:text-lg"
+            />
           </div>
+          <p class="text-pretty text-secondary">{experience.descriptionShort}</p>
           <div class="flex flex-wrap gap-2">
             {experience.stackShort.map((item) => (
               <span class="rounded-full bg-white/10 px-4 py-1.5 text-sm duration-500 group-hover/card:bg-accent">
