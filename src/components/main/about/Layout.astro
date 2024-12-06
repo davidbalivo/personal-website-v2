@@ -15,18 +15,18 @@ const { content, BioComponent, layout = 'full' } = Astro.props;
 
 const layoutConfig = {
   full: {
-    skillsCols: 'grid-cols-4',
-    imageWidth: 'w-1/3',
+    skillsClass: 'grid-cols-4',
+    imageClass: 'w-1/3',
     size: 'full' as const,
   },
   intermediate: {
-    skillsCols: 'grid-cols-2',
-    imageWidth: 'w-2/4',
+    skillsClass: 'grid-cols-2',
+    imageClass: 'w-2/4',
     size: 'full' as const,
   },
   compact: {
-    skillsCols: 'grid-cols-2',
-    imageWidth: 'w-2/4',
+    skillsClass: 'grid-cols-2',
+    imageClass: 'w-2/4',
     size: 'compact' as const,
   },
 };
@@ -38,20 +38,20 @@ const config = layoutConfig[layout];
   layout === 'full' ? (
     <div class="flex">
       <div class="flex w-full flex-col justify-center space-y-12">
-        <Skills skills={content.skills} class={config.skillsCols} />
+        <Skills skills={content.skills} class={config.skillsClass} />
         <Hobbies hobbies={content.hobbies} />
         <Bio BioComponent={BioComponent} />
       </div>
-      <Image image={content.image} class={config.imageWidth} size={config.size} />
+      <Image image={content.image} class={config.imageClass} size={config.size} />
     </div>
   ) : (
     <div class="flex flex-col space-y-10">
       <div class="flex w-auto flex-row">
         <div class="flex w-full flex-col justify-center space-y-12">
-          <Skills skills={content.skills} class={config.skillsCols} />
+          <Skills skills={content.skills} class={config.skillsClass} />
           {layout === 'intermediate' && <Hobbies hobbies={content.hobbies} />}
         </div>
-        <Image image={content.image} class={config.imageWidth} size={config.size} />
+        <Image image={content.image} class={config.imageClass} size={config.size} />
       </div>
       {layout === 'compact' && <Hobbies hobbies={content.hobbies} />}
       <Bio BioComponent={BioComponent} />
