@@ -47,9 +47,9 @@ const hero = defineCollection({
 const socialLinks = defineCollection({
   type: 'data',
   schema: z.object({
-    linkedin: z.string().url(),
-    github: z.string().url(),
-    email: z.string().url(),
+    linkedin: z.string(),
+    github: z.string(),
+    email: z.string(),
   }),
 });
 

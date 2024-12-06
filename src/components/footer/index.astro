@@ -12,9 +12,9 @@ const { github, linkedin, email }: SocialLinksContent = await getSocialLinks();
 const socialIconLinkClass = 'text-4xl hover:text-accent cursor-pointer duration-500 hover:scale-110';
 
 const socialLinks = [
-  { href: github, Icon: Github, text: github },
-  { href: linkedin, Icon: Linkedin, text: linkedin },
-  { href: email, Icon: Email, text: email },
+  { href: `https://www.${github}`, Icon: Github, text: github },
+  { href: `https://www.${linkedin}`, Icon: Linkedin, text: linkedin },
+  { href: `mailto:${email}`, Icon: Email, text: email },
 ];
 ---
 

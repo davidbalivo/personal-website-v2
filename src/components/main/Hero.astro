@@ -6,15 +6,13 @@ import EmailIcon from '../icons/regular/Email.astro';
 import GithubIcon from '../icons/regular/Github.astro';
 import LinkedinIcon from '../icons/regular/Linkedin.astro';
 
-const [{ BioComponent, ...content }, socialLinks]: [HeroContent, SocialLinksContent] = await Promise.all([
-  getHeroContent(),
-  getSocialLinks(),
-]);
+const [{ BioComponent, ...content }, { linkedin, github, email }]: [HeroContent, SocialLinksContent] =
+  await Promise.all([getHeroContent(), getSocialLinks()]);
 
 const socialIcons = [
-  { href: socialLinks.linkedin, Icon: LinkedinIcon },
-  { href: socialLinks.github, Icon: GithubIcon },
-  { href: socialLinks.email, Icon: EmailIcon },
+  { href: `https://www.${linkedin}`, Icon: LinkedinIcon },
+  { href: `https://www.${github}`, Icon: GithubIcon },
+  { href: `mailto:${email}`, Icon: EmailIcon },
 ];
 
 const socialIconLinkClass = 'size-8 text-accent duration-500 hover:scale-125 cursor-pointer';
