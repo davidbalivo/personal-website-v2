@@ -1,18 +1,29 @@
 ---
 import type { SocialLinksContent } from '@/types';
 import { getSocialLinks } from '@/utils/content-loader';
+import IconText from '../common/IconText.astro';
 import SocialIconLink from '../common/SocialIconLink.astro';
-import EmailIcon from '../icons/solid/Email.astro';
-import GithubIcon from '../icons/solid/Github.astro';
-import LinkedinIcon from '../icons/solid/Linkedin.astro';
+import Email from '../icons/solid/Email.astro';
+import Github from '../icons/solid/Github.astro';
+import Linkedin from '../icons/solid/Linkedin.astro';
 
-const content: SocialLinksContent = await getSocialLinks();
+const { github, linkedin, email }: SocialLinksContent = await getSocialLinks();
 
 const socialIconLinkClass = 'text-4xl hover:text-accent cursor-pointer duration-500 hover:scale-110';
+
+const socialLinks = [
+  { href: github, Icon: Github, text: github },
+  { href: linkedin, Icon: Linkedin, text: linkedin },
+  { href: email, Icon: Email, text: email },
+];
 ---
 
 <div class="flex flex-row justify-between">
-  <SocialIconLink href={content.github} class={socialIconLinkClass}><GithubIcon class="size-10" /></SocialIconLink>
-  <SocialIconLink href={content.linkedin} class={socialIconLinkClass}><LinkedinIcon class="size-10" /></SocialIconLink>
-  <SocialIconLink href={content.email} class={socialIconLinkClass}><EmailIcon class="size-10" /></SocialIconLink>
+  {
+    socialLinks.map(({ href, Icon, text }) => (
+      <SocialIconLink href={href} class={socialIconLinkClass}>
+        <IconText Icon={Icon} text={text} iconSize="10" textClass="text-sm" orientation="column" />
+      </SocialIconLink>
+    ))
+  }
 </div>
