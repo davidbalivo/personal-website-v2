@@ -1,11 +1,11 @@
 # Personal Website with Astro
 
-A modern, responsive personal website built with Astro and Tailwind CSS. Features a clean design with smooth transitions, interactive timeline components, and comprehensive sections for showcasing professional experience, skills, and personal information.
+A modern, responsive personal website built with Astro and Tailwind CSS. Features a clean design with smooth transitions, interactive components, and comprehensive sections for showcasing professional experience, expertise, education, and personal information.
 
 ## 🚀 Features
 
 - Responsive design
-- Interactive timeline for experience and education
+- Interactive components for experience
 - Smooth transitions
 - Page views for detailed experience information
 - Profile information with social links
@@ -35,20 +35,20 @@ All commands are run from the root of the project, from a terminal:
 ```text
 /
 ├── public/
-│   ├── icons/          # SVG icons for UI elements
-│   └── images/         # Project images
+│   ├── images/          # webp images for UI elements
 ├── src/
 │   ├── components/     # Reusable UI components
-│   ├── data/          # CV data and content
-│   ├── layouts/       # Page layouts
-│   ├── pages/         # Application pages
-│   └── utils/         # Utility functions
-└── package.json
+│   ├── content/        # Content collections
+│   ├── layouts/        # Page layouts templates
+│   ├── pages/          # Application pages
+│   └── types/          # Type definitions
+│   └── utils/          # Utility functions
+└── tailwind.config.mjs # Tailwind CSS configuration
 ```
 
 ## 🎨 Customization
 
-1. Update your personal information in `src/data/index.ts`
+1. Update your personal information in `src/content`
 2. Replace images in the `public/images` directory
 3. Modify the color scheme in `tailwind.config.mjs`
 4. Adjust component styles in their respective files
