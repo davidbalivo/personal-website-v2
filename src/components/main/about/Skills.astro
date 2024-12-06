@@ -9,6 +9,6 @@ interface Props {
 const { skills, class: className = '' } = Astro.props;
 ---
 
-<div class={`grid gap-2 ${className}`}>
+<div class={`grid gap-2 items-center ${className}`}>
   {skills.map((skill) => <div class="rounded-full bg-accent py-1.5 text-center text-sm">{skill}</div>)}
 </div>

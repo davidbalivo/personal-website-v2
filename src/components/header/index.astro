@@ -6,7 +6,7 @@ const navigation: NavigationContent[] = await getNavigation();
 ---
 
 <header class="fixed top-0 z-10 mx-auto mt-2 flex w-full items-center justify-center">
-  <nav class="flex rounded-full px-3 text-sm text-primary">
+  <nav class="flex rounded-full px-3 text-xs text-primary sm:text-sm">
     {
       navigation.map((item) => (
         <a class="nav-link" aria-label={item.label} href={item.url}>
