@@ -38,16 +38,22 @@ const navigation: NavigationContent[] = await getNavigation();
   }
 
   .nav-link {
-    @apply relative block p-2 transition hover:text-accent;
+    @apply relative block p-2 transition;
   }
 
-  .nav-link::after {
-    content: '';
-    @apply absolute bottom-2 left-1/2 h-px w-0 bg-accent transition-all duration-500 ease-in-out;
-    transform: translateX(-50%);
-  }
+  @media (hover: hover) {
+    .nav-link:hover {
+      @apply text-accent;
+    }
 
-  .nav-link:hover::after {
-    @apply w-1/2;
+    .nav-link::after {
+      content: '';
+      @apply absolute bottom-2 left-1/2 h-px w-0 bg-accent transition-all duration-500 ease-in-out;
+      transform: translateX(-50%);
+    }
+
+    .nav-link:hover::after {
+      @apply w-1/2;
+    }
   }
 </style>
