@@ -9,6 +9,9 @@ export default {
       pattern: /^size-.+$/,
     },
   ],
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
   theme: {
     extend: {
       colors: {
