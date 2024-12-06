@@ -8,10 +8,10 @@ import Skills from './Skills.astro';
 interface Props {
   content: Omit<AboutContent, 'BioComponent'>;
   BioComponent: AboutContent['BioComponent'];
-  layout: 'full' | 'intermediate' | 'compact';
+  layout?: 'full' | 'intermediate' | 'compact';
 }
 
-const { content, BioComponent, layout } = Astro.props;
+const { content, BioComponent, layout = 'full' } = Astro.props;
 
 const layoutConfig = {
   full: {
