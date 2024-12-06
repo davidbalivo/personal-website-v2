@@ -9,6 +9,7 @@ export interface IconTextProps {
   textClass?: string;
   class?: string;
   textTransitionName?: string;
+  orientation?: 'row' | 'column';
 }
 
 const {
@@ -19,10 +20,11 @@ const {
   textClass = '',
   class: className = '',
   textTransitionName = undefined,
+  orientation = 'row',
 } = Astro.props;
 ---
 
-<div class={`flex flex-row items-center space-x-2 ${className}`}>
+<div class={`flex flex-${orientation === 'row' ? 'row' : 'col'} items-center space-x-2 ${className}`}>
   <div class={`${iconClass}`}>
     <Icon class={`size-${iconSize}`} />
   </div>
