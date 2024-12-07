@@ -1,5 +1,25 @@
 ---
+import Boxing from '@/components/icons/solid/Boxing.astro';
+import Nature from '@/components/icons/solid/Nature.astro';
+import Reading from '@/components/icons/solid/Reading.astro';
+import Riding from '@/components/icons/solid/Riding.astro';
+import Skiing from '@/components/icons/solid/Skiing.astro';
+import Traveling from '@/components/icons/solid/Traveling.astro';
 import type { AboutContent } from '@/types';
+import type { AstroComponentFactory } from 'astro/runtime/server/index.js';
+
+interface ComponentMap {
+  [key: string]: AstroComponentFactory;
+}
+
+const componentMap: ComponentMap = {
+  boxing: Boxing,
+  riding: Riding,
+  skiing: Skiing,
+  traveling: Traveling,
+  nature: Nature,
+  reading: Reading,
+} as const;
 
 interface Props {
   hobbies: AboutContent['hobbies'];
@@ -9,5 +29,10 @@ const { hobbies } = Astro.props;
 ---
 
 <div class="flex justify-between">
-  {hobbies.map((hobby) => <img src={hobby.img} alt={hobby.alt} class="size-10 items-center justify-center" />)}
+  {
+    hobbies.map(({ icon }) => {
+      const IconComponent = componentMap[icon];
+      return <IconComponent class="size-16 text-secondary" />;
+    })
+  }
 </div>

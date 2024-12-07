@@ -13,12 +13,12 @@ skills:
   ]
 hobbies:
   [
-    { img: '/icons/nature.svg', alt: 'Nature' },
-    { img: '/icons/reading.svg', alt: 'Reading' },
-    { img: '/icons/boxing.svg', alt: 'Boxing' },
-    { img: '/icons/riding.svg', alt: 'Riding' },
-    { img: '/icons/skiing.svg', alt: 'Skiing' },
-    { img: '/icons/traveling.svg', alt: 'Traveling' },
+    { icon: 'boxing' },
+    { icon: 'riding' },
+    { icon: 'skiing' },
+    { icon: 'traveling' },
+    { icon: 'nature' },
+    { icon: 'reading' },
   ]
 ---
 

@@ -82,8 +82,7 @@ export interface AboutContent {
   image: string;
   skills: string[];
   hobbies: {
-    img: string;
-    alt: string;
+    icon: string;
   }[];
   BioComponent: AstroComponentFactory;
 }

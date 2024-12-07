@@ -99,8 +99,7 @@ const about = defineCollection({
     skills: z.array(z.string()),
     hobbies: z.array(
       z.object({
-        img: z.string(),
-        alt: z.string(),
+        icon: z.string(),
       }),
     ),
   }),
