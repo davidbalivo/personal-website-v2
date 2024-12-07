@@ -8,16 +8,13 @@ interface Props {
 }
 
 const { image, class: className = '', size = 'full' } = Astro.props;
+
+const sizeClass = size === 'compact' ? 'h-[200px] w-[150px]' : 'h-[300px] w-[218px]';
 ---
 
 <div class={`flex justify-end ${className}`}>
   <div class="flex h-full items-center overflow-hidden rounded-b-full">
-    <img
-      class={`image-shadow ${size === 'compact' ? 'h-[200px] w-[150px]' : 'h-[300px] w-[218px]'}`}
-      src={image}
-      alt="about"
-      loading="lazy"
-    />
+    <img class={`image-shadow ${sizeClass}`} src={image} alt="about" loading="lazy" />
   </div>
 </div>
 

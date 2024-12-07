@@ -20,9 +20,11 @@ const {
   textTransitionName = undefined,
   orientation = 'row',
 } = Astro.props;
+
+const orientationClass = orientation === 'row' ? 'flex-row' : 'flex-col';
 ---
 
-<div class={`flex flex-${orientation === 'row' ? 'row' : 'col'} items-center space-x-2 ${className}`}>
+<div class={`flex ${orientationClass} items-center space-x-2 ${className}`}>
   <div>
     <Icon class={iconClass} />
   </div>
