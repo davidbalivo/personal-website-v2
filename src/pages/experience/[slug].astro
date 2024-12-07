@@ -2,6 +2,8 @@
 import BackButton from '@/components/common/BackButton.astro';
 import IconText from '@/components/common/IconText.astro';
 import SectionContainer from '@/components/common/SectionContainer.astro';
+import ArrowBack from '@/components/icons/regular/ArrowBack.astro';
+import ArrowLeft from '@/components/icons/regular/ArrowLeft.astro';
 import Calendar from '@/components/icons/regular/Calendar.astro';
 import Company from '@/components/icons/regular/Company.astro';
 import Job from '@/components/icons/regular/Job.astro';
@@ -25,7 +27,7 @@ const { date, location, title, company, descriptionLong, stackLong, Responsibili
   <SectionContainer>
     <div class="space-y-16 rounded-2xl bg-white/5 p-5" sm:p-10>
       <BackButton>
-        <span aria-hidden="true">←</span>
+        <ArrowLeft class="size-8" />
       </BackButton>
 
       <section>
@@ -83,7 +85,7 @@ const { date, location, title, company, descriptionLong, stackLong, Responsibili
 
       <div class="flex justify-center">
         <BackButton class="text-4xl">
-          <span aria-hidden="true">↩</span>
+          <ArrowBack class="size-8" />
         </BackButton>
       </div>
     </div>
