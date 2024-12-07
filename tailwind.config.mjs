@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./src/**/*.{astro,md,json}'],
+  content: ['./src/**/*.{astro,md, mdx, json}'],
   future: {
     hoverOnlyWhenSupported: true,
   },
