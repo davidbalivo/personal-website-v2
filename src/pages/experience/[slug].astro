@@ -29,33 +29,24 @@ const { date, location, title, company, descriptionLong, stackLong, Responsibili
       </BackButton>
 
       <section>
-        <IconText
-          Icon={Calendar}
-          text={date}
-          iconClass="text-secondary"
-          iconSize="4"
-          textClass="text-secondary text-sm"
-        />
+        <IconText Icon={Calendar} text={date} iconClass="text-secondary size-4" textClass="text-secondary text-sm" />
         <IconText
           Icon={Location}
           text={location}
-          iconClass="text-secondary"
-          iconSize="4"
+          iconClass="text-secondary size-4"
           textClass="text-secondary text-sm"
         />
         <IconText
           Icon={Job}
           text={title}
-          iconClass="text-primary"
-          iconSize="4"
+          iconClass="text-primary size-4"
           textClass="text-lg sm:text-2xl font-semibold"
           textTransitionName={`${slug}-${title}-${date}`}
         />
         <IconText
           Icon={Company}
           text={company}
-          iconClass="text-accent"
-          iconSize="4"
+          iconClass="text-accent size-4"
           textClass="text-accent text-lg sm:text-xl"
         />
       </section>
@@ -69,8 +60,7 @@ const { date, location, title, company, descriptionLong, stackLong, Responsibili
           class="pb-10"
           Icon={Stack}
           text="Stack"
-          iconClass="text-primary"
-          iconSize="6"
+          iconClass="text-primary size-5"
           textClass="text-xl font-semibold"
         />
         <div class="flex flex-wrap gap-2">
@@ -83,8 +73,7 @@ const { date, location, title, company, descriptionLong, stackLong, Responsibili
           class="pb-10"
           Icon={Responsibilities}
           text="Responsibilities"
-          iconClass="text-primary"
-          iconSize="6"
+          iconClass="text-primary size-5"
           textClass="text-xl font-semibold"
         />
         <div class="text-pretty text-lg text-secondary">

@@ -22,23 +22,20 @@ const content: ExperienceContent[] = await getExperience();
             <IconText
               Icon={Calendar}
               text={experience.date}
-              iconClass="text-secondary"
-              iconSize="4"
+              iconClass="text-secondary size-4"
               textClass="text-sm text-secondary"
             />
             <IconText
               Icon={Job}
               text={experience.title}
-              iconClass="text-primary"
-              iconSize="4"
+              iconClass="text-primary size-4"
               textClass="text-lg font-semibold lm:text-xl"
               textTransitionName={`${experience.slug}-${experience.title}-${experience.date}`}
             />
             <IconText
               Icon={Company}
               text={experience.company}
-              iconClass="text-accent"
-              iconSize="4"
+              iconClass="text-accent size-4"
               textClass="text-accent lm:text-lg"
             />
           </div>

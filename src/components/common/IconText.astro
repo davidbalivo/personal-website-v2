@@ -5,7 +5,6 @@ interface Props {
   Icon: AstroComponentFactory;
   text: string;
   iconClass?: string;
-  iconSize?: string;
   textClass?: string;
   class?: string;
   textTransitionName?: string;
@@ -16,7 +15,6 @@ const {
   Icon,
   text,
   iconClass = '',
-  iconSize = 4,
   textClass = '',
   class: className = '',
   textTransitionName = undefined,
@@ -25,8 +23,8 @@ const {
 ---
 
 <div class={`flex flex-${orientation === 'row' ? 'row' : 'col'} items-center space-x-2 ${className}`}>
-  <div class={`${iconClass}`}>
-    <Icon class={`size-${iconSize}`} />
+  <div>
+    <Icon class={iconClass} />
   </div>
   {
     textTransitionName ? (

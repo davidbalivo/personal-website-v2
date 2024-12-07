@@ -34,15 +34,13 @@ const content: EducationContent[] = await getEducation();
           <IconText
             Icon={Calendar}
             text={education.date}
-            iconClass="text-secondary"
-            iconSize="4"
+            iconClass="text-secondary size-4"
             textClass="text-sm text-secondary"
           />
           <IconText
             Icon={education.type === 'certification' ? Certification : Diploma}
             text={education.category}
-            iconClass="text-accent"
-            iconSize="4"
+            iconClass="text-accent size-4"
             textClass="text-accent"
           />
           <div>
@@ -51,8 +49,7 @@ const content: EducationContent[] = await getEducation();
           <IconText
             Icon={Company}
             text={education.institution}
-            iconClass="text-secondary"
-            iconSize="4"
+            iconClass="text-secondary size-4"
             textClass="text-secondary"
           />
         </div>

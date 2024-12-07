@@ -22,7 +22,13 @@ const socialLinks = [
   {
     socialLinks.map(({ href, Icon, text }) => (
       <SocialIconLink href={href} class={socialIconLinkClass}>
-        <IconText Icon={Icon} text={text} iconSize="10" textClass="text-sm hidden sm:block" orientation="column" />
+        <IconText
+          Icon={Icon}
+          text={text}
+          textClass="text-sm hidden sm:block"
+          orientation="column"
+          iconClass="size-10"
+        />
       </SocialIconLink>
     ))
   }
