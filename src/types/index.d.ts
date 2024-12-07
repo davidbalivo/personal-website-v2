@@ -64,8 +64,7 @@ export interface ExperienceContent {
 }
 
 export interface ExpertiseContent {
-  src: string;
-  alt: string;
+  icon: string;
   text: string;
   oreder: number;
 }

@@ -22,9 +22,10 @@ const {
 } = Astro.props;
 
 const orientationClass = orientation === 'row' ? 'flex-row' : 'flex-col';
+const spaceClass = orientation === 'row' ? 'space-x-2' : 'space-y-2';
 ---
 
-<div class={`flex ${orientationClass} items-center space-x-2 ${className}`}>
+<div class={`flex ${orientationClass} items-center ${spaceClass} ${className}`}>
   <div>
     <Icon class={iconClass} />
   </div>

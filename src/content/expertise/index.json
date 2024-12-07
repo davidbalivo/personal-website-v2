@@ -1,73 +1,61 @@
 [
   {
-    "src": "/icons/cloud.svg",
-    "alt": "cloud",
+    "icon": "cloud",
     "text": "Cloud",
     "order": 1
   },
   {
-    "src": "/icons/ai-ml.svg",
-    "alt": "ai-ml",
+    "icon": "ai-ml",
     "text": "AI/ML",
     "order": 2
   },
   {
-    "src": "/icons/infrastructure.svg",
-    "alt": "infrastructure",
+    "icon": "infrastructure",
     "text": "Infrastructure",
     "order": 3
   },
   {
-    "src": "/icons/security.svg",
-    "alt": "security",
+    "icon": "security",
     "text": "Security",
     "order": 4
   },
   {
-    "src": "/icons/serverless.svg",
-    "alt": "serverless",
+    "icon": "serverless",
     "text": "Serverless",
     "order": 5
   },
   {
-    "src": "/icons/containerization.svg",
-    "alt": "containerization",
+    "icon": "containerization",
     "text": "Containerization",
     "order": 6
   },
   {
-    "src": "/icons/micro-services.svg",
-    "alt": "micro-services",
-    "text": "Micro-services",
+    "icon": "micro-services",
+    "text": "Micro-Services",
     "order": 7
   },
   {
-    "src": "/icons/devops.svg",
-    "alt": "devops",
+    "icon": "devops",
     "text": "DevOps",
     "order": 8
   },
   {
-    "src": "/icons/databases.svg",
-    "alt": "databases",
+    "icon": "databases",
     "text": "Databases",
     "order": 9
   },
   {
-    "src": "/icons/python.svg",
-    "alt": "python",
+    "icon": "python",
     "text": "Python",
     "order": 10
   },
   {
-    "src": "/icons/typescript.svg",
-    "alt": "typescript",
+    "icon": "typescript",
     "text": "Typescript",
     "order": 11
   },
   {
-    "src": "/icons/javascript.svg",
-    "alt": "javascript",
+    "icon": "javascript",
     "text": "Javascript",
     "order": 12
   }

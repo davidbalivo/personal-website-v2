@@ -72,9 +72,9 @@ const expertise = defineCollection({
   type: 'data',
   schema: z.array(
     z.object({
-      src: z.string(),
-      alt: z.string(),
+      icon: z.string(),
       text: z.string(),
+      order: z.number(),
     }),
   ),
 });

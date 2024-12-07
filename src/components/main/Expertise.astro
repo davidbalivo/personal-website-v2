@@ -1,17 +1,56 @@
 ---
+import AiMl from '@/components/icons/solid/AiMl.astro';
+import Cloud from '@/components/icons/solid/Cloud.astro';
+import Containerization from '@/components/icons/solid/Containerization.astro';
+import Databases from '@/components/icons/solid/Databases.astro';
+import DevOps from '@/components/icons/solid/DevOps.astro';
+import Infrastructure from '@/components/icons/solid/Infrastructure.astro';
+import Javascript from '@/components/icons/solid/JavaScript.astro';
+import MicroServices from '@/components/icons/solid/MicroServices.astro';
+import Python from '@/components/icons/solid/Python.astro';
+import Security from '@/components/icons/solid/Security.astro';
+import Serverless from '@/components/icons/solid/Serverless.astro';
+import Typescript from '@/components/icons/solid/TypeScript.astro';
 import type { ExpertiseContent } from '@/types';
 import { getExpertise } from '@/utils/content-loader';
+import type { AstroComponentFactory } from 'astro/runtime/server/index.js';
+import IconText from '../common/IconText.astro';
+
+interface ComponentMap {
+  [key: string]: AstroComponentFactory;
+}
+
+const componentMap: ComponentMap = {
+  cloud: Cloud,
+  'ai-ml': AiMl,
+  infrastructure: Infrastructure,
+  security: Security,
+  serverless: Serverless,
+  containerization: Containerization,
+  'micro-services': MicroServices,
+  devops: DevOps,
+  databases: Databases,
+  python: Python,
+  typescript: Typescript,
+  javascript: Javascript,
+} as const;
 
 const content: ExpertiseContent[] = await getExpertise();
 ---
 
-<div class="lm:grid-cols-6 grid grid-cols-4 gap-10">
+<div class="grid grid-cols-4 gap-10 lm:grid-cols-6">
   {
-    content.map((expertise: ExpertiseContent) => (
-      <div class="flex flex-col items-center">
-        <img src={expertise.src} class="size-12 sm:size-14" alt={expertise.alt} />
-        <span class="py-2 text-xs text-secondary sm:text-sm">{expertise.text}</span>
-      </div>
-    ))
+    content.map(({ icon, text }) => {
+      const IconComponent = componentMap[icon];
+      return (
+        <IconText
+          orientation="column"
+          Icon={IconComponent}
+          text={text}
+          iconClass="size-12 text-accent sm:size-14"
+          textClass="text-xs text-secondary sm:text-sm"
+        />
+      );
+    })
   }
 </div>
