@@ -59,3 +59,7 @@ All commands are run from the root of the project, from a terminal:
 2. Install dependencies with `bun install`
 3. Start the development server with `bun run dev`
 4. Open `http://localhost:4321` in your browser
+
+## ©️ License
+
+This work is licensed under the [Creative Commons Attribution-NonCommercial 4.0 International License](https://creativecommons.org/licenses/by-nc/4.0/).
