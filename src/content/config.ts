@@ -95,7 +95,10 @@ const education = defineCollection({
 const about = defineCollection({
   type: 'content',
   schema: z.object({
-    image: z.string(),
+    image: z.object({
+      src: z.string(),
+      alt: z.string(),
+    }),
     skills: z.array(z.string()),
     hobbies: z.array(
       z.object({

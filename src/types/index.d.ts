@@ -79,7 +79,10 @@ export interface EducationContent {
 }
 
 export interface AboutContent {
-  image: string;
+  image: {
+    src: string;
+    alt: string;
+  };
   skills: string[];
   hobbies: {
     icon: string;

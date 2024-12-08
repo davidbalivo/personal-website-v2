@@ -1,5 +1,5 @@
 ---
-image: '/images/about.webp'
+image: { src: '/images/about.webp', alt: 'David Balivo' }
 skills:
   [
     'Team Work',
