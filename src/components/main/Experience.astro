@@ -17,37 +17,39 @@ const content: ExperienceContent[] = await getExperience();
         class="group/card overflow-hidden rounded-2xl border border-white/5 bg-white/5 duration-500 hover:scale-105 hover:cursor-pointer hover:bg-accent/5"
       >
         <div class="h-[1px] origin-center scale-x-0 transform-gpu bg-accent duration-500 group-hover/card:scale-x-100" />
-        <div class="space-y-5 p-5">
-          <div>
-            <IconText
-              Icon={Calendar}
-              text={experience.date}
-              iconClass="text-secondary size-4"
-              textClass="text-sm text-secondary"
-            />
-            <IconText
-              Icon={Job}
-              text={experience.title}
-              iconClass="text-primary size-4"
-              textClass="text-lg font-semibold lm:text-xl"
-              textTransitionName={`${experience.slug}-${experience.title}-${experience.date}`}
-            />
-            <IconText
-              Icon={Company}
-              text={experience.company}
-              iconClass="text-accent size-4"
-              textClass="text-accent lm:text-lg"
-            />
+        <div class="flex h-full flex-col p-5">
+          <div class="space-y-5">
+            <div>
+              <IconText
+                Icon={Calendar}
+                text={experience.date}
+                iconClass="text-secondary size-4"
+                textClass="text-sm text-secondary"
+              />
+              <IconText
+                Icon={Job}
+                text={experience.title}
+                iconClass="text-primary size-4"
+                textClass="text-lg font-semibold lm:text-xl"
+                textTransitionName={`${experience.slug}-${experience.title}-${experience.date}`}
+              />
+              <IconText
+                Icon={Company}
+                text={experience.company}
+                iconClass="text-accent size-4"
+                textClass="text-accent lm:text-lg"
+              />
+            </div>
+            <p class="text-pretty text-secondary">{experience.descriptionShort}</p>
+            <div class="flex flex-wrap gap-2">
+              {experience.stackShort.map((item) => (
+                <span class="rounded-full bg-white/10 px-4 py-1.5 text-sm duration-500 group-hover/card:bg-accent">
+                  {item}
+                </span>
+              ))}
+            </div>
           </div>
-          <p class="text-pretty text-secondary">{experience.descriptionShort}</p>
-          <div class="flex flex-wrap gap-2">
-            {experience.stackShort.map((item) => (
-              <span class="rounded-full bg-white/10 px-4 py-1.5 text-sm duration-500 group-hover/card:bg-accent">
-                {item}
-              </span>
-            ))}
-          </div>
-          <div class="flex justify-end">
+          <div class="mt-auto flex justify-end pt-5">
             <div class="flex space-x-2 text-sm text-secondary hover:text-accent">
               <span class="duration-300 hover:text-accent group-hover/card:scale-105">Learn more</span>
               <span class="pt-0.5 hover:text-accent group-hover/card:scale-105">→</span>
