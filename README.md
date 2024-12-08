@@ -1,8 +1,8 @@
-# Personal Website with Astro
+# 🏅 Personal Website with Astro
 
 A modern, responsive personal website built with Astro and Tailwind CSS. Features a clean design with smooth transitions, interactive components, and comprehensive sections for showcasing professional experience, expertise, education, and personal information.
 
-## 🚀 Features
+## 💫 Features
 
 - Responsive design
 - Interactive components for experience
@@ -11,13 +11,13 @@ A modern, responsive personal website built with Astro and Tailwind CSS. Feature
 - Profile information with social links
 - Hobbies and interests section
 
-## 🛠️ Tech Stack
+## ≺/≻ Tech Stack
 
 - Astro
 - Tailwind CSS
 - TypeScript
 
-## 🧞 Commands
+## 💻 Commands
 
 All commands are run from the root of the project, from a terminal:
 
@@ -30,7 +30,7 @@ All commands are run from the root of the project, from a terminal:
 | `bun run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `bun run astro -- --help` | Get help using the Astro CLI                     |
 
-## 📝 Project Structure
+## 🧬 Project Structure
 
 ```text
 /
