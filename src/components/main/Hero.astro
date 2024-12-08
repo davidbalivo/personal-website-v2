@@ -1,6 +1,7 @@
 ---
 import type { HeroContent, SocialLinksContent } from '@/types';
 import { getHeroContent, getSocialLinks } from '@/utils/content-loader';
+import { Image } from 'astro:assets';
 import SocialIconLink from '../common/SocialIconLink.astro';
 import EmailIcon from '../icons/regular/Email.astro';
 import GithubIcon from '../icons/regular/Github.astro';
@@ -36,11 +37,14 @@ const socialIconLinkClass = 'size-8 text-accent duration-500 hover:scale-125 cur
   <div class="w-full ms:w-1/2">
     <div class="flex h-full items-center justify-center ms:justify-end">
       <div class="size-48 overflow-hidden rounded-full border border-accent/10 bg-white/10 ms:size-64">
-        <img
+        <Image
           class="image-shadow h-full w-full"
           src={content.image}
           alt={content.name}
-          loading="lazy"
+          width={256}
+          height={256}
+          quality={100}
+          loading="eager"
           decoding="async"
         />
       </div>
