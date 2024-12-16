@@ -6,8 +6,8 @@ import type { PageSectionContent, PagesMetadataContent } from '@/types';
 import { getPagesMetaData } from '@/utils/content-loader';
 import { getPageMainSections } from '@/utils/page-main';
 
-const pagesMetaData: PagesMetadataContent = await getPagesMetaData();
-const sections: PageSectionContent[] = await getPageMainSections();
+const pagesMetaData: PagesMetadataContent = getPagesMetaData();
+const sections: PageSectionContent[] = getPageMainSections();
 ---
 
 <Layout title={pagesMetaData.main.title} description={pagesMetaData.main.description}>

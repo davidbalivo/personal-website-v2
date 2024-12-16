@@ -20,8 +20,8 @@ const isValidComponent = (component: string): component is keyof typeof COMPONEN
   return component in COMPONENT_MAP;
 };
 
-export const getPageMainSections = async (): Promise<PageSectionContent[]> => {
-  const sections: SectionContent[] = await getSections();
+export const getPageMainSections = (): PageSectionContent[] => {
+  const sections: SectionContent[] = getSections();
 
   return sections.map((section) => {
     const Component = isValidComponent(section.component) ? COMPONENT_MAP[section.component] : null;

@@ -2,7 +2,7 @@
 import type { NavigationContent } from '@/types';
 import { getNavigation } from '@/utils/content-loader';
 
-const navigation: NavigationContent[] = await getNavigation();
+const navigation: NavigationContent[] = getNavigation();
 ---
 
 <header class="fixed top-0 z-10 mx-auto mt-2 flex w-full items-center justify-center">

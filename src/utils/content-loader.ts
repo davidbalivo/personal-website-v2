@@ -55,7 +55,7 @@ export const getExpertise = (): ExpertiseContent[] => validateContent(expertise,
 
 export const getEducation = (): EducationContent[] => validateContent(education, 'Education');
 
-export const getNavigation = async (): Promise<NavigationContent[]> => generateNavigation(await getSections());
+export const getNavigation = (): NavigationContent[] => generateNavigation(getSections());
 
 export const getHeroContent = async (): Promise<HeroContent> => getEntryAndRenderContent('hero');
 

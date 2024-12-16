@@ -7,28 +7,12 @@ import Company from '../icons/regular/Company.astro';
 import Diploma from '../icons/regular/Diploma.astro';
 import Calendar from '../icons/solid/Calendar.astro';
 
-interface EducationType {
-  icon: string;
-  alt: string;
-}
-
-const educationTypeMap: Record<string, EducationType> = {
-  certification: {
-    icon: '/icons/certification.svg',
-    alt: 'certification',
-  },
-  diploma: {
-    icon: '/icons/diploma.svg',
-    alt: 'diploma',
-  },
-};
-
-const content: EducationContent[] = await getEducation();
+const content: EducationContent[] = getEducation();
 ---
 
 <div class="grid grid-cols-1 gap-5 ms:grid-cols-2">
   {
-    content.map((education: EducationContent) => {
+    content.map((education) => {
       return (
         <div class="rounded-2xl border border-white/5 bg-white/5 p-5">
           <IconText
