@@ -13,7 +13,7 @@ const content: ExperienceContent[] = await getExperience();
   {
     content.map((experience) => (
       <a
-        href={`/experience/${experience.slug}`}
+        href={`/experience/${experience.id}`}
         class="group/card overflow-hidden rounded-2xl border border-white/5 bg-white/5 duration-500 hover:scale-105 hover:cursor-pointer hover:bg-accent/5"
       >
         <div class="h-[1px] origin-center scale-x-0 transform-gpu bg-accent duration-500 group-hover/card:scale-x-100" />
@@ -31,7 +31,7 @@ const content: ExperienceContent[] = await getExperience();
                 text={experience.title}
                 iconClass="text-primary size-4"
                 textClass="text-lg font-semibold lm:text-xl"
-                textTransitionName={`${experience.slug}-${experience.title}-${experience.date}`}
+                textTransitionName={`${experience.id}-${experience.title}-${experience.date}`}
               />
               <IconText
                 Icon={Company}

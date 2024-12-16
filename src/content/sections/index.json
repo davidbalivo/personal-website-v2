@@ -7,7 +7,6 @@
       "showInNav": true
     },
     "component": "Hero",
-    "order": 1,
     "class": "pt-24 ms:pt-32 sm:pt-24"
   },
   {
@@ -17,8 +16,7 @@
       "showTitle": true,
       "showInNav": true
     },
-    "component": "Experience",
-    "order": 2
+    "component": "Experience"
   },
   {
     "id": "expertise",
@@ -27,8 +25,7 @@
       "showTitle": true,
       "showInNav": true
     },
-    "component": "Expertise",
-    "order": 3
+    "component": "Expertise"
   },
   {
     "id": "education",
@@ -37,8 +34,7 @@
       "showTitle": true,
       "showInNav": true
     },
-    "component": "Education",
-    "order": 4
+    "component": "Education"
   },
   {
     "id": "about",
@@ -47,8 +43,7 @@
       "showTitle": true,
       "showInNav": true
     },
-    "component": "About",
-    "order": 5
+    "component": "About"
   },
   {
     "id": "contact",
@@ -57,7 +52,6 @@
     "display": {
       "showTitle": true,
       "showInNav": true
-    },
-    "order": 6
+    }
   }
 ]

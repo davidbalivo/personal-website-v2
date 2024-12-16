@@ -1,62 +1,50 @@
 [
   {
     "icon": "cloud",
-    "text": "Cloud",
-    "order": 1
+    "text": "Cloud"
   },
   {
     "icon": "ai-ml",
-    "text": "AI/ML",
-    "order": 2
+    "text": "AI/ML"
   },
   {
     "icon": "infrastructure",
-    "text": "Infrastructure",
-    "order": 3
+    "text": "Infrastructure"
   },
   {
     "icon": "security",
-    "text": "Security",
-    "order": 4
+    "text": "Security"
   },
   {
     "icon": "serverless",
-    "text": "Serverless",
-    "order": 5
+    "text": "Serverless"
   },
   {
     "icon": "containerization",
-    "text": "Containerization",
-    "order": 6
+    "text": "Containerization"
   },
   {
     "icon": "micro-services",
-    "text": "Micro-Services",
-    "order": 7
+    "text": "Micro-Services"
   },
   {
     "icon": "devops",
-    "text": "DevOps",
-    "order": 8
+    "text": "DevOps"
   },
   {
     "icon": "databases",
-    "text": "Databases",
-    "order": 9
+    "text": "Databases"
   },
   {
     "icon": "python",
-    "text": "Python",
-    "order": 10
+    "text": "Python"
   },
   {
     "icon": "typescript",
-    "text": "Typescript",
-    "order": 11
+    "text": "Typescript"
   },
   {
     "icon": "javascript",
-    "text": "Javascript",
-    "order": 12
+    "text": "Javascript"
   }
 ]

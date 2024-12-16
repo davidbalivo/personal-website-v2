@@ -21,7 +21,6 @@ export interface SectionContent {
     showInNav: boolean;
   };
   component: string;
-  order: number;
   class?: string;
 }
 
@@ -50,7 +49,7 @@ export interface SocialLinksContent {
 }
 
 export interface ExperienceContent {
-  slug: string;
+  id: string;
   order: number;
   date: string;
   location: string;
@@ -66,7 +65,6 @@ export interface ExperienceContent {
 export interface ExpertiseContent {
   icon: string;
   text: string;
-  oreder: number;
 }
 
 export interface EducationContent {
@@ -75,7 +73,6 @@ export interface EducationContent {
   category: string;
   title: string;
   institution: string;
-  order: number;
 }
 
 export interface AboutContent {

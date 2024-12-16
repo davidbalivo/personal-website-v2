@@ -1,42 +1,8 @@
+import { glob } from 'astro/loaders';
 import { defineCollection, z } from 'astro:content';
 
-const siteMetadata = defineCollection({
-  type: 'data',
-  schema: z.object({
-    site: z.object({
-      defaultLanguage: z.string().default('en'),
-      author: z.string(),
-      domain: z.string(),
-    }),
-    pages: z.record(
-      z.string(),
-      z.object({
-        title: z.string(),
-        description: z.string(),
-      }),
-    ),
-  }),
-});
-
-const section = defineCollection({
-  type: 'data',
-  schema: z.array(
-    z.object({
-      id: z.string().optional(),
-      title: z.string(),
-      display: z.object({
-        showTitle: z.boolean(),
-        showInNav: z.boolean(),
-      }),
-      component: z.string(),
-      order: z.number(),
-      class: z.string().optional(),
-    }),
-  ),
-});
-
 const hero = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '*.md', base: 'src/content/hero' }),
   schema: z.object({
     name: z.string(),
     title: z.string(),
@@ -44,17 +10,8 @@ const hero = defineCollection({
   }),
 });
 
-const socialLinks = defineCollection({
-  type: 'data',
-  schema: z.object({
-    linkedin: z.string(),
-    github: z.string(),
-    email: z.string(),
-  }),
-});
-
 const experience = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '*.mdx', base: 'src/content/experience' }),
   schema: z.object({
     order: z.number(),
     date: z.string(),
@@ -68,32 +25,8 @@ const experience = defineCollection({
   }),
 });
 
-const expertise = defineCollection({
-  type: 'data',
-  schema: z.array(
-    z.object({
-      icon: z.string(),
-      text: z.string(),
-      order: z.number(),
-    }),
-  ),
-});
-
-const education = defineCollection({
-  type: 'data',
-  schema: z.array(
-    z.object({
-      date: z.string(),
-      type: z.string(),
-      category: z.string(),
-      title: z.string(),
-      institution: z.string(),
-    }),
-  ),
-});
-
 const about = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '*.md', base: 'src/content/about' }),
   schema: z.object({
     image: z.object({
       src: z.string(),
@@ -109,12 +42,7 @@ const about = defineCollection({
 });
 
 export const collections = {
-  'site-metadata': siteMetadata,
-  section,
   hero,
-  'social-links': socialLinks,
   experience,
-  expertise,
-  education,
   about,
 };
