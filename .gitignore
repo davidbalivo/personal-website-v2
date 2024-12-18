@@ -27,5 +27,5 @@ pnpm-debug.log*
 /blob-report/
 /playwright/.cache/
 
-# generated snapshots
-tests/**/*-snapshots/
+# tests generated screenshots
+tests/**/screenshots/

@@ -13,6 +13,7 @@ test.describe(
           img.removeAttribute('loading');
         });
       });
+      console.log('info', test.info().project.name);
       await expect(page).toHaveScreenshot(`page-home-${test.info().project.name}.png`, { fullPage: true });
     });
 
