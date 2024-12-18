@@ -1,5 +1,4 @@
 import { expect, test } from '@playwright/test';
-import { isCi } from '../../config';
 
 test.describe(
   'Screenshots Visual Regression',
@@ -7,10 +6,6 @@ test.describe(
     tag: ['@ui'],
   },
   () => {
-    test.beforeAll(() => {
-      test.skip(isCi, 'Skipping Screenshots Visual Regression in CI environment');
-    });
-
     test('Home Page', async ({ page }) => {
       await page.goto('/');
       await page.evaluate(() => {

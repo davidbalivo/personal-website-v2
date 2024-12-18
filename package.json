@@ -8,7 +8,9 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "upload:images": "gcloud storage cp tests/ui/screenshots/index.spec.ts-snapshots/*.png gs://pwsv2-ui-regression-testing/",
+    "download:images": "test -d tests/ui/screenshots/index.spec.ts-snapshots || mkdir -p tests/ui/screenshots/index.spec.ts-snapshots && gcloud storage cp 'gs://pwsv2-ui-regression-testing/*.png' tests/ui/screenshots/index.spec.ts-snapshots/"
   },
   "dependencies": {
     "@astrojs/check": "0.9.4",
