@@ -13,7 +13,7 @@ permissions:
 jobs:
   test:
     timeout-minutes: 60
-    runs-on: macos-latest
+    runs-on: macos-13
     env:
       IS_TEST: true
     steps:
