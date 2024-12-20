@@ -30,6 +30,28 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
+## 🧪 Visual Regression Testing Workflow
+
+The visual regression testing ensures UI consistency across code changes by following this process:
+
+### Local Environment
+
+1. **Screenshot Generation**: Running tests locally captures screenshots of the application's pages.
+
+2. **Upload to Google Cloud Platform (GCP)**: These screenshots are uploaded to GCP, keeping the repository lightweight by avoiding large image files.
+
+### Continuous Integration (CI) Environment
+
+1. **Download from GCP**: During CI runs, the reference images are downloaded from GCP.
+
+2. **Test Execution**: The current UI is compared against the downloaded reference images to detect visual discrepancies.
+
+### Tolerance Configuration
+
+- **Threshold** & **Max Difference Pixel Ratio**: A 0.1% tolerance is set to allow minor differences, accommodating variations between local and CI environments.
+
+This setup maintains UI integrity while optimizing repository size.
+
 ## 🧬 Project Structure
 
 ```text
@@ -43,7 +65,7 @@ All commands are run from the root of the project, from a terminal:
 │   ├── pages/          # Application pages
 │   └── types/          # Type definitions
 │   └── utils/          # Utility functions
-└── tailwind.config.mjs # Tailwind CSS configuration
+├── tests/
 ```
 
 ## 🎨 Customization
