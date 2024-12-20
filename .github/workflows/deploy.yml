@@ -16,6 +16,7 @@ jobs:
     runs-on: macos-13
     env:
       IS_TEST: true
+      CI: true
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4

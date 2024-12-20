@@ -1,3 +1,2 @@
-const IS_TEST = process.env.IS_TEST === 'true';
-
-export const isTest: boolean = IS_TEST;
+export const isTest: boolean = process.env.IS_TEST === 'true';
+export const isCI: boolean = process.env.CI === 'true';

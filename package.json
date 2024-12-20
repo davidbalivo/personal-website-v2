@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "test": "IS_TEST=true playwright test",
+    "test:update": "IS_TEST=true playwright test --update-snapshots",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",

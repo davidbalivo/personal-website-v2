@@ -1,4 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
+import { isCI } from 'tests/config';
 
 export default defineConfig({
   testDir: './tests',
@@ -15,6 +16,13 @@ export default defineConfig({
   use: {
     baseURL: 'http://localhost:4321',
     trace: 'on-first-retry',
+  },
+
+  expect: {
+    toHaveScreenshot: {
+      threshold: isCI ? 0.01 : undefined,
+      maxDiffPixelRatio: isCI ? 0.01 : undefined,
+    },
   },
 
   projects: [
