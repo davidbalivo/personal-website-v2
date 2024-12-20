@@ -10,7 +10,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "upload:images": "gcloud storage cp tests/ui/screenshots/*.png gs://pwsv2-ui-regression-testing",
-    "download:images": "test -d tests/ui/screenshots || mkdir -p tests/ui/screenshots && gcloud storage cp 'gs://pwsv2-ui-regression-testing/*.png' tests/ui/screenshots"
+    "download:images": "test -d tests/ui/screenshots || mkdir -p tests/ui/screenshots && gcloud storage cp 'gs://pwsv2-ui-regression-testing/*.png' tests/ui/screenshots",
+    "prepare": "husky"
   },
   "dependencies": {
     "@astrojs/check": "0.9.4",
@@ -24,6 +25,7 @@
   "devDependencies": {
     "@playwright/test": "^1.49.0",
     "@types/node": "^22.10.1",
+    "husky": "^9.1.7",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.6.9"
